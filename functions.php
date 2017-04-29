@@ -128,17 +128,18 @@
     $stmt->bind_param("s", $usrnm);
     $stmt->execute();
     $tasks = mysqli_stmt_get_result($stmt);
-    $table = "<table>
-                <thead>
-                  <tr>
-                    <th>Username</th>
-                    <th>Task Name</th>
-                    <th>Task Description</th>
-                    <th>Task Date</th>
-                    <th>Task Time</th>
-                    <th>Task Status</th>
-                  </tr>
-                </thead>
+    $table = "";
+    $table .= "<table>
+                 <thead>
+                   <tr>
+                     <th>Username</th>
+                     <th>Task Name</th>
+                     <th>Task Description</th>
+                     <th>Task Date</th>
+                     <th>Task Time</th>
+                     <th>Task Status</th>
+                   </tr>
+                 </thead>
                 <tbody>";
     while($row = $tasks->fetch_array(MYSQLI_NUM)){
       $table .= "<tr>

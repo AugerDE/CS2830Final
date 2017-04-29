@@ -41,7 +41,11 @@
           </ul>
           <ul class="nav navbar-nav">
             <button id="notes" class="btn btn-success navbar-btn">Notes</button>
-            <button id="tasks" class="btn btn-warning navbar-btn">Tasks</button>
+            <li>
+              <form action="home.php" method="POST">
+                <input type="submit" name="tasks" class="btn btn-warning navbar-btn" value="Tasks" />
+              </form>
+            </li>
             <button id="videos" class="btn btn-danger navbar-btn">Videos</button>
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -58,6 +62,7 @@
           <div class="panel panel-info">
             <div class="panel-heading"><h2>Welcome back, <?=$usrnm?>!</h2></div>
             <div class="panel-body" id="mainBody">
+
               <div class="row">
                 <div class="col-sm-4">
                   <div class="panel panel-success">
@@ -81,6 +86,14 @@
                   </div>
                 </div>
               </div>
+
+              <?php
+                include("functions.php");
+                if(isset($_POST['tasks'])){
+                  echo getTasks($usrnm);
+                }
+              ?>
+
             </div>
           </div>
         </div>
