@@ -154,6 +154,6 @@
     $table .= "</tbody></table>";
     $stmt->close();
     $conn->close();
-    return $table;
+    echo $table;
   }
 ?>
