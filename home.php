@@ -8,6 +8,10 @@
     header('Location: index.php');
   }
 
+  if(isset($_SESSION['user'])){
+    $usrnm = $_SESSION['user'];
+  }
+
   if(isset($_POST['logout'])){
     session_unset();
     session_destroy();
@@ -43,7 +47,7 @@
             <button id="videos" class="btn btn-danger navbar-btn">Videos</button>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><button id="profile" class="btn btn-info navbar-btn" value="<?=$_SESSION['user']?>"></button></li>
+            <li><button id="profile" class="btn btn-info navbar-btn" value="<?=$usrnm?>"></button></li>
             <li><form action="home.php" method="POST">
               <input type="submit" name="logout" class="btn btn-danger navbar-btn" value="Logout" />
             </form></li>
