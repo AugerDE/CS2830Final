@@ -8,9 +8,7 @@
     header('Location: index.php');
   }
 
-  if(isset($_SESSION['user'])){
-    $usrnm = $_SESSION['user'];
-  }
+  $usrnm = (isset($_SESSION['user']) ? $_SESSION['user'] : NULL);
 
   if(isset($_POST['logout'])){
     session_unset();
