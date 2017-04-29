@@ -41,11 +41,12 @@
           </ul>
           <ul class="nav navbar-nav">
             <button id="notes" class="btn btn-success navbar-btn">Notes</button>
-            <li>
+            <button id="tasks" class="btn btn-warning navbar-btn">Tasks</button>
+            <!-- <li>
               <form action="home.php" method="POST">
                 <input type="submit" name="tasks" class="btn btn-warning navbar-btn" value="Tasks" />
               </form>
-            </li>
+            </li> -->
             <button id="videos" class="btn btn-danger navbar-btn">Videos</button>
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -86,13 +87,6 @@
                   </div>
                 </div>
               </div>
-
-              <?php
-                include("functions.php");
-                if(isset($_POST['tasks'])){
-                  echo getTasks($usrnm);
-                }
-              ?>
 
             </div>
           </div>
