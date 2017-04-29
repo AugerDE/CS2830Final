@@ -25,7 +25,7 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="panel panel-info">
-            <div class="panel panel-heading"><h2>Welcome</h2></div>
+            <div class="panel panel-heading"><h2>Final Project</h2></div>
             <div class="panel-body">
 
               <div class="row">
@@ -57,7 +57,7 @@
                         $psswd = checkInput($_POST['psswd']);
                         $status = login($usrnm, $psswd);
                         if($status == 1){
-                          session_start();              
+                          session_start();
                           ob_start();
                           $_SESSION['user'] = $usrnm;
                           $_SESSION['status'] = "active";
