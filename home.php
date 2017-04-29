@@ -49,6 +49,30 @@
         </div>
       </nav>
 
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="panel panel-success">
+            <div class="panel-heading">Check Notes</div>
+            <div class="panel-body">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-warning">
+            <div class="panel-heading">Check Tasks</div>
+            <div class="panel-body">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-danger">
+            <div class="panel-heading">Watch a Video</div>
+            <div class="panel-body">
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </body>
 </html>
