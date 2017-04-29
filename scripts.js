@@ -8,6 +8,7 @@ $(function(){
       usrnm: usrnm
     },
     function(data){
+      console.log("Data: " + data);
       $("#taskPanel").html(data);
     });
   });
