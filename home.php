@@ -56,7 +56,7 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="panel panel-info">
-            <div class="panel-heading"><h2>Welcome back, <?=$_SESSION['user']?>!</h2></div>
+            <div class="panel-heading"><h2>Welcome back, <?=$usrnm?>!</h2></div>
             <div class="panel-body" id="mainBody">
               <div class="row">
                 <div class="col-sm-4">
