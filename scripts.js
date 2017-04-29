@@ -7,7 +7,7 @@ $(function(){
       usrnm: usrnm
     },
     function(data){
-      $("#mainBody").html(data);
+      $("#taskPanel").html(data);
     });
   });
 
