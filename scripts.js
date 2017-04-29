@@ -1,7 +1,14 @@
 $(function(){
 
   $("#tasks").click(function(){
-    console.log($("#profile").val());
+    var usrnm = $("#profile").val();
+    $.post('tabs.php', {
+      action: 'tasks',
+      usrnm: usrnm
+    },
+    function(data){
+      $("#mainBody").html(data);
+    });
   });
 
 });
