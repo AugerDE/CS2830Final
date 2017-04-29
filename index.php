@@ -57,8 +57,7 @@
                         $psswd = checkInput($_POST['psswd']);
                         $status = login($usrnm, $psswd);
                         if($status == 1){
-                          session_start();
-                          
+                          session_start();              
                           ob_start();
                           $_SESSION['user'] = $usrnm;
                           $_SESSION['status'] = "active";
