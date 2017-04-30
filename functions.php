@@ -104,7 +104,7 @@
   }
 
   function registerSuccessMessage(){
-    return "<div class='panel-footer'>
+    return "<div class='panel-footer good'>
               <strong>USER CREATED: </strong>Now Just Log-In!
             </div>";
   }
