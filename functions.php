@@ -221,7 +221,7 @@
                 <th><input type='text' class='form-control' name='tsktime' value='$row[3]' /></th>
                 <th><input type='text' class='form-control' name='tskstat' value='$row[4]' /></th>
                 <th>
-                  <button class='btn btn-success'>
+                  <button class='btn btn-info'>
                     <span class='glyphicon glyphicon-ok'></span>
                   </button>
                 </th>
