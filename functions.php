@@ -406,7 +406,7 @@
                     <div class='form-inline'>
                       <input type='text' class='form-control' disabled value='$row[0]' />";
     $user = "'".$usrnm."'";
-    $profile .=      '<button class="btn btn-info" onclick="usernameInput('.$usrnm.')">Update</button>';
+    $profile .=      ' <button class="btn btn-info" onclick="usernameInput('.$user.')">Update</button>';
     $profile .=    "</div>
                     <br />
                     <strong>Email: </strong>
