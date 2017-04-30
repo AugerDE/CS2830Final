@@ -1,13 +1,15 @@
 $(function(){
 
-
   loadTab("home");
 
   $("#home").click(function(){
+    $("#home").removeClass("home");
     loadTab("home");
   });
 
   $("#tasks").click(function(){
+    $("#home").addClass("#clear");
+    $("#tasks").removeClass("clear");
     loadTab("tasks");
   });
 
