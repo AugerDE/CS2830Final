@@ -173,23 +173,24 @@
                  </thead>
                 <tbody>";
     while($row = $tasks->fetch_array(MYSQLI_NUM)){
-      $taskName = "'".$row[0]."'";
-      $taskDesc = "'".$row[1]."'";
-      $taskDate = "'".$row[2]."'";
-      $taskTime = "'".$row[3]."'";
-      $taskStat = "'".$row[4]."'";
+      // $taskName = "'".$row[0]."'";
+      // $taskDesc = "'".$row[1]."'";
+      // $taskDate = "'".$row[2]."'";
+      // $taskTime = "'".$row[3]."'";
+      // $taskStat = "'".$row[4]."'";
+      // '.$taskName.', '.$taskDesc.', '.$taskDate.', '.$taskTime.', '.$taskStat.'
       $table .= "<tr>
-                  <td>$row[0]</td>
-                  <td>$row[1]</td>
-                  <td>$row[2]</td>
-                  <td>$row[3]</td>
-                  <td>$row[4]</td>";
+                  <td id='tskname'>$row[0]</td>
+                  <td id='tskdesc'>$row[1]</td>
+                  <td id='tskdate'>$row[2]</td>
+                  <td id='tsktime'>$row[3]</td>
+                  <td id='tskstat'>$row[4]</td>";
 
       $table .=  '<td>
-                    <button class="btn btn-success" onclick="editTask('.$taskName.', '.$taskDesc.', '.$taskDate.', '.$taskTime.', '.$taskStat.')">Update</button>
+                    <button class="btn btn-success" onclick="editTask()">Update</button>
                   </td>
                   <td>
-                    <button class="btn btn-danger" onclick="deleteTask('.$taskName.', '.$taskDesc.', '.$taskDate.', '.$taskTime.', '.$taskStat.')">Delete</button>
+                    <button class="btn btn-danger" onclick="deleteTask()">Delete</button>
                   </td>
                   </tr>';
     }

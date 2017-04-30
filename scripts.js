@@ -33,7 +33,12 @@ function loadTab(tab){
   });
 }
 
-function editTask(name, desc, date, time, stat){
+function editTask(){
+  var name = $("#tskname").val();
+  var desc = $("#tskdesc").val();
+  var date = $("#tskdate").val();
+  var time = $("#tsktime").val();
+  var stat = $("#tskstat").val();
   console.log(name + " " + desc + " " + date + " " + time + " " + stat);
   $.post('tabs.php', {
     action: 'update',
@@ -48,7 +53,12 @@ function editTask(name, desc, date, time, stat){
   });
 }
 
-function deleteTask(name, desc, date, time, stat){
+function deleteTask(){
+  var name = $("#tskname").val();
+  var desc = $("#tskdesc").val();
+  var date = $("#tskdate").val();
+  var time = $("#tsktime").val();
+  var stat = $("#tskstat").val();
   console.log(name + " " + desc + " " + date + " " + time + " " + stat);
 }
 
