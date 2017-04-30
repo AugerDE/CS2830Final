@@ -394,7 +394,7 @@
     $profile = "<div class='row'>
                   <div class='col-sm-4'>
                     <div class='thumbnail'>
-                      <img src='shakeIt.gif' alt='shake' style='width:100%' />
+                      <img src='shakeIt.gif' alt='shake' style='width:50%' />
                       <div class='caption'>
                         <button class='btn btn-info'>Change Photo</button>
                       </div>
