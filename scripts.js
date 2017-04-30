@@ -51,3 +51,7 @@ function editTask(name, desc, date, time, stat){
 function deleteTask(name, desc, date, time, stat){
   console.log(name + " " + desc + " " + date + " " + time + " " + stat);
 }
+
+function updateTask(){
+  console.log("Task Name: " + $("#tskname").val());
+}

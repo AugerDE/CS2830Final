@@ -214,14 +214,14 @@
     $stmt->execute();
     $edit = mysqli_stmt_get_result($stmt);
     $row = $edit->fetch_array(MYSQLI_NUM);
-    $inputs = "<form class='form-inline' action='home.php' method='POST'>
-                <th><input type='text' class='form-control' name='tskname' value='$row[0]' /></th>
-                <th><input type='text' class='form-control' name='tskdesc' value='$row[1]' /></th>
-                <th><input type='text' class='form-control' name='tskdate' value='$row[2]' /></th>
-                <th><input type='text' class='form-control' name='tsktime' value='$row[3]' /></th>
-                <th><input type='text' class='form-control' name='tskstat' value='$row[4]' /></th>
+    $inputs = "<form class='form-inline'>
+                <th><input type='text' class='form-control' id='tskname' value='$row[0]' /></th>
+                <th><input type='text' class='form-control' id='tskdesc' value='$row[1]' /></th>
+                <th><input type='text' class='form-control' id='tskdate' value='$row[2]' /></th>
+                <th><input type='text' class='form-control' id='tsktime' value='$row[3]' /></th>
+                <th><input type='text' class='form-control' id='tskstat' value='$row[4]' /></th>
                 <th>
-                  <button class='btn btn-info'>
+                  <button class='btn btn-info' onclick='updateTask()'>
                     <span class='glyphicon glyphicon-ok'></span>
                   </button>
                 </th>
