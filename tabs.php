@@ -6,9 +6,9 @@
     $usrnm = checkInput($_POST['usrnm']);
     switch($action){
       case "notes":
-        getTasks($usrnm);
         break;
       case "tasks":
+        getTasks($usrnm);
         break;
       case "video":
         break;
