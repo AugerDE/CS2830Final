@@ -34,9 +34,6 @@ th, td{
   border-color: transparent;
   text-align: right;
 }
-.dropdown-menu:focus{
-  box-shadow: transparent;
-}
 #profile, #logout{
   width: 100%;
 }
