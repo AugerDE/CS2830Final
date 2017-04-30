@@ -40,3 +40,7 @@ th, td{
 .caption{
   text-align: center;
 }
+.btnImg{
+  border: 1px solid gray;
+  padding-bottom: 5px;
+}
