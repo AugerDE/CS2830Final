@@ -3,7 +3,6 @@
 
   if(isset($_POST['action'])){
     $action = $_POST['action'];
-    $usrnm = checkInput($_POST['usrnm']);
     switch($action){
       case "home":
         getHome();
@@ -11,6 +10,7 @@
       case "notes":
         break;
       case "tasks":
+        $usrnm = checkInput($_POST['usrnm']);
         getTasks($usrnm);
         break;
       case "video":
