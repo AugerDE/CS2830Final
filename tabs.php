@@ -24,7 +24,9 @@
         break;
 
       case "tasks":
-        echo getTasks($usrnm);
+        $tasks = getTasks($usrnm);
+        $new = addTaskButton();
+        echo $tasks.$new;
         break;
 
       case "edit":
@@ -49,15 +51,13 @@
         $name = checkInput($_POST['name']);
         $tasks = getTasks($usrnm);
         $task = taskToDelete($name, $usrnm);
-        $confirm = updateConfirm();
-        echo $tasks.$task.$confirm;
+        echo $tasks.$task;
         break;
 
       case "remove":
         $task = checkInput($_POST['task']);
         $tasks = deleteTask($task, $usrnm);
-        $confirm = deleteConfirm();
-        echo $tasks.$confirm;
+        echo $tasks;
         break;
 
       case "video":

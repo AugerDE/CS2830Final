@@ -199,6 +199,12 @@
     return $table;
   }
 
+  function addTaskButton(){
+    return "<button class='btn btn-success' onclick='addForm()'>
+              <span class='glyphicon glyphicon-ok'></span> Add a Task
+            </button>";
+  }
+
   function editTask($task, $usrnm){
     $conn = connectToDB();
     $SQL = "SELECT taskName, taskDesc, taskDate, taskTime, TaskStat
