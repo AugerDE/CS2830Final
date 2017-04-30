@@ -240,5 +240,7 @@ function changePhoto(file, alt){
 function usernameInput(){
   console.log($("#userToUpdate").val());
   $("#userToUpdate").prop("disabled", false);
-  $("#userUpdateBtn").html("Blah");
+  $("#userUpdateBtn").addClass("hidden");
+  $("#userUpdateConf").removeClass("hidden");
+  $("#userUpdateCanc").removeClass("hidden");
 }
