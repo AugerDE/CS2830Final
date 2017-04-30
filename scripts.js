@@ -1,5 +1,7 @@
 $(function(){
 
+  loadTab("home");
+
   $("#home").click(function(){
     loadTab("home");
   });
@@ -31,6 +33,10 @@ function loadTab(tab){
   });
 }
 
-function loadTasks(name, desc, date, time, stat){
+function editTask(name, desc, date, time, stat){
+  console.log(name + " " + desc + " " + date + " " + time + " " + stat);
+}
+
+function editTask(name, desc, date, time, stat){
   console.log(name + " " + desc + " " + date + " " + time + " " + stat);
 }
