@@ -187,7 +187,7 @@
                   <td>$row[5]</td>
                   <input type='hidden' name='tskname' value='$row[1]' />
                   <td>
-                    <button class='btn btn-success' onclick='loadTasks($taskName, $taskDec, $taskDate, $taskTime, $taskStat)'>Update</button>
+                    <button class='btn btn-success' onclick='loadTasks($taskName, $taskDesc, $taskDate, $taskTime, $taskStat)'>Update</button>
                   </td>
                   <td>
                     <form action='home.php' method='POST'>
