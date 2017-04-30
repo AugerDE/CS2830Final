@@ -85,10 +85,8 @@
                   <td>$row[4]</td>
                   <td>$row[5]</td>
                   <td>
-                    <form action='home.php' method='POST'>
-                      <input type='hidden' name='tskname' value='$row[1]' />
-                      <input type='submit' class='btn btn-info' name='update' value='Update' />
-                    </form>
+                    <input type='hidden' name='tskname' value='$row[1]' />
+                    <button id='update' class='btn btn-info'>Update</button>
                   </td>
                   <td>
                     <form action='home.php' method='POST'>

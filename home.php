@@ -27,6 +27,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <script src="scripts.js"></script>
+    <script>
+      $(function(){
+        $("#update").click(function(){
+          console.log("Update");
+        });
+      });
+    </script>
   </head>
   <body>
     <div class="container">
@@ -42,11 +49,6 @@
           <ul class="nav navbar-nav">
             <button id="notes" class="btn btn-success navbar-btn">Notes</button>
             <button id="tasks" class="btn btn-warning navbar-btn">Tasks</button>
-            <!-- <li>
-              <form action="home.php" method="POST">
-                <input type="submit" name="tasks" class="btn btn-warning navbar-btn" value="Tasks" />
-              </form>
-            </li> -->
             <button id="videos" class="btn btn-danger navbar-btn">Videos</button>
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -63,31 +65,6 @@
           <div class="panel panel-info">
             <div class="panel-heading"><h2>Welcome back, <?=$usrnm?>!</h2></div>
             <div class="panel-body" id="content">
-
-              <!-- <div class="row">
-                <div class="col-sm-4">
-                  <div class="panel panel-success">
-                    <div class="panel-heading">Check Notes</div>
-                    <div class="panel-body">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="panel panel-warning">
-                    <div class="panel-heading">Check Tasks</div>
-                    <div class="panel-body">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="panel panel-danger">
-                    <div class="panel-heading">Watch a Video</div>
-                    <div class="panel-body">
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-
             </div>
           </div>
         </div>
