@@ -57,7 +57,7 @@
                 </li>
                 <li>
                   <form action="home.php" method="POST">
-                    <input type="submit" name="logout" class="btn btn-danger" />
+                    <input type="submit" name="logout" class="btn btn-danger" value="Logout" />
                   </form>
                 </li>
               </ul>
