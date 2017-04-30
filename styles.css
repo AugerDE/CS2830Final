@@ -24,4 +24,5 @@ th, td{
 .error{
   background-color: #ffe6e6;
   color: #990000;
+  border-color: #990000;
 }
