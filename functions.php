@@ -420,7 +420,8 @@
     foreach(new DirectoryIterator($dir) as $file){
       if($file->isFile()){
         $i++;
-        $images .= "<button class='btnImg'><img src='".$dir.$file."' alt='".$file."' class='imgBtn' /><br /></button><br />";
+        $location = $dir.$file;
+        $images .= "<button class='btnImg'><img src='".$location."' alt='".$file."' class='imgBtn' /><br /></button><br />";
       }
       if($i % 3 == 0){
         $images .= "</div><div class='col-sm-2'>";
