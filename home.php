@@ -32,7 +32,6 @@
     <script src="scripts.js"></script>
   </head>
   <body>
-    <input type='hidden' id="profile" value="<?=$usrnm?>">
     <div class="container">
 
       <nav class="navbar navbar-inverse">
@@ -56,7 +55,7 @@
               <ul style="background-color:white; opacity:0.9;" class="dropdown-menu">
                 <li>
                   <button class="btn btn-info navbar-btn" id="profile" value="<?=$usrnm?>">
-                    <span class="glyphicon glyphicon-user"></span>
+                    <span class="glyphicon glyphicon-user"></span><?=$usrnm?>
                   </button>
                 </li>
                 <li class="divider"></li>
