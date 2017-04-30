@@ -184,17 +184,12 @@
                   <td>$row[2]</td>
                   <td>$row[3]</td>
                   <td>$row[4]</td>
-                  <td>$row[5]</td>
-                  <td>
-                    <button class='btn btn-success' onclick='loadTasks('$row[1]', '$row[2]', '$row[3]', '$row[4]', '$row[5]')'>Update</button>
+                  <td>$row[5]</td>";
+
+      $table .=  '<td>
+                    <button class="btn btn-success" onclick="loadTasks('$row[1]', '$row[2]', '$row[3]', '$row[4]', '$row[5]')">Update</button>
                   </td>
-                  <td>
-                    <form action='home.php' method='POST'>
-                      <input type='hidden' name='tskname' value='$row[1]' />
-                      <input type='submit' class='btn btn-danger' name='delete' value='Update' />
-                    </form>
-                  </td>
-                </tr>";
+                  </tr>';
     }
     $table .= "</tbody></table>";
     $stmt->close();
