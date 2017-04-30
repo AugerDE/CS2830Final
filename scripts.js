@@ -237,12 +237,7 @@ function changePhoto(file, alt){
   });
 }
 
-$("#updateUserBtn").click(function(){
+function usernameInput(){
   console.log($("#userToUpdate").val());
   $("#userToUpdate").prop("disabled", false);
-});
-
-// function usernameInput(){
-//   console.log($("#userToUpdate").val());
-//   $("#userToUpdate").prop("disabled", false);
-// }
+}
