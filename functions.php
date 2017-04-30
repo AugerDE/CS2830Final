@@ -236,4 +236,23 @@
     $conn->close();
     return $inputs;
   }
+
+  function updateTask($task, $name, $desc, $date, $time, $stat, $usrnm){
+    $conn = connectToDB();
+    $SQL = "UPDATE Tasks
+            SET taskName=?, taskDesc=?, taskDate=?, taskTime=?, taskStat=?
+            WHERE taskName=?
+            AND userName=?";
+    $stmt = $conn->stmt_init();
+    if(!$stmt->prepare($SQL)){
+      $error = stmtErrorMessage($stmt->error);
+      $stmt->close();
+      $conn->close();
+      return $error;
+    }
+    $stmt->bind_param("sssssss", $name, $desc, $date, $time, $stat, $task, $usrnm);
+    $stmt->execute();
+    $stmt->close();
+    $conn->close();
+  }
 ?>

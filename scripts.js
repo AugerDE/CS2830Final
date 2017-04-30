@@ -36,7 +36,7 @@ function loadTab(tab){
 function editTask(name, desc, date, time, stat){
   console.log(name + " " + desc + " " + date + " " + time + " " + stat);
   $.post('tabs.php', {
-    action: 'update',
+    action: 'edit',
     name: name,
     desc: desc,
     date: date,
@@ -53,6 +53,22 @@ function deleteTask(name, desc, date, time, stat){
 }
 
 function updateTask(){
-  console.log("Old Task: " + $("#task").val());
-  console.log("New Task: " + $("#tskname").val());
+  var task = $("#task").val();
+  var name = $("#tskname").val();
+  var desc = $("#tskdesc").val();
+  var date = $("#tskdate").val();
+  var time = $("#tsktime").val();
+  var stat = $("#tskstat").val();
+  $.post('tabs.php', {
+    action: 'update',
+    task: task,
+    name: name,
+    desc: desc,
+    date: date,
+    time: time,
+    stat: stat
+  },
+  function(data){
+    $("#content").html(data);
+  });
 }
