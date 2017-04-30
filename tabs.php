@@ -24,6 +24,11 @@
       case "tasks":
         echo getTasks($usrnm);
         break;
+      case "update":
+        $name = checkInput($_POST['name']);
+        $tasks = getTasks($usrnm);
+        $task = editTask($task, $usrnm);
+        echo $tasks.$task;
       case "video":
         break;
       default:

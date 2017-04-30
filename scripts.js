@@ -35,6 +35,17 @@ function loadTab(tab){
 
 function editTask(name, desc, date, time, stat){
   console.log(name + " " + desc + " " + date + " " + time + " " + stat);
+  $.post('tabs.php', {
+    action: 'update',
+    name: name,
+    desc: desc,
+    date: date,
+    time: time,
+    stat: stat
+  },
+  function(data){
+    $("#content").html(data);
+  });
 }
 
 function deleteTask(name, desc, date, time, stat){
