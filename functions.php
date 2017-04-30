@@ -214,7 +214,7 @@
     $stmt->execute();
     $edit = mysqli_stmt_get_result($stmt);
     $row = $edit->fetch_array(MYSQLI_NUM);
-    $inputs = "<form class='form-inline'>
+    $inputs = "<div class='form-inline'>
                 <th><input type='text' class='form-control' id='tskname' value='$row[0]' /></th>
                 <th><input type='text' class='form-control' id='tskdesc' value='$row[1]' /></th>
                 <th><input type='text' class='form-control' id='tskdate' value='$row[2]' /></th>
@@ -230,7 +230,7 @@
                     <span class='glyphicon glyphicon-remove'></span>
                   </button>
                 </th>
-               <form>";
+               <div>";
     $stmt->close();
     $conn->close();
     return $inputs;
