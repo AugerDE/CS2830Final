@@ -132,6 +132,7 @@ function updateTask(){
         action: "empty"
       },
       function(data){
+        $("#notify").show();
         $("#notify").html(data);
       });
     }else{
@@ -170,6 +171,7 @@ function addTask(){
         action: "empty"
       },
       function(data){
+        $("#notify").show();
         $("#notify").html(data);
       });
     }else{
