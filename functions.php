@@ -392,7 +392,7 @@
     $info = mysqli_stmt_get_result($stmt);
     $row = $info->fetch_array(MYSQLI_NUM);
     $profile = "<div class='row'>
-                  <div class='col-sm-4'>
+                  <div class='col-sm-4 profileHolder'>
                     <img src='shakeIt.gif' alt='shake' height='250' width='250' /><br />
                     <button class='btn btn-info'>Change Picture</button>
                   </div>
