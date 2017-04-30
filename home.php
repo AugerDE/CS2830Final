@@ -51,13 +51,13 @@
               <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li>
-                  <button class="btn btn-info" id="profile" value="<?=$usrnm?>">
+                  <button class="btn btn-info navbar-btn" id="profile" value="<?=$usrnm?>">
                     Profile
                   </button>
                 </li>
                 <li>
                   <form action="home.php" method="POST">
-                    <input id="logout" type="submit" name="logout" class="btn btn-danger" value="Logout" />
+                    <input id="logout" type="submit" name="logout" class="btn btn-danger navbar-btn" value="Logout" />
                   </form>
                 </li>
               </ul>
