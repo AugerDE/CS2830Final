@@ -1,8 +1,8 @@
 $(function(){
 
   $("#tasks").click(function(){
-    console.log("clicked");
     var usrnm = $("#profile").val();
+    console.log("clicked: " + usrnm);
     $.post('tabs.php', {
       action: 'tasks',
       usrnm: usrnm
