@@ -39,4 +39,5 @@ th, td{
 }
 .profileHolder{
   text-align: center;
+  border: 1px solid gainsboro;
 }
