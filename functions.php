@@ -173,11 +173,11 @@
                  </thead>
                 <tbody>";
     while($row = $tasks->fetch_array(MYSQLI_NUM)){
-      $taskName = "'".$row[1]."'";
       $taskDesc = "'".$row[2]."'";
       $taskDate = "'".$row[3]."'";
       $taskTime = "'".$row[4]."'";
       $taskStat = "'".$row[5]."'";
+      $taskName = "'".$row[1]."'";
       $table .= "<tr>
                   <td>$row[0]</td>
                   <td>$row[1]</td>
@@ -185,9 +185,8 @@
                   <td>$row[3]</td>
                   <td>$row[4]</td>
                   <td>$row[5]</td>
-                  <input type='hidden' name='tskname' value='$row[1]' />
                   <td>
-                    <button class='btn btn-success' onclick='loadTasks($taskName, $taskDesc, $taskDate, $taskTime, $taskStat)'>Update</button>
+                    <button class='btn btn-success' onclick='loadTasks('$row[1]', '$row[2]', '$row[3]', '$row[4]', '$row[5]')'>Update</button>
                   </td>
                   <td>
                     <form action='home.php' method='POST'>
