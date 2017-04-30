@@ -404,9 +404,9 @@
                   <div class='col-sm-4'>
                     <strong>Username: </strong>
                     <div class='form-inline'>
-                      <input type='text' class='form-control' disabled value='$row[0]' />";
+                      <input type='text' class='form-control' disabled value='$row[0]' /> ";
     $user = "'".$usrnm."'";
-    $profile .=      ' <button class="btn btn-info" onclick="usernameInput('.$user.')">Update</button>';
+    $profile .=      '<button class="btn btn-info" onclick="usernameInput('.$user.')">Update</button>';
     $profile .=    "</div>
                     <br />
                     <strong>Email: </strong>
