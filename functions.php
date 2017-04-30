@@ -412,9 +412,10 @@
   }
 
   function displayPhotos(){
+    $dir = "images";
     $images = "";
     $i = 0;
-    foreach(new DirectoryIterator(images) as $file){
+    foreach(new DirectoryIterator($dir) as $file){
       if($file->isFile()){
         $i++;
         $images .= "<img src='images/".$file."' alt='".$file."' height='50' width='50'/>";
