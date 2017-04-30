@@ -111,7 +111,6 @@ function cancel(){
 }
 
 function updateTask(){
-  $("#notify").hide();
   var task = $("#task").val();
   var name = $("#tskname").val();
   var desc = $("#tskdesc").val();
@@ -152,7 +151,6 @@ function addForm(){
 }
 
 function addTask(){
-  $("#notify").hide();
   var name = $("#tskname").val();
   var desc = $("#tskdesc").val();
   var date = $("#tskdate").val();
