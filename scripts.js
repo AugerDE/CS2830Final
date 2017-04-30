@@ -11,6 +11,18 @@ $(function(){
 });
 
 function loadTab(tab){
+  var user = $("#profile").val();
+  switch(tab){
+    case "home":
+      $("#contentHeader").html("Welcome back, " + user + "!");
+      break;
+    case "notes":
+      $("#contentHeader").html(user + "'s Notes");
+      break;
+    case "tasks":
+      $("#contentHeader").html(user + "'s Tasks");
+      break;
+  }
   $.post('tabs.php', {
     action: tab
   },
