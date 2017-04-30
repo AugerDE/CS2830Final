@@ -37,3 +37,6 @@ th, td{
 .dropdown-menu:focus{
   box-shadow: transparent;
 }
+#profile{
+  width: 10px;
+}
