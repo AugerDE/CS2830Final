@@ -377,9 +377,10 @@
 
   function getProfile($usrnm){
     $conn = connectToDB();
-    $SQL = "SELECT userName, userMail
-            FROM Users
-            WHERE userName=?";
+    $SQL = "SELECT Users.userName, userMail, src, alt
+            FROM Users, Pics
+            WHERE Users.userName=?
+            AND Pics.userName=?";
     $stmt = $conn->stmt_init();
     if(!$stmt->prepare($SQL)){
       $error = stmtErrorMessage($stmt->error);
@@ -387,7 +388,7 @@
       $conn->close();
       return $error;
     }
-    $stmt->bind_param("s", $usrnm);
+    $stmt->bind_param("ss", $usrnm, $usrnm);
     $stmt->execute();
     $info = mysqli_stmt_get_result($stmt);
     $row = $info->fetch_array(MYSQLI_NUM);
