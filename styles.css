@@ -41,5 +41,6 @@ th, td{
   text-align: center;
 }
 .btnImg{
-  border: 1px solid gray;
+  background-color: transparent;
+  border: 1px solid gainsboro;
 }
