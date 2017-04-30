@@ -3,6 +3,7 @@ $(function(){
   loadTab("home");
 
   $("#home").click(function(){
+    $("#notify").hide();
     $("#home").removeClass("clear");
     $("#tasks").addClass("clear");
     $("#videos").addClass("clear");
@@ -11,6 +12,7 @@ $(function(){
   });
 
   $("#notes").click(function(){
+    $("#notify").hide();
     $("#home").addClass("clear");
     $("#tasks").addClass("clear");
     $("#videos").addClass("clear");
@@ -18,6 +20,7 @@ $(function(){
   });
 
   $("#tasks").click(function(){
+    $("#notify").hide();
     $("#home").addClass("clear");
     $("#tasks").removeClass("clear");
     $("#videos").addClass("clear");
@@ -26,6 +29,7 @@ $(function(){
   });
 
   $("#videos").click(function(){
+    $("#notify").hide();
     $("#panelType").removeClass("panel-success panel-warning panel-info").addClass("panel-danger");
     $("#home").addClass("clear");
     $("#tasks").addClass("clear");
@@ -60,6 +64,7 @@ function loadTab(tab){
 }
 
 function editTask(name, desc, date, time, stat){
+  $("#notify").hide();
   $.post('tabs.php', {
     action: 'edit',
     name: name,
@@ -74,6 +79,7 @@ function editTask(name, desc, date, time, stat){
 }
 
 function deleteTask(name, desc, date, time, stat){
+  $("#notify").hide();
   $.post('tabs.php', {
     action: 'delete',
     name: name,
@@ -88,6 +94,7 @@ function deleteTask(name, desc, date, time, stat){
 }
 
 function removeTask(){
+  $("#notify").hide();
   var task = $("#task").val();
   $.post('tabs.php', {
     action: 'remove',
@@ -99,10 +106,12 @@ function removeTask(){
 }
 
 function cancel(){
+  $("#notify").hide();
   loadTab("tasks");
 }
 
 function updateTask(){
+  $("#notify").hide();
   var task = $("#task").val();
   var name = $("#tskname").val();
   var desc = $("#tskdesc").val();
@@ -133,6 +142,7 @@ function updateTask(){
 }
 
 function addForm(){
+  $("#notify").hide();
   $.post('tabs.php', {
     action: 'showadd'
   },
@@ -142,6 +152,7 @@ function addForm(){
 }
 
 function addTask(){
+  $("#notify").hide();
   var name = $("#tskname").val();
   var desc = $("#tskdesc").val();
   var date = $("#tskdate").val();
