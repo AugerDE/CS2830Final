@@ -215,27 +215,13 @@
     $edit = mysqli_stmt_get_result($stmt);
     $row = $edit->fetch_array(MYSQLI_NUM);
     $inputs = "<form class='form-inline' action='home.php' method='POST'>
-                <th>
-                  <input type='text' class='form-control' name='tskname' value='$row[0]' />
-                </th>
-                <th>
-                  <input type='text' class='form-control' name='tskdesc' value='$row[1]' />
-                </th>
-                <th>
-                  <input type='text' class='form-control' name='tskdate' value='$row[2]' />
-                </th>
-                <th>
-                  <input type='text' class='form-control' name='tsktime' value='$row[3]' />
-                </th>
-                <th>
-                  <input type='text' class='form-control' name='tskstat' value='$row[4]' />
-                </th>
-                <th>
-                  <input type='submit' name='confirm' class='btn btn-success' value='Confirm' />
-                </th>
-                <th>
-                  <input type='submit' name='cancel' class='btn btn-danger' value='Cancel' />
-                </th>
+                <th><input type='text' class='form-control' name='tskname' value='$row[0]' /></th>
+                <th><input type='text' class='form-control' name='tskdesc' value='$row[1]' /></th>
+                <th><input type='text' class='form-control' name='tskdate' value='$row[2]' /></th>
+                <th><input type='text' class='form-control' name='tsktime' value='$row[3]' /></th>
+                <th><input type='text' class='form-control' name='tskstat' value='$row[4]' /></th>
+                <th><input type='submit' name='confirm' class='btn btn-success' value='Confirm' /></th>
+                <th><input type='submit' name='cancel' class='btn btn-danger' value='Cancel' /></th>
                <form>";
     $stmt->close();
     $conn->close();
