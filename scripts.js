@@ -5,12 +5,7 @@ $(function(){
   });
 
   $("#tasks").click(function(){
-    $.post('tabs.php', {
-      action: 'tasks'
-    },
-    function(data){
-      $("#content").html(data);
-    });
+    loadTab("tasks");
   });
 
 });
