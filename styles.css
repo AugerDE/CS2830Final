@@ -30,7 +30,7 @@ th, td{
   color: #008000;
 }
 .dropdown-menu{
-  box-shadow: 0px;
+  box-shadow: transparent;
   background-color: transparent;
   border-color: transparent;
   text-align: center;
