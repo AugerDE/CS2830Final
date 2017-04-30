@@ -30,11 +30,20 @@ $(function(){
 
   $("#videos").click(function(){
     $("#notify").hide();
-    $("#panelType").removeClass("panel-success panel-warning panel-info").addClass("panel-danger");
     $("#home").addClass("clear");
     $("#tasks").addClass("clear");
     $("#videos").removeClass("clear");
     $("#notes").addClass("clear");
+  });
+
+  $("#profile").click(function(){
+    console.log("clicked");
+    $("#notify").hide();
+    $("#home").addClass("clear");
+    $("#tasks").addClass("clear");
+    $("#videos").addClass("clear");
+    $("#notes").addClass("clear");
+    loadTab("profile");
   });
 
 });
@@ -58,6 +67,14 @@ function loadTab(tab){
       case "tasks":
         $("#panelType").removeClass("panel-success panel-info panel-danger").addClass("panel-warning");
         $("#contentHeader").html(user + "'s Tasks");
+        break;
+      case "videos":
+        $("#panelType").removeClass("panel-success panel-warning panel-info").addClass("panel-danger");
+        $("#contentHeader").html(user + "'s Videos");
+        break;
+      case "profile":
+        $("#panelType").removeClass("panel-success panel-warning panel-danger").addClass("panel-info");
+        $("#contentHeader").html(user + "'s Profile");
         break;
     }
   });

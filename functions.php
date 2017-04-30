@@ -374,4 +374,27 @@
               Task Successfully Deleted
             </div>";
   }
+
+  function getProfile($usrnm){
+    $conn = connectToDB();
+    $SQL = "SELECT userName, userMail
+            FROM Users
+            WHERE userName=?";
+    $stmt = $conn->stmt_init();
+    if(!$stmt->prepare($SQL)){
+      $error = stmtErrorMessage($stmt->error);
+      $stmt->close();
+      $conn->close();
+      return $error;
+    }
+    $stmt->bind_param("s", $usrnm);
+    $stmt->execute();
+    $info = mysqli_stmt_get_result($stmt);
+    $row = $info->fetch_array(MYSQLI_NUM);
+    $profile = "<strong>Username: </strong>".$row[0]."<br />
+                <strong>Email: </strong>".$row[1]."<br />";
+    $stmt->close();
+    $conn->close();
+    return $profile;
+  }
 ?>

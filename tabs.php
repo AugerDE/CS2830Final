@@ -32,6 +32,10 @@
         echo deleteMessage();
         break;
 
+      case "profile":
+        echo getProfile($usrnm);
+        break;
+
       case "home":
         echo getHomeDash();
         break;
