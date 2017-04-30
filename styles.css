@@ -43,5 +43,5 @@ th, td{
 .btnImg{
   background-color: transparent;
   border: 1px solid gainsboro;
-  padding: 10px;
+  margin-bottom: 10px;
 }
