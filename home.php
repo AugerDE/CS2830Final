@@ -27,13 +27,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <script src="scripts.js"></script>
-    <script>
-      $(function(){
-        $("#update").click(function(){
-          console.log("Update");
-        });
-      });
-    </script>
   </head>
   <body>
     <div class="container">
