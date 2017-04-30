@@ -416,17 +416,17 @@
     $images = "";
     $images .= "<div class='row'>";
     $i = 0;
+    $images .= "<div class='col-sm-2'>";
     foreach(new DirectoryIterator($dir) as $file){
-      $images .= "<div class='col-sm-2'>";
       if($file->isFile()){
         $i++;
         $images .= "<div class='thumbnail'><img src='images/".$file."' alt='".$file."' style='width:100%'/></div>";
       }
       if($i % 5 == 0){
-        $images .= "</div>";
+        $images .= "</div><div class='col-sm-2'>";
       }
     }
-    $images .= "</div>";
+    $images .= "</div></div>";
     return $images;
   }
 ?>
