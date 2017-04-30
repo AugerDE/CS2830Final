@@ -9,11 +9,12 @@
   }
 
   $usrnm = (isset($_SESSION['user']) ? $_SESSION['user'] : NULL);
-  
+
   include("functions.php");
 
   if(isset($_POST['action'])){
     $action = $_POST['action'];
+    $_SESSION['tab'] = $action;
     switch($action){
       case "home":
         echo getHomeDash();
@@ -21,7 +22,6 @@
       case "notes":
         break;
       case "tasks":
-        $_SESSION['tab'] = "tasks";
         echo getTasks($usrnm);
         break;
       case "video":
