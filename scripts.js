@@ -1,7 +1,6 @@
 $(function(){
 
-  $("#content").html("<img src='shakeIt.gif' alt='shake' height='100' width='100'>");
-  // loadTab("home");
+  loadTab("home");
 
   $("#home").click(function(){
     $("#notify").hide();

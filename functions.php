@@ -391,7 +391,8 @@
     $stmt->execute();
     $info = mysqli_stmt_get_result($stmt);
     $row = $info->fetch_array(MYSQLI_NUM);
-    $profile = "<strong>Username: </strong>".$row[0]."<br />
+    $profile = "<img src='shakeIt.gif' alt='shake' height='100' width='100' />
+                <strong>Username: </strong>".$row[0]."<br />
                 <strong>Email: </strong>".$row[1]."<br />";
     $stmt->close();
     $conn->close();
