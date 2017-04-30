@@ -42,7 +42,7 @@ th, td{
 }
 .btnImg{
   height: 100px;
-  width: 20%;
+  width: 100%;
   background-color: transparent;
   border: 1px solid gainsboro;
   margin-bottom: 10px;
