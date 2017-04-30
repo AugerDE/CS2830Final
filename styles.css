@@ -4,3 +4,6 @@ h2{
 #taskTable{
   border: 1px solid gainsboro;
 }
+th, td{
+  text-align: center;
+}
