@@ -51,7 +51,7 @@
               <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li>
-                  <button class="btn btn-info navbar-btn" id="profile" value="<?=$usrnm?>">
+                  <button class="btn btn-info navbar-btn" id="profile" onclick="profile()" value="<?=$usrnm?>">
                     Profile
                   </button>
                 </li>

@@ -36,16 +36,6 @@ $(function(){
     $("#notes").addClass("clear");
   });
 
-  $("#profile").click(function(){
-    console.log("clicked");
-    $("#notify").hide();
-    $("#home").addClass("clear");
-    $("#tasks").addClass("clear");
-    $("#videos").addClass("clear");
-    $("#notes").addClass("clear");
-    loadTab("profile");
-  });
-
 });
 
 function loadTab(tab){
@@ -216,4 +206,14 @@ function addTask(){
       });
     }
   });
+}
+
+function profile(){
+  console.log("clicked");
+  $("#notify").hide();
+  $("#home").addClass("clear");
+  $("#tasks").addClass("clear");
+  $("#videos").addClass("clear");
+  $("#notes").addClass("clear");
+  loadTab("profile");
 }
