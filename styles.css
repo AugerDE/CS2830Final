@@ -31,5 +31,6 @@ th, td{
 }
 .dropdown-menu{
   background-color: transparent;
+  border-color: transparent;
   text-align: center;
 }
