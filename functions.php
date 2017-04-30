@@ -227,7 +227,7 @@
                   </button>
                 </th>
                 <th>
-                  <button class='btn btn-danger'>
+                  <button class='btn btn-danger' onclick='cancel()'>
                     <span class='glyphicon glyphicon-remove'></span>
                   </button>
                 </th>

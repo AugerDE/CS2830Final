@@ -52,6 +52,10 @@ function deleteTask(name, desc, date, time, stat){
   console.log(name + " " + desc + " " + date + " " + time + " " + stat);
 }
 
+function cancel(){
+  loadTab("tasks");
+}
+
 function updateTask(){
   var task = $("#task").val();
   var name = $("#tskname").val();
