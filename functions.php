@@ -413,6 +413,8 @@
                       <input type='text' class='form-control' disabled value='$row[1]' />
                       <button class='btn btn-info'>Update</button>
                     </div>
+                    <br />
+                    <button class='btn btn-info'>Change Password</button>
                   </div>
                 </div>";
     $stmt->close();
