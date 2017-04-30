@@ -3,15 +3,33 @@ $(function(){
   loadTab("home");
 
   $("#home").click(function(){
-    $("#home").removeClass("clear");
+    $("#home").addRemove("clear");
     $("#tasks").addClass("clear");
+    $("#videos").addClass("clear");
+    $("#notes").addClass("clear");
     loadTab("home");
+  });
+
+  $("#notes").click(function(){
+    $("#home").addClass("clear");
+    $("#tasks").addClass("clear");
+    $("#videos").addClass("clear");
+    $("#notes").removeClass("clear");
   });
 
   $("#tasks").click(function(){
     $("#home").addClass("clear");
     $("#tasks").removeClass("clear");
+    $("#videos").addClass("clear");
+    $("#notes").addClass("clear");
     loadTab("tasks");
+  });
+
+  $("#videos").click(function(){
+    $("#home").addClass("clear");
+    $("#tasks").addClass("clear");
+    $("#videos").removeClass("clear");
+    $("#notes").addClass("clear");
   });
 
 });
