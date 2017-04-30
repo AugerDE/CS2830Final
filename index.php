@@ -62,6 +62,7 @@
                           ob_start();
                           $_SESSION['user'] = $usrnm;
                           $_SESSION['status'] = "active";
+                          $_SESSION['tab'] = "home";
                           header('Location: home.php');
                         }else{
                           echo $status;

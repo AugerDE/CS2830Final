@@ -9,6 +9,7 @@
   }
 
   $usrnm = (isset($_SESSION['user']) ? $_SESSION['user'] : NULL);
+  $tab = (isset($_SESSION['tab']) ? $_SESSION['tab'] : NULL);
 
   if(isset($_POST['logout'])){
     session_unset();
@@ -27,6 +28,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <script src="scripts.js"></script>
+    <script>
+      $(function(){
+        loadTab("<?=$tab?>");
+      });
+    </script>
   </head>
   <body>
     <div class="container">
@@ -56,7 +62,7 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="panel panel-info">
-            <div class="panel-heading"><h2>Welcome back, <?=$usrnm?>!</h2></div>
+            <div class="panel-heading" id="contentHeader"><h2>Welcome back, <?=$usrnm?>!</h2></div>
             <div class="panel-body" id="content">
             </div>
           </div>

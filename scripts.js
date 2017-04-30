@@ -1,12 +1,5 @@
 $(function(){
 
-  $.post('tabs.php', {
-    action: 'home'
-  },
-  function(data){
-    $("#content").html(data);
-  });
-
   $("#tasks").click(function(){
     var usrnm = $("#profile").val();
     $.post('tabs.php', {
@@ -19,3 +12,12 @@ $(function(){
   });
 
 });
+
+function loadTab(tab){
+  $.post('tabs.php', {
+    action: tab
+  },
+  function(data){
+    $("#content").html(data);
+  });
+}
