@@ -37,3 +37,6 @@ th, td{
 #profile, #logout{
   width: 100%;
 }
+.hidden{
+  display: none;
+}
