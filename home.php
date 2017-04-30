@@ -30,13 +30,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <script src="scripts.js"></script>
-    <script>
-      $(function(){
-        function loadTasks(name, desc, date, time, stat){
-          console.log(name + " " + desc + " " + date + " " + time + " " + stat);
-        }
-      });
-    </script>
   </head>
   <body>
     <div class="container">
