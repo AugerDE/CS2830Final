@@ -55,24 +55,9 @@
               </a>
               <ul style="background-color:white; opacity:0.9;" class="dropdown-menu">
                 <li>
-                  <div class="navbar-login">
-                    <div class="row">
-                      <div class="col-lg-4">
-                        <p class="text-center">
-                          <span class="glyphicon glyphicon-user icon-size"></span>
-                        </p>
-                      </div>
-                      <div class="col-lg-8">
-                        <p class="text-center"><?=$usrnm?></p>
-                        <p class="text-center small"></p>
-                        <p class="text-center">
-                        <a href="adminProfile.php" class="btn btn-primary btn-block btn-sm">
-                          <span class="glyphicon glyphicon-home"></span> Home
-                        </a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                  <button class="btn btn-info navbar-btn" id="profile" value="<?=$usrnm?>">
+                    <span class="glyphicon glyphicon-user"></span>
+                  </button>
                 </li>
                 <li class="divider"></li>
                 <li>
