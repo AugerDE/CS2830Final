@@ -391,11 +391,16 @@
     $stmt->execute();
     $info = mysqli_stmt_get_result($stmt);
     $row = $info->fetch_array(MYSQLI_NUM);
-    $profile = "<div class='profileHolder'>
-                  <img src='shakeIt.gif' alt='shake' height='150' width='150' />
-                  <div>
+    $profile = "<div class='row'>
+                  <div class='col-sm-4'>
+                    <img src='shakeIt.gif' alt='shake' height='150' width='150' />
+                  </div>
+                  <div class='col-sm-4'>
                     <strong>Username: </strong>".$row[0]."<br />
                     <strong>Email: </strong>".$row[1]."<br />
+                  </div>
+                  <div class='col-sm-4'>
+                    <img src='shakeIt.gif' alt='shake' height='150' width='150' />
                   </div>
                 </div>";
     $stmt->close();
