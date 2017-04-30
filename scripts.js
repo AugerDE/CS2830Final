@@ -43,9 +43,6 @@ function loadTab(tab){
     action: tab
   },
   function(data){
-    if(tab == "profile"){
-      $("#content").html(data + "<img src='shakeIt.gif' alt='shake' width='50' height='50'>");
-    }
     $("#content").html(data);
     var user = $("#profile").val();
     switch(tab){

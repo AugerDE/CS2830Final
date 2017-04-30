@@ -71,14 +71,14 @@
           <div class="panel panel-info" id="panelType">
             <div class="panel-heading"><h2 id="contentHeader"></h2></div>
             <div class="panel-body" id="content">
-            <img src="shakeIt.gif" alr="shake it" height="50" width="50" id="pic"/>
+
             </div>
             <div id="notify"></div>
           </div>
         </div>
       </div>
 
-
+<img src="shakeIt.gif" alr="shake it" height="50" width="50" id="pic"/>
 
     </div>
   </body>
