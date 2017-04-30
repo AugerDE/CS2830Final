@@ -239,4 +239,5 @@ function changePhoto(file, alt){
 
 function usernameInput(user){
   console.log($("#userToUpdate").val());
+  $("#userToUpdate").prop("disabled", false);
 }
