@@ -8,7 +8,7 @@ $(function(){
   });
 
   $("#tasks").click(function(){
-    $("#home").addClass("#clear");
+    $("#home").addClass("clear");
     $("#tasks").removeClass("clear");
     loadTab("tasks");
   });
