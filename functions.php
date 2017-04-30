@@ -392,16 +392,19 @@
     $info = mysqli_stmt_get_result($stmt);
     $row = $info->fetch_array(MYSQLI_NUM);
     $profile = "<div class='row'>
-                  <div class='col-sm-4 profileHolder'>
-                    <img src='shakeIt.gif' alt='shake' height='250' width='250' /><br />
-                    <button class='btn btn-info'>Change Picture</button>
+                  <div class='col-sm-4'>
+                    <div class='thumbnail'>
+                      <a href='shakeIt.gif'>
+                        <img src='shakeIt.gif' alt='shake' height='100' width='100' />
+                        <div class='caption'>
+                          <button class='btn btn-info'>Change Photo</button>
+                        </div>
+                      </a>
+                    </div>
                   </div>
                   <div class='col-sm-4'>
-                    <strong>Username: </strong>".$row[0]."<br />
-                    <strong>Email: </strong>".$row[1]."<br />
-                  </div>
-                  <div class='col-sm-4'>
-                    <img src='shakeIt.gif' alt='shake' height='150' width='150' />
+                    Username: ".$row[0]."<br />
+                    Email: ".$row[1]."<br />
                   </div>
                 </div>";
     $stmt->close();
