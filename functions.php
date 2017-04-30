@@ -337,6 +337,23 @@
     $stmt->bind_param("ss", $task, $usrnm);
     $stmt->execute();
     $stmt->close();
+    $conn->close();
+  }
+
+  function addTask($name, $desc, $date, $time, $stat, $usrnm){
+    $conn = connectToDB();
+    $SQL = "INSERT INTO Tasks(userName, taskName, taskDesc, taskDate, taskTime, taskStat)
+            VALUES(?, ?, ?, ?, ?, ?)";
+    $stmt = $conn->stmt_init();
+    if(!$stmt->prepare($SQL)){
+      $error = stmtErrorMessage($stmt->error);
+      $stmt->close();
+      $conn->close();
+      return $error;
+    }
+    $stmt->bind_param("ssssss", $usrnm, $name, $desc, $date, $time, $stat);
+    $stmt->execute();
     $stmt->close();
+    $conn->close();
   }
 ?>

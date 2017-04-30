@@ -131,3 +131,22 @@ function addForm(){
     $("#content").html(data);
   });
 }
+
+function addTask(){
+  var name = $("#tskname").val();
+  var desc = $("#tskdesc").val();
+  var date = $("#tskdate").val();
+  var time = $("#tsktime").val();
+  var stat = $("#tskstat").val();
+  $.post('tabs.php', {
+    action: 'add',
+    name: name,
+    desc: desc,
+    date: date,
+    time: time,
+    stat: stat
+  },
+  function(data){
+    $("#content").html(data);
+  });
+}
