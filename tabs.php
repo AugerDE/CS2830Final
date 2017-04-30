@@ -45,8 +45,8 @@
         $stat = checkInput($_POST['stat']);
         updateTask($task, $name, $desc, $date, $time, $stat, $usrnm);
         $tasks = getTasks($usrnm);
-        $form = addTaskForm();
-        echo $tasks.$form;
+        $new = addTaskButton();
+        echo $tasks.$new;
         break;
 
       case "delete":
