@@ -1,5 +1,6 @@
 $(function(){
 
+
   loadTab("home");
 
   $("#home").click(function(){
@@ -27,7 +28,6 @@ function loadTab(tab){
         $("#contentHeader").html(user + "'s Notes");
         break;
       case "tasks":
-        $("#contentHeader").addClass("panel-warning");
         $("#contentHeader").html(user + "'s Tasks");
         break;
     }
