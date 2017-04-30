@@ -3,7 +3,8 @@ $(function(){
   loadTab("home");
 
   $("#home").click(function(){
-    $("#home").removeClass("home");
+    $("#home").removeClass("clear");
+    $("#tasks").addClass("clear");
     loadTab("home");
   });
 
