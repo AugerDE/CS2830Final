@@ -6,7 +6,7 @@
     $usrnm = checkInput($_POST['usrnm']);
     switch($action){
       case "notes":
-        echo getTasks($usrnm);
+        getTasks($usrnm);
         break;
       case "tasks":
         break;
