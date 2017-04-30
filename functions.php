@@ -187,7 +187,7 @@
                   <td>$row[5]</td>";
 
       $table .=  '<td>
-                    <button class="btn btn-success" onclick="loadTasks('.$row[1].', '.$row[2].', '.$row[3].', '.$row[4].', '.$row[5].')">Update</button>
+                    <button class="btn btn-success" onclick="loadTasks('.$taskName.', '.$taskDesc.', '.$taskDate.', '.$taskTime.', '.$taskStat.')">Update</button>
                   </td>
                   </tr>';
     }
