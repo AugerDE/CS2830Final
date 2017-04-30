@@ -1,5 +1,12 @@
 $(function(){
 
+  $.post('tabs.php', {
+    action: 'home'
+  },
+  function(data){
+    $("#content").html(data);
+  });
+
   $("#tasks").click(function(){
     var usrnm = $("#profile").val();
     console.log("clicked: " + usrnm);
