@@ -21,3 +21,7 @@ th, td{
 #addBtn{
   text-align: center;
 }
+.error{
+  background-color: #ffe6e6;
+  color: #990000;
+}
