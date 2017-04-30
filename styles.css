@@ -8,6 +8,7 @@ th, td{
   text-align: center;
 }
 .clear{
+  color: white;
   border-width: 2px;
   background-color: transparent;
 }
