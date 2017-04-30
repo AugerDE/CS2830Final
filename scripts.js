@@ -3,7 +3,6 @@ $(function(){
   loadTab("home");
 
   $("#home").click(function(){
-    $("#panelType").removeClass("panel-success panel-warning panel-danger").addClass("panel-info");
     $("#home").removeClass("clear");
     $("#tasks").addClass("clear");
     $("#videos").addClass("clear");
@@ -12,7 +11,6 @@ $(function(){
   });
 
   $("#notes").click(function(){
-    $("#panelType").removeClass("panel-info panel-warning panel-danger").addClass("panel-success");
     $("#home").addClass("clear");
     $("#tasks").addClass("clear");
     $("#videos").addClass("clear");
@@ -20,7 +18,6 @@ $(function(){
   });
 
   $("#tasks").click(function(){
-    $("#panelType").removeClass("panel-success panel-info panel-danger").addClass("panel-warning");
     $("#home").addClass("clear");
     $("#tasks").removeClass("clear");
     $("#videos").addClass("clear");
@@ -47,12 +44,15 @@ function loadTab(tab){
     var user = $("#profile").val();
     switch(tab){
       case "home":
+        $("#panelType").removeClass("panel-success panel-warning panel-danger").addClass("panel-info");
         $("#contentHeader").html("Welcome back, " + user + "!");
         break;
       case "notes":
+        $("#panelType").removeClass("panel-info panel-warning panel-danger").addClass("panel-success");
         $("#contentHeader").html(user + "'s Notes");
         break;
       case "tasks":
+        $("#panelType").removeClass("panel-success panel-info panel-danger").addClass("panel-warning");
         $("#contentHeader").html(user + "'s Tasks");
         break;
     }
