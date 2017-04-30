@@ -24,8 +24,6 @@
       case "tasks":
         echo getTasks($usrnm);
         break;
-      case "edit":
-        $tasks = getTasks($usrnm);
       case "video":
         break;
       default:
