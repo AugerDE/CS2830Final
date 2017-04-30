@@ -47,3 +47,7 @@ th, td{
   border: 1px solid gainsboro;
   margin-bottom: 10px;
 }
+.imgBtn{
+  width: 100%;
+  height: 100%;
+}
