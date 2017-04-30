@@ -90,7 +90,7 @@ function deleteTask(name, desc, date, time, stat){
 function removeTask(){
   var task = $("#task").val();
   $.post('tabs.php', {
-    action: 'remove'
+    action: 'remove',
     task: task
   },
   function(data){
