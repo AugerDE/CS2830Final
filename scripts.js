@@ -244,3 +244,11 @@ function usernameInput(){
   $("#userUpdateConf").removeClass("hidden");
   $("#userUpdateCanc").removeClass("hidden");
 }
+
+function cancelUserUpdate(user){
+  $("#userToUpdate").val(user);
+  $("#userToUpdate").prop("disabled", true);
+  $("#userUpdateBtn").removeClass("hidden");
+  $("#userUpdateConf").addClass("hidden");
+  $("#userUpdateCanc").addClass("hidden");
+}

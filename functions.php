@@ -410,7 +410,7 @@
                       <button class="btn btn-success hidden" id="userUpdateConf" onclick="confirmUserUpdate()">
                         <span class="glyphicon glyphicon-ok"></span>
                       </button>
-                      <button class="btn btn-danger hidden" id="userUpdateCanc" onclick="cancelUserUpdate()">
+                      <button class="btn btn-danger hidden" id="userUpdateCanc" onclick="cancelUserUpdate('.$user.')">
                         <span class="glyphicon glyphicon-remove"></span>
                       </button>';
     $profile .=    "</div>
