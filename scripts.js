@@ -238,5 +238,5 @@ function changePhoto(file, alt){
 }
 
 function usernameInput(user){
-  console.log(user);
+  console.log($("#userToUpdate").val());
 }
