@@ -27,7 +27,7 @@
       case "update":
         $name = checkInput($_POST['name']);
         $tasks = getTasks($usrnm);
-        $task = editTask($task, $usrnm);
+        $task = editTask($name, $usrnm);
         echo $tasks.$task;
       case "video":
         break;
