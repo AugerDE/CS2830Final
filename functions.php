@@ -256,12 +256,6 @@
     $conn->close();
   }
 
-  function updateConfirm(){
-    return "<div class='panel-footer'>
-              Task Successfully Updated
-            </div>";
-  }
-
   function taskToDelete($task, $usrnm){
     $conn = connectToDB();
     $SQL = "SELECT taskName, taskDesc, taskDate, taskTime, TaskStat
@@ -316,11 +310,5 @@
     $stmt->execute();
     $stmt->close();
     $stmt->close();
-  }
-
-  function deleteConfirm(){
-    return "<div class='panel-footer'>
-              Task Successfully Deleted
-            </div>";
   }
 ?>
