@@ -180,19 +180,23 @@
       // $taskStat = "'".$row[4]."'";
       // '.$taskName.', '.$taskDesc.', '.$taskDate.', '.$taskTime.', '.$taskStat.'
       $table .= "<tr>
-                  <td id='tskname'>$row[0]</td>
-                  <td id='tskdesc'>$row[1]</td>
-                  <td id='tskdate'>$row[2]</td>
-                  <td id='tsktime'>$row[3]</td>
-                  <td id='tskstat'>$row[4]</td>";
-
-      $table .=  '<td>
-                    <button class="btn btn-success" onclick="editTask()">Update</button>
+                  <td>$row[0]</td>
+                  <input type='hidden' id='tskname' value='$row[0]' />
+                  <td>$row[1]</td>
+                  <input type='hidden' id='tskdesc' value='$row[1]' />
+                  <td>$row[2]</td>
+                  <input type='hidden' id='tskdate' value='$row[2]' />
+                  <td>$row[3]</td>
+                  <input type='hidden' id='tsktime' value='$row[3]' />
+                  <td>$row[4]</td>
+                  <input type='hidden' id='tskstat' value='$row[4]' />
+                  <td>
+                    <button class='btn btn-success' onclick='editTask()'>Update</button>
                   </td>
                   <td>
-                    <button class="btn btn-danger" onclick="deleteTask()">Delete</button>
+                    <button class='btn btn-danger' onclick='deleteTask()'>Delete</button>
                   </td>
-                  </tr>';
+                  </tr>";
     }
     $table .= "</tbody></table>";
     $stmt->close();
