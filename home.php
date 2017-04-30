@@ -32,6 +32,7 @@
     <script src="scripts.js"></script>
   </head>
   <body>
+    <input type='hidden' id="profile" value="<?=$usrnm?>">
     <div class="container">
 
       <nav class="navbar navbar-inverse">
@@ -62,7 +63,7 @@
                         </p>
                       </div>
                       <div class="col-lg-8">
-                        <p class="text-center" id="profile"><?=$usrnm?></p>
+                        <p class="text-center"><?=$usrnm?></p>
                         <p class="text-center small"></p>
                         <p class="text-center">
                         <a href="adminProfile.php" class="btn btn-primary btn-block btn-sm">
