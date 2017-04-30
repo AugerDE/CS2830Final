@@ -34,7 +34,7 @@
                   <div class="panel panel-default">
                     <div class="panel-heading">Log-In</div>
                     <div class="panel-body">
-                      <form action="index.php" method="POST">
+                      <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
                         <div>
                           <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -74,7 +74,7 @@
                   <div class="panel panel-default">
                     <div class="panel-heading">Register</div>
                     <div class="panel-body">
-                      <form action="index.php" method="POST">
+                      <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
                         <div>
                           <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
