@@ -407,7 +407,7 @@
                       <input type='text' class='form-control' id='userToUpdate' disabled value='$row[0]' /> ";
     $user = "'".$usrnm."'";
     $profile .=      '<button class="btn btn-info" id="userUpdateBtn" onclick="usernameInput()">Update</button>
-                      <button class="btn btn-success hidden" id="userUpdateConf" onclick="confirmUserUpdate()">
+                      <button class="btn btn-success hidden" id="userUpdateConf" onclick="confirmUserUpdate('.$user.')">
                         <span class="glyphicon glyphicon-ok"></span>
                       </button>
                       <button class="btn btn-danger hidden" id="userUpdateCanc" onclick="cancelUserUpdate('.$user.')">

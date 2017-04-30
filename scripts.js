@@ -245,6 +245,11 @@ function usernameInput(){
   $("#userUpdateCanc").removeClass("hidden");
 }
 
+function confirmUserUpdate(user){
+  console.log("Old: " + user);
+  console.log("New: " + $("#userToUpdate").val());
+}
+
 function cancelUserUpdate(user){
   $("#userToUpdate").val(user);
   $("#userToUpdate").prop("disabled", true);
