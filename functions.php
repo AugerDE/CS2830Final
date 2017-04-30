@@ -201,7 +201,7 @@
 
   function addTaskButton(){
     return "<button class='btn btn-success' onclick='addForm()'>
-              <span class='glyphicon glyphicon-ok'></span> Add a Task
+              <span class='glyphicon glyphicon-plus'></span> Add a Task
             </button>";
   }
 
