@@ -52,6 +52,7 @@
               <ul class="dropdown-menu">
                 <li>
                   <button class="btn btn-info" id="profile" value="<?=$usrnm?>">
+                    Profile
                   </button>
                 </li>
                 <li>
