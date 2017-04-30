@@ -414,7 +414,7 @@
   function displayPhotos(){
     $dir = "images";
     $images = "";
-    $images .= "<div class='row'>";
+    $images .= "<div class='row'><div class='col-sm-12'>";
     $i = 0;
     $images .= "<div class='col-sm-2'>";
     foreach(new DirectoryIterator($dir) as $file){
@@ -426,7 +426,7 @@
         $images .= "</div><div class='col-sm-2'>";
       }
     }
-    $images .= "</div></div>";
+    $images .= "</div></div></div>";
     return $images;
   }
 ?>
