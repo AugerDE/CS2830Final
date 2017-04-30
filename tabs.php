@@ -6,7 +6,7 @@
     session_destroy();
     header('Location: index.php');
   }
-
+  $usrnm = (isset($_SESSION['user']) ? $_SESSION['user'] : NULL);
   include("functions.php");
 
   if(isset($_POST['action'])){
@@ -19,7 +19,6 @@
         break;
       case "tasks":
         $_SESSION['tab'] = "tasks";
-        $usrnm = checkInput($_POST['usrnm']);
         echo getTasks($usrnm);
         break;
       case "video":
