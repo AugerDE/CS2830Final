@@ -414,16 +414,19 @@
   function displayPhotos(){
     $dir = "images";
     $images = "";
+    $images .= "<div class='row'>";
     $i = 0;
     foreach(new DirectoryIterator($dir) as $file){
+      $images .= "<div class='col-sm-2'>";
       if($file->isFile()){
         $i++;
-        $images .= "<img src='images/".$file."' alt='".$file."' height='50' width='50'/>";
+        $images .= "<div class='thumbnail'><img src='images/".$file."' alt='".$file."' style='width:100%'/></div>";
       }
       if($i % 5 == 0){
-        $images .= "<br />";
+        $images .= "</div>";
       }
     }
+    $images .= "</div>";
     return $images;
   }
 ?>
