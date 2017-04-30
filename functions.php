@@ -146,7 +146,8 @@
 
   function getTasks($usrnm){
     $conn = connectToDB();
-    $SQL = "SELECT * FROM Tasks WHERE userName=?";
+    $SQL = "SELECT taskName, taskDesc, taskDate, taskTime, TaskStat
+            FROM Tasks WHERE userName=?";
     $stmt = $conn->stmt_init();
     if(!$stmt->prepare($SQL)){
       $error = stmtErrorMessage($stmt->error);
@@ -161,7 +162,6 @@
     $table .= "<table class='table table-striped' id='taskTable'>
                  <thead>
                    <tr>
-                     <th>Username</th>
                      <th>Task Name</th>
                      <th>Task Description</th>
                      <th>Task Date</th>
@@ -173,18 +173,17 @@
                  </thead>
                 <tbody>";
     while($row = $tasks->fetch_array(MYSQLI_NUM)){
-      $taskDesc = "'".$row[2]."'";
-      $taskDate = "'".$row[3]."'";
-      $taskTime = "'".$row[4]."'";
-      $taskStat = "'".$row[5]."'";
-      $taskName = "'".$row[1]."'";
+      $taskName = "'".$row[0]."'";
+      $taskDesc = "'".$row[1]."'";
+      $taskDate = "'".$row[2]."'";
+      $taskTime = "'".$row[3]."'";
+      $taskStat = "'".$row[4]."'";
       $table .= "<tr>
                   <td>$row[0]</td>
                   <td>$row[1]</td>
                   <td>$row[2]</td>
                   <td>$row[3]</td>
-                  <td>$row[4]</td>
-                  <td>$row[5]</td>";
+                  <td>$row[4]</td>";
 
       $table .=  '<td>
                     <button class="btn btn-success" onclick="editTask('.$taskName.', '.$taskDesc.', '.$taskDate.', '.$taskTime.', '.$taskStat.')">Update</button>
