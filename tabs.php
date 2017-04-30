@@ -20,6 +20,18 @@
         echo emptyFormMessage();
         break;
 
+      case "updatesuccess":
+        echo updateMessage();
+        break;
+
+      case "addsuccess":
+        echo addMessage();
+        break;
+
+      case "deletesuccess":
+        echo deleteMessage();
+        break;
+
       case "home":
         echo getHomeDash();
         break;
@@ -53,7 +65,7 @@
           updateTask($task, $name, $desc, $date, $time, $stat, $usrnm);
           $tasks = getTasks($usrnm);
           $new = addTaskButton();
-          echo $tasks.$new;  
+          echo $tasks.$new;
         }
         break;
 

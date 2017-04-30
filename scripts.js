@@ -102,6 +102,13 @@ function removeTask(){
   },
   function(data){
     $("#content").html(data);
+    $.post('tabs.php', {
+      action: 'deletesuccess'
+    },
+    function(data){
+      $("#notify").show();
+      $("#notify").html(data);
+    });
   });
 }
 
@@ -137,6 +144,13 @@ function updateTask(){
       });
     }else{
       $("#content").html(data);
+      $.post('tabs.php', {
+        action: 'updatesuccess'
+      },
+      function(data){
+        $("#notify").show();
+        $("#notify").html(data);
+      });
     }
   });
 }
@@ -176,6 +190,13 @@ function addTask(){
       });
     }else{
       $("#content").html(data);
+      $.post('tabs.php', {
+        action: 'addsuccess'
+      },
+      function(data){
+        $("#notify").show();
+        $("#notify").html(data);
+      });
     }
   });
 }

@@ -356,4 +356,22 @@
     $stmt->close();
     $conn->close();
   }
+
+  function updateMessage(){
+    return "<div class='panel-footer good'>
+              Task Successfully Updated
+            </div>";
+  }
+
+  function addMessage(){
+    return "<div class='panel-footer good'>
+              Task Successfully Added
+            </div>";
+  }
+
+  function deleteMessage(){
+    return "<div class='panel-footer good'>
+              Task Successfully Deleted
+            </div>";
+  }
 ?>
