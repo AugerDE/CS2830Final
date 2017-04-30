@@ -158,7 +158,7 @@
     $stmt->execute();
     $tasks = mysqli_stmt_get_result($stmt);
     $table = "";
-    $table .= "<table>
+    $table .= "<table class='table table-striped'>
                  <thead>
                    <tr>
                      <th>Username</th>
