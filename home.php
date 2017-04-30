@@ -63,6 +63,7 @@
             <div class="panel-body" id="content">
 
             </div>
+            <div id="notify"></div>
           </div>
         </div>
       </div>

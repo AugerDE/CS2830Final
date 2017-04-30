@@ -16,6 +16,10 @@
     $action = $_POST['action'];
     $_SESSION['tab'] = $action;
     switch($action){
+      case "empty":
+        echo emptyFormMessage();
+        break;
+
       case "home":
         echo getHomeDash();
         break;
@@ -76,10 +80,14 @@
         $date = checkInput($_POST['date']);
         $time = checkInput($_POST['time']);
         $stat = checkInput($_POST['stat']);
-        addTask($name, $desc, $date, $time, $stat, $usrnm);
-        $tasks = getTasks($usrnm);
-        $new = addTaskButton();
-        echo $tasks.$new;
+        if(empty($name) || empty($desc) || empty($date) || empty($time) || empty($stat)){
+          echo "empty";
+        }else{
+          addTask($name, $desc, $date, $time, $stat, $usrnm);
+          $tasks = getTasks($usrnm);
+          $new = addTaskButton();
+          echo $tasks.$new;
+        }
         break;
 
       case "video":
