@@ -40,4 +40,5 @@ th, td{
 .profileHolder{
   text-align: center;
   border: 1px solid gainsboro;
+  padding-top: 5px;
 }
