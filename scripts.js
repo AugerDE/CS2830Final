@@ -122,3 +122,12 @@ function updateTask(){
     $("#content").html(data);
   });
 }
+
+function addForm(){
+  $.post('tabs.php', {
+    action: 'showadd'
+  },
+  function(data){
+
+  });
+}

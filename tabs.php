@@ -60,6 +60,12 @@
         echo $tasks;
         break;
 
+      case "showadd":
+        $tasks = getTasks($usrnm);
+        $form = addTaskForm();
+        echo $tasks.$form;
+        break;
+
       case "video":
         break;
       default:

@@ -207,6 +207,26 @@
             </div>";
   }
 
+  function addTaskForm(){
+    return "<div class='form-inline'>
+              <th><input type='text' class='form-control' id='tskname' placeholder='Task Name'/></th>
+              <th><input type='text' class='form-control' id='tskdesc' placeholder='Task Description'/></th>
+              <th><input type='text' class='form-control' id='tskdate' placeholder='Task Date'/></th>
+              <th><input type='text' class='form-control' id='tsktime' placeholder='Task Time'/></th>
+              <th><input type='text' class='form-control' id='tskstat' placeholder='Task Status'/></th>
+              <th>
+                <button class='btn btn-success' onclick='addTask()'>
+                  <span class='glyphicon glyphicon-plus'></span>
+                </button>
+              </th>
+              <th>
+                <button class='btn btn-danger' onclick='cancel()'>
+                  <span class='glyphicon glyphicon-remove'></span>
+                </button>
+              </th>
+            </div>";
+  }
+
   function editTask($task, $usrnm){
     $conn = connectToDB();
     $SQL = "SELECT taskName, taskDesc, taskDate, taskTime, TaskStat
