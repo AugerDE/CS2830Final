@@ -3,6 +3,7 @@ $(function(){
   loadTab("home");
 
   $("#home").click(function(){
+    $("#panelType").removeClass("panel-success panel-warning panel-danger").addClass("panel-info");
     $("#home").removeClass("clear");
     $("#tasks").addClass("clear");
     $("#videos").addClass("clear");
@@ -11,6 +12,7 @@ $(function(){
   });
 
   $("#notes").click(function(){
+    $("#panelType").removeClass("panel-info panel-warning panel-danger").addClass("panel-success");
     $("#home").addClass("clear");
     $("#tasks").addClass("clear");
     $("#videos").addClass("clear");
@@ -18,6 +20,7 @@ $(function(){
   });
 
   $("#tasks").click(function(){
+    $("#panelType").removeClass("panel-success panel-info panel-danger").addClass("panel-warning");
     $("#home").addClass("clear");
     $("#tasks").removeClass("clear");
     $("#videos").addClass("clear");
@@ -26,6 +29,7 @@ $(function(){
   });
 
   $("#videos").click(function(){
+    $("#panelType").removeClass("panel-success panel-warning panel-info").addClass("panel-danger");
     $("#home").addClass("clear");
     $("#tasks").addClass("clear");
     $("#videos").removeClass("clear");
