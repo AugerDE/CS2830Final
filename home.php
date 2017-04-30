@@ -52,6 +52,49 @@
                 <input type="submit" name="logout" class="btn btn-danger navbar-btn" value="Logout" />
               </form>
             </li>
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="glyphicon glyphicon-user"></span> 
+                  <strong></strong>
+                <span class="glyphicon glyphicon-chevron-down"></span>
+              </a>
+              <ul style="background-color:white; opacity:0.9;" class="dropdown-menu">
+                <li>
+                  <div class="navbar-login">
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <p class="text-center">
+                          <span class="glyphicon glyphicon-user icon-size"></span>
+                        </p>
+                      </div>
+                      <div class="col-lg-8">
+                        <p class="text-center"><strong></strong></p>
+                        <p class="text-center small"></p>
+                        <p class="text-center">
+                        <a href="adminProfile.php" class="btn btn-primary btn-block btn-sm">
+                          <span class="glyphicon glyphicon-home"></span> Home
+                        </a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <div class="navbar-login navbar-login-session">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <p>
+                          <form action="" method="POST">
+                            <input class="btn btn-danger btn-block" type="submit" name="logout" value="Log out">
+                          </form>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
       </nav>
