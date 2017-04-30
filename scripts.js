@@ -45,7 +45,7 @@ function loadTab(tab){
   },
   function(data){
     $("#content").html(data);
-    var user = $("#profile").html();
+    var user = $("#profile").val();
     switch(tab){
       case "home":
         $("#panelType").removeClass("panel-success panel-warning panel-danger").addClass("panel-info");
