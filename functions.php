@@ -393,8 +393,8 @@
     $row = $info->fetch_array(MYSQLI_NUM);
     $profile = "<div class='row'>
                   <div class='col-sm-4'>
-                    <img src='shakeIt.gif' alt='shake' height='150' width='150' />
-                    <button class='btn btn-info'>Change Picture</button> 
+                    <img src='shakeIt.gif' alt='shake' height='150' width='150' /><br />
+                    <button class='btn btn-info'>Change Picture</button>
                   </div>
                   <div class='col-sm-4'>
                     <strong>Username: </strong>".$row[0]."<br />
