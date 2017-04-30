@@ -78,7 +78,7 @@
         </div>
       </div>
 
-<img src="shakeIt.gif" alr="shake it" height="50" width="50" id="pic"/>
+      <img src="shakeIt.gif" alt="shake it" height="50" width="50" id="pic"/>
 
     </div>
   </body>
