@@ -62,7 +62,7 @@
                         </p>
                       </div>
                       <div class="col-lg-8">
-                        <p class="text-center" id="profile"><strong><?=$usrnm?></strong></p>
+                        <p class="text-center" id="profile"><?=$usrnm?></p>
                         <p class="text-center small"></p>
                         <p class="text-center">
                         <a href="adminProfile.php" class="btn btn-primary btn-block btn-sm">
