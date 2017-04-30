@@ -47,30 +47,17 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-              <a href="" class="dropdown-toggle" data-toggle="dropdown">
-                <span class="glyphicon glyphicon-user"></span> 
-                  <strong><?=$usrnm?></strong>
-                <span class="glyphicon glyphicon-chevron-down"></span>
-              </a>
-              <ul style="background-color:white; opacity:0.9;" class="dropdown-menu">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#"><?=$usrnm?>
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
                 <li>
-                  <button class="btn btn-info navbar-btn" id="profile" value="<?=$usrnm?>">
-                    <span class="glyphicon glyphicon-user"></span>Profile
+                  <button class="btn btn-info" id="profile" value="<?=$usrnm?>">
                   </button>
                 </li>
-                <li class="divider"></li>
                 <li>
-                  <div class="navbar-login navbar-login-session">
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <p>
-                          <form action="home.php" method="POST">
-                            <input type="submit" name="logout" class="btn btn-danger navbar-btn" value="Logout" />
-                          </form>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                  <form action="home.php" method="POST">
+                    <input type="submit" name="logout" class="btn btn-danger" />
+                  </form>
                 </li>
               </ul>
             </li>
