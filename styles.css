@@ -32,7 +32,7 @@ th, td{
 .dropdown-menu{
   background-color: transparent;
   border-color: transparent;
-  text-align: center;
+  text-align: right;
 }
 .dropdown-menu:focus{
   box-shadow: transparent;
