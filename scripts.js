@@ -9,7 +9,7 @@ $(function(){
     },
     function(data){
       console.log("Data: " + data);
-      $("#taskPanel").html(data);
+      $("#content").html(data);
     });
   });
 
