@@ -128,6 +128,6 @@ function addForm(){
     action: 'showadd'
   },
   function(data){
-
+    $("#content").html(data);
   });
 }
