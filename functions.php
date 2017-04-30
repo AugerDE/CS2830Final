@@ -402,8 +402,8 @@
                     </div>
                   </div>
                   <div class='col-sm-4'>
-                    Username: ".$row[0]."<br />
-                    Email: ".$row[1]."<br />
+                    <strong>Username: </strong><input type='text' class='form-control' disabled value='$row[0]' /><br />
+                    <strong>Email: </strong><input type='text' class='form-control' disabled value='$row[1]' /><br />
                   </div>
                 </div>";
     $stmt->close();
