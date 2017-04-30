@@ -227,5 +227,12 @@ function showPhotos(){
 }
 
 function changePhoto(file, alt){
-  console.log(file + " " + alt);
+  $.post('tabs.php', {
+    action: 'updatephoto',
+    src: file,
+    alt: alt
+  },
+  function(data){
+    $("#content").html(data);
+  });
 }

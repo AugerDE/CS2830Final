@@ -433,4 +433,23 @@
     $images .= "</div></div></div>";
     return $images;
   }
+
+  function updatePhoto($src, $alt, $usrnm){
+    $conn = connectToDB();
+    $SQL = "UPDATE Pics
+            SET src=?, alt=?
+            WHERE userName=?";
+    $stmt = $conn->stmt_init();
+    if(!$stmt->prepare($SQL)){
+      $error = stmtErrorMessage($stmt->error);
+      $stmt->close();
+      $conn->close();
+      return $error;
+    }
+    $stmt->bind_param("sss", $src, $alt, $usrnm);
+    $stmt->execute();
+    $stmt->close();
+    $conn->close();
+    return getProfile($usrnm);
+  }
 ?>

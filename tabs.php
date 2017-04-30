@@ -19,6 +19,13 @@
       case "photos":
         echo displayPhotos();
         break;
+
+      case "updatephoto":
+        $src = checkInput($_POST['src']);
+        $alt = checkInput($_POST['alt']);
+        echo updatePhoto($src, $alt, $usrnm);
+        break;
+
       case "empty":
         echo emptyFormMessage();
         break;
