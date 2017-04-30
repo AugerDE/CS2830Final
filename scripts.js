@@ -236,3 +236,7 @@ function changePhoto(file, alt){
     $("#content").html(data);
   });
 }
+
+function usernameInput(user){
+  console.log(user);
+}
