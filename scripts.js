@@ -53,5 +53,6 @@ function deleteTask(name, desc, date, time, stat){
 }
 
 function updateTask(){
-  console.log("Task Name: " + $("#tskname").val());
+  console.log("Old Task: " + $("#task").val());
+  console.log("New Task: " + $("#tskname").val());
 }

@@ -215,6 +215,7 @@
     $edit = mysqli_stmt_get_result($stmt);
     $row = $edit->fetch_array(MYSQLI_NUM);
     $inputs = "<div class='form-inline'>
+                <input type='hidden' id='task' value='$task' />
                 <th><input type='text' class='form-control' id='tskname' value='$row[0]' /></th>
                 <th><input type='text' class='form-control' id='tskdesc' value='$row[1]' /></th>
                 <th><input type='text' class='form-control' id='tskdate' value='$row[2]' /></th>
