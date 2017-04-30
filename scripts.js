@@ -60,7 +60,6 @@ function loadTab(tab){
 }
 
 function editTask(name, desc, date, time, stat){
-  console.log(name + " " + desc + " " + date + " " + time + " " + stat);
   $.post('tabs.php', {
     action: 'edit',
     name: name,
@@ -75,7 +74,28 @@ function editTask(name, desc, date, time, stat){
 }
 
 function deleteTask(name, desc, date, time, stat){
-  console.log(name + " " + desc + " " + date + " " + time + " " + stat);
+  $.post('tabs.php', {
+    action: 'delete',
+    name: name,
+    desc: desc,
+    date: date,
+    time: time,
+    stat: stat
+  },
+  function(data){
+    $("#content").html(data);
+  });
+}
+
+function removeTask(){
+  var task = $("#task").val();
+  $.post('tabs.php', {
+    action: 'remove'
+    task: task
+  },
+  function(data){
+    $("#content").html(data);
+  });
 }
 
 function cancel(){

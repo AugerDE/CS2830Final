@@ -255,4 +255,72 @@
     $stmt->close();
     $conn->close();
   }
+
+  function updateConfirm(){
+    return "<div class='panel-footer'>
+              Task Successfully Updated
+            </div>";
+  }
+
+  function taskToDelete($task, $usrnm){
+    $conn = connectToDB();
+    $SQL = "SELECT taskName, taskDesc, taskDate, taskTime, TaskStat
+            FROM Tasks WHERE userName=? AND taskName=?";
+    $stmt = $conn->stmt_init();
+    if(!$stmt->prepare($SQL)){
+      $error = stmtErrorMessage($stmt->error);
+      $stmt->close();
+      $conn->close();
+      return $error;
+    }
+    $stmt->bind_param("ss", $usrnm, $task);
+    $stmt->execute();
+    $edit = mysqli_stmt_get_result($stmt);
+    $row = $edit->fetch_array(MYSQLI_NUM);
+    $inputs = "<div class='form-inline'>
+                <input type='hidden' id='task' value='$task' />
+                <th><input disabled type='text' class='form-control' id='tskname' value='$row[0]' /></th>
+                <th><input disabled type='text' class='form-control' id='tskdesc' value='$row[1]' /></th>
+                <th><input disabled type='text' class='form-control' id='tskdate' value='$row[2]' /></th>
+                <th><input disabled type='text' class='form-control' id='tsktime' value='$row[3]' /></th>
+                <th><input disabled type='text' class='form-control' id='tskstat' value='$row[4]' /></th>
+                <th>
+                  <button class='btn btn-info' onclick='removeTask()'>
+                    <span class='glyphicon glyphicon-ok'></span>
+                  </button>
+                </th>
+                <th>
+                  <button class='btn btn-danger' onclick='cancel()'>
+                    <span class='glyphicon glyphicon-remove'></span>
+                  </button>
+                </th>
+               <div>";
+    $stmt->close();
+    $conn->close();
+    return $inputs;
+  }
+
+  function deleteTask($task, $usrnm){
+    $conn = connectToDB();
+    $SQL = "DELETE FROM Tasks
+            WHERE taskName=?
+            AND userName=?";
+    $stmt = $conn->stmt_init();
+    if(!$stmt->prepare($SQL)){
+      $error = stmtErrorMessage($stmt->error);
+      $stmt->close();
+      $conn->close();
+      return $error;
+    }
+    $stmt->bind_param("ss", $task, $usrnm);
+    $stmt->execute();
+    $stmt->close();
+    $stmt->close();
+  }
+
+  function deleteConfirm(){
+    return "<div class='panel-footer'>
+              Task Successfully Deleted
+            </div>";
+  }
 ?>

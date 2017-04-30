@@ -19,17 +19,21 @@
       case "home":
         echo getHomeDash();
         break;
+
       case "notes":
         break;
+
       case "tasks":
         echo getTasks($usrnm);
         break;
+
       case "edit":
         $name = checkInput($_POST['name']);
         $tasks = getTasks($usrnm);
         $task = editTask($name, $usrnm);
         echo $tasks.$task;
         break;
+
       case "update":
         $task = checkInput($_POST['task']);
         $name = checkInput($_POST['name']);
@@ -40,6 +44,22 @@
         updateTask($task, $name, $desc, $date, $time, $stat, $usrnm);
         echo getTasks($usrnm);
         break;
+
+      case "delete":
+        $name = checkInput($_POST['name']);
+        $tasks = getTasks($usrnm);
+        $task = taskToDelete($name, $usrnm);
+        $confirm = updateConfirm();
+        echo $tasks.$task.$confirm;
+        break;
+
+      case "remove":
+        $task = checkInput($_POST['task']);
+        $tasks = deleteTask($task, $usrnm);
+        $confirm = deleteConfirm();
+        echo $tasks.$confirm;
+        break;
+
       case "video":
         break;
       default:
