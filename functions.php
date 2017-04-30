@@ -420,7 +420,7 @@
     foreach(new DirectoryIterator($dir) as $file){
       if($file->isFile()){
         $i++;
-        $images .= "<div class='thumbnail'><img src='images/".$file."' alt='".$file."' style='width:100%'/></div>";
+        $images .= "<div class='thumbnail'><button class='btn' style='background: url('images/".$file"')'></button></div>";
       }
       if($i % 3 == 0){
         $images .= "</div><div class='col-sm-2'>";
