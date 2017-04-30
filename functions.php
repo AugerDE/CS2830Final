@@ -199,4 +199,35 @@
     $conn->close();
     return $table;
   }
+
+  function editTask($task, $usrnm){
+    $conn = connectToDB();
+    $SQL = "SELECT taskName, taskDesc, taskDate, taskTime, TaskStat
+            FROM Tasks WHERE userName=? AND taskName=?";
+    $stmt = $conn->stmt_init();
+    if(!$stmt->prepare($SQL)){
+      $error = stmtErrorMessage($stmt->error);
+      $stmt->close();
+      $conn->close();
+      return $error;
+    }
+    $stmt->bind_param("ss", $usrnm, $task);
+    $stmt->execute();
+    $edit = mysqli_stmt_get_result($stmt);
+    $row = $edit->fetch_array(MYSQLI_NUM);
+    $inputs = "<form class='form-inline' action='home.php' method='POST'>
+                <div class='input-group'>
+                  <input type='text' class='form-control' name='tskname' value='$row[0]' />
+                  <input type='text' class='form-control' name='tskdesc' value='$row[1]' />
+                  <input type='text' class='form-control' name='tskdate' value='$row[2]' />
+                  <input type='text' class='form-control' name='tsktime' value='$row[3]' />
+                  <input type='text' class='form-control' name='tskstat' value='$row[4]' />
+                  <input type='submit' name='confirm' class='btn btn-success' value='Confirm' />
+                  <input type='submit' name='cancel' class='btn btn-danger' value='Cancel' />
+                </div>
+               <form>";
+    $stmt->close();
+    $conn->close();
+    return $inputs;
+  }
 ?>
