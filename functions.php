@@ -394,12 +394,10 @@
     $profile = "<div class='row'>
                   <div class='col-sm-4'>
                     <div class='thumbnail'>
-                      <a href='shakeIt.gif'>
-                        <img src='shakeIt.gif' alt='shake' height='100' width='100' />
-                        <div class='caption'>
-                          <button class='btn btn-info'>Change Photo</button>
-                        </div>
-                      </a>
+                      <img src='shakeIt.gif' alt='shake' style='width:100%' />
+                      <div class='caption'>
+                        <button class='btn btn-info'>Change Photo</button>
+                      </div>
                     </div>
                   </div>
                   <div class='col-sm-4'>
