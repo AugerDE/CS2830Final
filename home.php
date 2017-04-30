@@ -68,13 +68,7 @@
           <div class="panel panel-info">
             <div class="panel-heading"><h2 id="contentHeader"></h2></div>
             <div class="panel-body" id="content">
-              <?php
-                if(isset($_POST['update'])){
-                  $task = checkInput($_POST['tskname']);
-                  echo getTasks($usrnm);
-                  echo editTask($task, $usrnm);
-                }
-              ?>
+              
             </div>
           </div>
         </div>

@@ -24,6 +24,9 @@
       case "tasks":
         echo getTasks($usrnm);
         break;
+      case "edit":
+        $task = (isset($_SESSION['task']) ? $_SESSION['task'])
+        $tasks = getTasks($usrnm);
       case "video":
         break;
       default:
