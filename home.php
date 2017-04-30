@@ -46,12 +46,6 @@
             <button id="videos" class="btn btn-danger navbar-btn clear">Videos</button>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><button id="profile" class="btn btn-info navbar-btn" value="<?=$usrnm?>"><?=$usrnm?></button></li>
-            <li>
-              <form action="home.php" method="POST">
-                <input type="submit" name="logout" class="btn btn-danger navbar-btn" value="Logout" />
-              </form>
-            </li>
             <li class="dropdown">
               <a href="" class="dropdown-toggle" data-toggle="dropdown">
                 <span class="glyphicon glyphicon-user"></span> 
