@@ -41,8 +41,6 @@
           </div>
           <ul class="nav navbar-nav">
             <button id="home" class="btn btn-default navbar-btn">Home</button>
-          </ul>
-          <ul class="nav navbar-nav">
             <button id="notes" class="btn btn-success navbar-btn clear">Notes</button>
             <button id="tasks" class="btn btn-warning navbar-btn clear">Tasks</button>
             <button id="videos" class="btn btn-danger navbar-btn clear">Videos</button>
