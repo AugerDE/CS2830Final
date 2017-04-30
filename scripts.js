@@ -225,3 +225,7 @@ function showPhotos(){
     $("#content").html(data);
   });
 }
+
+function changePhoto(file, alt){
+  console.log(file + " " + alt);
+}
