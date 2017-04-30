@@ -421,7 +421,9 @@
       if($file->isFile()){
         $i++;
         $location = "'".$dir.$file."'";
-        $images .= '<button class="btnImg" onclick="changePhoto('.$location.', '.$file.')"><img src="images/'.$file.'" alt="'.$file.'" class="imgBtn" /><br /></button><br />';
+        $images .= '<button class="btnImg" onclick="changePhoto('.$location.', '.$file.')">';
+        $images .= "<img src='images/".$file."' alt=".$file." class='imgBtn' />";
+        $images .= "</button>";
       }
       if($i % 3 == 0){
         $images .= "</div><div class='col-sm-2'>";
