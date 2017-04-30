@@ -55,7 +55,7 @@
               <ul style="background-color:white; opacity:0.9;" class="dropdown-menu">
                 <li>
                   <button class="btn btn-info navbar-btn" id="profile" value="<?=$usrnm?>">
-                    <span class="glyphicon glyphicon-user"></span><?=$usrnm?>
+                    <span class="glyphicon glyphicon-user"></span>Profile
                   </button>
                 </li>
                 <li class="divider"></li>
