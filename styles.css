@@ -30,6 +30,6 @@ th, td{
   color: #008000;
 }
 .dropdown-menu{
-  width: 10%;
+  background-color: transparent;
   text-align: center;
 }
