@@ -58,8 +58,10 @@
 
       case "remove":
         $task = checkInput($_POST['task']);
-        $tasks = deleteTask($task, $usrnm);
-        echo $tasks;
+        deleteTask($task, $usrnm);
+        $tasks = getTasks($usrnm);
+        $new = addTaskButton();
+        echo $tasks.$new;
         break;
 
       case "showadd":
@@ -76,8 +78,8 @@
         $stat = checkInput($_POST['stat']);
         addTask($name, $desc, $date, $time, $stat, $usrnm);
         $tasks = getTasks($usrnm);
-        $form = addTaskForm();
-        echo $tasks.$form;
+        $new = addTaskButton();
+        echo $tasks.$new;
         break;
 
       case "video":
