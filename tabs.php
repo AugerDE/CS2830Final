@@ -1,12 +1,15 @@
 <?php
   session_start();
   ob_start();
+
   if(!isset($_SESSION['status'])){
     session_unset();
     session_destroy();
     header('Location: index.php');
   }
+
   $usrnm = (isset($_SESSION['user']) ? $_SESSION['user'] : NULL);
+  
   include("functions.php");
 
   if(isset($_POST['action'])){
