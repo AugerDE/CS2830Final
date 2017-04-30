@@ -397,7 +397,7 @@
                     <div class='thumbnail'>
                       <img src='$row[2]' alt='$row[3]' style='width:100%' />
                       <div class='caption'>
-                        <button class='btn btn-info'>Change Photo</button>
+                        <button class='btn btn-info' onclick='showPhotos()'>Change Photo</button>
                       </div>
                     </div>
                   </div>
@@ -409,5 +409,20 @@
     $stmt->close();
     $conn->close();
     return $profile;
+  }
+
+  function displayPhotos(){
+    $images = "";
+    $i = 0;
+    foreach(new DirectoryIterator(images) as $file){
+      if($file->isFile()){
+        $i++;
+        $images .= "<img src='images/".$file."' alt='".$file."' height='50' width='50'/>";
+      }
+      if($i % 5 == 0){
+        $images .= "<br />";
+      }
+    }
+    return $images;
   }
 ?>

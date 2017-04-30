@@ -16,6 +16,9 @@
     $action = $_POST['action'];
     $_SESSION['tab'] = $action;
     switch($action){
+      case "photos":
+        echo displayPhotos();
+        break;
       case "empty":
         echo emptyFormMessage();
         break;
