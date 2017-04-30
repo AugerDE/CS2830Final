@@ -414,7 +414,7 @@
                       <button class='btn btn-info'>Update</button>
                     </div>
                     <br />
-                    <button class='btn btn-success'>Change Password</button>
+                    <button class='btn btn-success'>Update Password</button>
                   </div>
                 </div>";
     $stmt->close();
