@@ -200,9 +200,11 @@
   }
 
   function addTaskButton(){
-    return "<button class='btn btn-success' onclick='addForm()'>
-              <span class='glyphicon glyphicon-plus'></span> Add a Task
-            </button>";
+    return "<div id='addBtn'>
+              <button class='btn btn-success' onclick='addForm()'>
+                <span class='glyphicon glyphicon-plus'></span> Add a Task
+              </button>
+            </div>";
   }
 
   function editTask($task, $usrnm){
