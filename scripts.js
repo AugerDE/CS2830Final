@@ -119,7 +119,16 @@ function updateTask(){
     stat: stat
   },
   function(data){
-    $("#content").html(data);
+    if(data == "empty"){
+      $.post('tabs.php', {
+        action: "empty"
+      },
+      function(data){
+        $("#notify").html(data);
+      });
+    }else{
+      $("#content").html(data);
+    }
   });
 }
 
