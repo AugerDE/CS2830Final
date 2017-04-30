@@ -80,25 +80,25 @@
   }
 
   function emptyFormMessage(){
-    return "<div class='panel-footer error'>
+    return "<div class='panel-footer'>
               <strong>ERROR: </strong>All Fields Required
             </div>";
   }
 
   function loginFailMessage(){
-    return "<div class='panel-footer error'>
+    return "<div class='panel-footer'>
               <strong>ERROR: </strong>Incorrect Username or Password
             </div>";
   }
 
   function passwordFailMessage(){
-    return "<div class='panel-footer error'>
+    return "<div class='panel-footer'>
               <strong>ERROR: </strong>Passwords Don't Match
             </div>";
   }
 
   function registerFailMessage(){
-    return "<div class='panel-footer error'>
+    return "<div class='panel-footer'>
               <strong>ERROR: </strong>This Username is Already Taken
             </div>";
   }
@@ -110,7 +110,7 @@
   }
 
   function stmtErrorMessage($error){
-    return "<div class='panel-footer error'>
+    return "<div class='panel-footer'>
               <strong>ERROR: </strong>".$error."
             </div>";
   }
