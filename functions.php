@@ -421,7 +421,8 @@
       if($file->isFile()){
         $i++;
         $location = "'".$dir.$file."'";
-        $images .= '<button class="btnImg" onclick="changePhoto('.$location.', '.$file.')">';
+        $alt = "'".$file."'";
+        $images .= '<button class="btnImg" onclick="changePhoto('.$location.', '.$alt.')">';
         $images .= "<img src='images/".$file."' alt=".$file." class='imgBtn' />";
         $images .= "</button>";
       }
