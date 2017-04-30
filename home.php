@@ -32,7 +32,9 @@
     <script src="scripts.js"></script>
     <script>
       $(function(){
-        loadTab("<?=$tab?>");
+        function loadTasks(name, desc, date, time, stat){
+          console.log(name + " " + desc + " " + date + " " + time + " " + stat);
+        }
       });
     </script>
   </head>
@@ -68,7 +70,7 @@
           <div class="panel panel-info">
             <div class="panel-heading"><h2 id="contentHeader"></h2></div>
             <div class="panel-body" id="content">
-              
+
             </div>
           </div>
         </div>

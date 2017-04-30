@@ -30,7 +30,3 @@ function loadTab(tab){
     $("#content").html(data);
   });
 }
-
-function loadTasks(name, desc, date, time, stat){
-  console.log(name + " " + desc + " " + date + " " + time + " " + stat);
-}
