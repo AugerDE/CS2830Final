@@ -322,6 +322,10 @@ function cancelPassUpdate(){
 }
 
 function confirmPassUpdate(){
+  $("#emptyPassError").addClass("hidden");
+  $("#passMatchError").addClass("hidden");
+  $("#passUpdateSuccess").addClass("hidden");
+  $("#incorrectPass").addClass("hidden");
   var ogPass = $("#ogPass").val();
   var ogPassConf = $("#ogPassConf").val();
   var newPass = $("#newPass").val();
