@@ -92,7 +92,7 @@ function editTask(name, desc, date, time, stat){
 
 function deleteTask(name, desc, date, time, stat){
   $("#notify").addClass("hidden");
-  // $("#addTaskBtn").addClass("hidden");
+  $("#addTaskBtn").addClass("hidden");
   $("#deltask").val(name);
   $("#delname").val(name);
   $("#deldesc").val(desc);

@@ -235,7 +235,7 @@
                      <span class='glyphicon glyphicon-remove'></span>
                    </button>
                  </th>
-               <div>
+               </div>
 
                <div class='form-inline hidden' id='deleteTaskForm'>
                  <input type='hidden' id='deltask'/>
@@ -254,7 +254,7 @@
                      <span class='glyphicon glyphicon-remove'></span>
                    </button>
                  </th>
-               <div>";
+               </div>";
 
     $stmt->close();
     $conn->close();
