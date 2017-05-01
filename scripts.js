@@ -348,7 +348,7 @@ function confirmPassUpdate(){
     },
     function(data){
       if(data == 1){
-        loadTab("profile");
+        cancelPassUpdate();
         $("#passUpdateSuccess").removeClass("hidden");
       }else{
         $("#incorrectPass").removeClass("hidden");
