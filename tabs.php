@@ -78,8 +78,7 @@
         $task = checkInput($_POST['task']);
         deleteTask($task, $usrnm);
         $tasks = getTasks($usrnm);
-        $new = addTaskButton();
-        echo $tasks.$new;
+        echo $tasks;
         break;
 
       case "showadd":

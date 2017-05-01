@@ -104,17 +104,15 @@ function deleteTask(name, desc, date, time, stat){
 
 function removeTask(){
   var task = $("#deltask").val();
-  var name = $("#delname").val();
-  var desc = $("#deldesc").val();
-  var date = $("#deldate").val();
-  var time = $("#deltime").val();
-  var stat = $("#delstat").val();
-  console.log(task);
-  console.log(name);
-  console.log(desc);
-  console.log(date);
-  console.log(time);
-  console.log(stat);
+  $.post('tabs.php', {
+    action: 'remove',
+    task: task
+  },
+  function(data){
+    $("#content").html(data);
+    $("#notify").html("<strong>SUCCESS: </strong>Your Task Has Been Deleted");
+    $("#notify").addClass("good").removeClass("hidden");
+  });
 }
 
 function cancel(){
