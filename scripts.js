@@ -239,8 +239,6 @@ function changePhoto(file, alt){
 
 function usernameInput(){
   $("#usernameError").addClass("hidden");
-  $("#emailError").addClass("hidden");
-  console.log($("#userToUpdate").val());
   $("#userToUpdate").prop("disabled", false);
   $("#userUpdateBtn").addClass("hidden");
   $("#userUpdateConf").removeClass("hidden");
@@ -265,6 +263,7 @@ function confirmUserUpdate(user){
 }
 
 function cancelUserUpdate(user){
+  $("#usernameError").addClass("hidden");
   $("#userToUpdate").val(user);
   $("#userToUpdate").prop("disabled", true);
   $("#userUpdateBtn").removeClass("hidden");
@@ -273,7 +272,7 @@ function cancelUserUpdate(user){
 }
 
 function emailInput(){
-  console.log($("#emailToUpdate").val());
+  $("#emailError").addClass("hidden");
   $("#emailToUpdate").prop("disabled", false);
   $("#emailUpdateBtn").addClass("hidden");
   $("#emailUpdateConf").removeClass("hidden");
@@ -281,6 +280,7 @@ function emailInput(){
 }
 
 function cancelEmailUpdate(email){
+  $("#emailError").addClass("hidden");
   $("#emailToUpdate").val(email);
   $("#emailToUpdate").prop("disabled", true);
   $("#emailUpdateBtn").removeClass("hidden");
