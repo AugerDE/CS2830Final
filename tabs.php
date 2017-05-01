@@ -45,8 +45,7 @@
 
       case "tasks":
         $tasks = getTasks($usrnm);
-        $new = addTaskButton();
-        echo $tasks.$new;
+        echo $tasks;
         break;
 
       case "edit":

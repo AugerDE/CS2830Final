@@ -193,7 +193,12 @@
                   </td>
                   </tr>';
     }
-    $table .= "</tbody></table>";
+    $table .= "</tbody></table>
+               <div id='addBtn'>
+                 <button class='btn btn-success' onclick='addForm()'>
+                   <span class='glyphicon glyphicon-plus'></span> Add a Task
+                 </button>
+               </div>";
     $stmt->close();
     $conn->close();
     return $table;
