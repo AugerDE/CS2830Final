@@ -444,6 +444,9 @@
                     </div>
                     <button class="btn btn-success" id="passUpdateBtn" onclick="passwordInput()">Update Password</button>
                   </div>
+                  <div class="col-sm-5">
+                    
+                  </div>
                 </div>';
     $stmt->close();
     $conn->close();
