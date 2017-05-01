@@ -238,6 +238,8 @@ function changePhoto(file, alt){
 }
 
 function usernameInput(){
+  $("#sameUsername").addClass("hidden");
+  $("#usernameEmpty").addClass("hidden");
   console.log($("#userToUpdate").val());
   $("#userToUpdate").prop("disabled", false);
   $("#userUpdateBtn").addClass("hidden");
@@ -257,6 +259,13 @@ function confirmUserUpdate(user){
       $(".dropdown-toggle").html(newUser + " <span class='caret'></span>");
       loadTab("profile");
     });
+  }else{
+    if(newUser == user){
+      $("#sameUsername").removeClass("hidden");
+    }
+    if(newUser == ""){
+      $("#usernameEmpty").removeClass("hidden");
+    }
   }
 }
 
