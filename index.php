@@ -51,23 +51,9 @@
                         </div>
                       </div>
                     </div>
-                    <?php
-                      if(isset($_POST['login'])){
-                        $usrnm = checkInput($_POST['usrnm']);
-                        $psswd = checkInput($_POST['psswd']);
-                        $status = login($usrnm, $psswd);
-                        if($status == 1){
-                          session_start();
-                          ob_start();
-                          $_SESSION['user'] = $usrnm;
-                          $_SESSION['status'] = "active";
-                          $_SESSION['tab'] = "home";
-                          header('Location: home.php');
-                        }else{
-                          echo $status;
-                        }
-                      }
-                    ?>
+                    <div class="panel-footer hidden" id="errorMessage">
+
+                    </div>
                   </div>
                 </div>
                 <div class="col-sm-6">
