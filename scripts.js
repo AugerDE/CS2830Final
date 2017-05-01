@@ -169,32 +169,20 @@ function addTask(){
   var date = $("#tskdate").val();
   var time = $("#tsktime").val();
   var stat = $("#tskstat").val();
-  $.post('tabs.php', {
-    action: 'add',
-    name: name,
-    desc: desc,
-    date: date,
-    time: time,
-    stat: stat
-  },
-  function(data){
-    if(data == "empty"){
-      $.post('tabs.php', {
-        action: "empty"
-      },
-      function(data){
-        $("#notify").show();
-        $("#notify").html(data);
-      });
-    }else{
+  if(name == "" || desc == "" || date == "" || time == "" || stat == ""){
+    $("#emptyAddForm").removeClass("hidden");
+  }else{
+    $.post('tabs.php', {
+      action: 'add',
+      name: name,
+      desc: desc,
+      date: date,
+      time: time,
+      stat: stat
+    },
+    function(data){
       $("#content").html(data);
-      $.post('tabs.php', {
-        action: 'addsuccess'
-      },
-      function(data){
-        $("#notify").show();
-        $("#notify").html(data);
-      });
-    }
-  });
+      $("#addSuccess").removeClass("hidden");
+    });
+  }
 }

@@ -74,7 +74,7 @@
             <div class="panel-body" id="content">
 
             </div>
-            <div id="notify"></div>
+            <div id="notify" class="hidden"></div>
           </div>
         </div>
       </div>
