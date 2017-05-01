@@ -254,7 +254,7 @@ function confirmUserUpdate(user){
     },
     function(data){
       $("#profile").val(newUser);
-      $(".dropdown-toggle").html(newUser);
+      $(".dropdown-toggle").html(newUser + "<span class='caret'></span>");
       loadTab("profile");
     });
   }
