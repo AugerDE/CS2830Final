@@ -192,7 +192,7 @@
                     <button class="btn btn-danger" onclick="deleteTask('.$taskName.', '.$taskDesc.', '.$taskDate.', '.$taskTime.', '.$taskStat.')">Delete</button>
                   </td>
                   </tr>';
-    }
+
     $table .= "</tbody></table>
                <div id='addBtn'>
                  <button class='btn btn-success' id='addTaskBtn' onclick='addForm()'>
@@ -243,6 +243,7 @@
                <div class='hidden' id='updateSuccess'>
                  <strong>SUCCESS: </strong>Task Successfully Updated
                </div>";
+    }
     $stmt->close();
     $conn->close();
     return $table;
