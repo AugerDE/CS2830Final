@@ -1,6 +1,6 @@
 <?php
   include("../../secure/connect.php");
-  
+
   function checkInput($val){
     $val = (isset($val) ? htmlspecialchars($val) : NULL);
     return $val;
@@ -100,7 +100,7 @@
   }
 
   function displayPhotos(){
-    $dir = "images/";
+    $dir = "Profile/images/";
     $images = "";
     $images .= "<div class='row'><div class='col-sm-12'>";
     $i = 0;
