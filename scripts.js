@@ -254,6 +254,7 @@ function confirmUserUpdate(user){
     },
     function(data){
       $("#content").html(data);
+      $("#profile").val(newUser);
     });
   }
 }
