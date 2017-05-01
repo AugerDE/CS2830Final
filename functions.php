@@ -401,7 +401,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class='col-sm-4'>
+                  <div class='col-sm-9'>
                     <strong>Username: </strong>
                     <div class='form-inline'>
                       <input type='text' class='form-control' id='userToUpdate' disabled value='$row[0]' /> ";
