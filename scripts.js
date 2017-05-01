@@ -117,11 +117,11 @@ function cancel(){
 
 function updateTask(){
   var task = $("#task").val();
-  var name = $("#tskname").val();
-  var desc = $("#tskdesc").val();
-  var date = $("#tskdate").val();
-  var time = $("#tsktime").val();
-  var stat = $("#tskstat").val();
+  var name = $("#name").val();
+  var desc = $("#desc").val();
+  var date = $("#date").val();
+  var time = $("#time").val();
+  var stat = $("#stat").val();
   if(name == "" || desc == "" || date == "" || time == "" || stat == ""){
     $("#emptyAddForm").removeClass("hidden");
   }else{
@@ -137,7 +137,7 @@ function updateTask(){
     function(data){
       $("#content").html(data);
       $("#updateSuccess").removeClass("hidden");
-    });
+    
   }
 }
 
