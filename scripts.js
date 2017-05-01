@@ -330,6 +330,9 @@ function confirmPassUpdate(){
   }
   else if(ogPass != ogPassConf){
     $("#passMatchError").removeClass("hidden");
+  }
+  else if(ogPass == newPass){
+    $("#incorrectPass").removeClass("hidden");
   }else{
     $.post('tabs.php', {
       action: 'passcheck',
