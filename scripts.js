@@ -304,11 +304,44 @@ function confirmEmailUpdate(email){
 }
 
 function passwordInput(){
+  $("#emptyPassError").addClass("hidden");
+  $("#passMatchError").addClass("hidden");
+  $("#passUpdateSuccess").addClass("hidden");
+  $("#incorrectPass").addClass("hidden");
   $("#passUpdateBtn").addClass("hidden");
   $("#psswdForm").removeClass("hidden");
 }
 
 function cancelPassUpdate(){
+  $("#emptyPassError").addClass("hidden");
+  $("#passMatchError").addClass("hidden");
+  $("#passUpdateSuccess").addClass("hidden");
+  $("#incorrectPass").addClass("hidden");
   $("#psswdForm").addClass("hidden");
   $("#passUpdateBtn").removeClass("hidden");
+}
+
+function confirmPassUpdate(){
+  var ogPass = $("#ogPass").val();
+  var ogPassConf = $("#ogPassConf").val();
+  var newPass = $("#newPass").val();
+  if(ogPass == "" || ogPassConf == "" || newPass == ""){
+    $("#emptyPassError").removeClass("hidden");
+  }
+  else if(ogPass != ogPassConf){
+    $("#passMatchError").removeClass("hidden");
+  }else{
+    $.post('tabs.php', {
+      action: 'passcheck',
+      pass: ogPass,
+      newPass: newPass
+    },
+    function(data){
+      if(data == 1){
+        $("#passUpdateSuccess").removeClass("hidden");
+      }else{
+        $("#incorrectPass").removeClass("hidden");
+      }
+    });
+  }
 }

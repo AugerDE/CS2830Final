@@ -413,9 +413,9 @@
                       <button class="btn btn-danger hidden" id="userUpdateCanc" onclick="cancelUserUpdate('.$user.')">
                         <span class="glyphicon glyphicon-remove"></span>
                       </button>
-                      <p id="usernameError" class="hidden">
+                      <div id="usernameError" class="hidden">
                         <strong>ERROR: </strong>Invalid Username
-                      </p>';
+                      </div>';
     $profile .=    "</div>
                     <br />
                     <strong>Email: </strong>
@@ -447,6 +447,18 @@
                       <button class="btn btn-danger" id="passCanc" onclick="cancelPassUpdate()">
                         <span class="glyphicon glyphicon-remove"></span>
                       </button>
+                      <div id="emptyPassError" class="hidden">
+                        <strong>ERROR: </strong>All Inputs Required
+                      </div>
+                      <div id="passMatchError" class="hidden">
+                        <strong>ERROR: </strong>Passwords Do Not Match
+                      </div>
+                      <div id="incorrectPass" class="hidden">
+                        <strong>ERROR: </strong>Incorrect Password
+                      </div>
+                      <div id="passUpdateSuccess" class="hidden">
+                        Password Successfully Updated
+                      </div>
                     </div>
                     <button class="btn btn-success" id="passUpdateBtn" onclick="passwordInput()">Update Password</button>
                   </div>
@@ -535,4 +547,51 @@
     $conn->close();
     return getProfile($usrnm);
   }
+
+  function checkPassword($pass, $usrnm){
+    $conn = connectToDB();
+    $SQL = "SELECT passHash
+            FROM Users
+            WHERE userName=?";
+    $stmt = $conn->stmt_init();
+    if(!$stmt->prepare($SQL)){
+      $error = stmtErrorMessage($stmt->error);
+      $stmt->close();
+      $conn->close();
+      return $error;
+    }
+    $stmt->bind_param("s", $usrnm);
+    $stmt->execute();
+    $result = mysqli_stmt_get_result($stmt);
+    $row = $result->fetch_array(MYSQLI_NUM);
+    if(password_verify($pass, $row[0])){
+      $stat = 1;
+    }else{
+      $stat = 0;
+    }
+    $stmt->close();
+    $conn->close():
+    return $stat;
+  }
+
+  function updatePassword($newPass, $usrnm){
+    $pHash = password_hash($newPass, PASSWORD_DEFAULT);
+    $conn = connectToDB();
+    $SQL = "UPDATE Users
+            SET passHash=?
+            WHERE userName=?";
+    $stmt = $conn->stmt_init();
+    if(!$stmt->prepare($SQL)){
+      $error = stmtErrorMessage($stmt->error);
+      $stmt->close();
+      $conn->close();
+      return $error;
+    }
+    $stmt->bind_param("ss", $pHash, $usrnm);
+    $stmt->execute();
+    $stmt->close();
+    $conn->close();
+    return 1;
+  }
+
 ?>

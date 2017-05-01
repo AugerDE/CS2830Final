@@ -61,6 +61,17 @@
         echo updateUserEmail($email, $usrnm);
         break;
 
+      case "passcheck":
+        $pass = checkInput($_POST['pass']);
+        $newPass = checkInput($_POST['newPass']);
+        $stat = checkPassword($pass, $usrnm);
+        if($stat != 1){
+          echo $stat;
+        }else{
+          echo updatePassword($newPass, $usrnm);
+        }
+        break;
+
       case "notes":
         break;
 
