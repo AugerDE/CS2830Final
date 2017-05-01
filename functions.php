@@ -233,16 +233,7 @@
                      <span class='glyphicon glyphicon-remove'></span>
                    </button>
                  </th>
-               <div>
-               <div class='hidden' id='emptyAddForm'>
-                 <strong>ERROR: </strong>All Fields Required
-               </div>
-               <div class='hidden' id='addSuccess'>
-                 <strong>SUCCESS: </strong>Your Task Has Been Added
-               </div>
-               <div class='hidden' id='updateSuccess'>
-                 <strong>SUCCESS: </strong>Task Successfully Updated
-               </div>";
+               <div>";
 
     $stmt->close();
     $conn->close();

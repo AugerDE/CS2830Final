@@ -20,12 +20,11 @@ $(function(){
   });
 
   $("#tasks").click(function(){
-    $("#notify").hide();
     $("#home").addClass("clear");
     $("#tasks").removeClass("clear");
     $("#videos").addClass("clear");
     $("#notes").addClass("clear");
-    loadTab("tasks");
+    loadTasks();
   });
 
   $("#videos").click(function(){
@@ -63,6 +62,18 @@ function loadTab(tab){
         $("#contentHeader").html(user + "'s Videos");
         break;
     }
+  });
+}
+
+function loadTasks(){
+  $("#notify").addClass("hidden");
+  $.post('tabs.php', {
+    action: 'tasks'
+  },
+  function(data){
+    $("#panelType").removeClass("panel-success panel-info panel-danger").addClass("panel-warning");
+    $("#contentHeader").html(user + "'s Tasks");
+    $("#content").html(data);
   });
 }
 
@@ -112,7 +123,7 @@ function removeTask(){
 }
 
 function cancel(){
-  loadTab("tasks");
+  loadTasks();
 }
 
 function updateTask(){
@@ -122,14 +133,9 @@ function updateTask(){
   var date = $("#date").val();
   var time = $("#time").val();
   var stat = $("#stat").val();
-  console.log("Old Task: " + task);
-  console.log("New Task: " + name);
-  console.log("    Desc: " + desc);
-  console.log("    Date: " + date);
-  console.log("    Time: " + time);
-  console.log("    Stat: " + stat);
   if(name == "" || desc == "" || date == "" || time == "" || stat == ""){
-    $("#emptyAddForm").removeClass("hidden");
+    $("#notify").html("<strong>ERROR: </strong>All Inputs Required");
+    $("#notify").addClass("error").removeClass("hidden");
   }else{
     $.post('tabs.php', {
       action: 'update',
@@ -142,7 +148,8 @@ function updateTask(){
     },
     function(data){
       $("#content").html(data);
-      $("#updateSuccess").removeClass("hidden");
+      $("#notify").html("<strong>SUCCESS: </strong>Your Task Has Been Updated");
+      $("#notify").addClass("good").removeClass("hidden");
     });
   }
 }
@@ -159,7 +166,8 @@ function addTask(){
   var time = $("#tsktime").val();
   var stat = $("#tskstat").val();
   if(name == "" || desc == "" || date == "" || time == "" || stat == ""){
-    $("#emptyAddForm").removeClass("hidden");
+    $("#notify").html("<strong>ERROR: </strong>All Inputs Required");
+    $("#notify").addClass("error").removeClass("hidden");
   }else{
     $.post('tabs.php', {
       action: 'add',
@@ -171,7 +179,8 @@ function addTask(){
     },
     function(data){
       $("#content").html(data);
-      $("#addSuccess").removeClass("hidden");
+      $("#notify").html("<strong>SUCCESS: </strong>Your Task Has Been Added");
+      $("#notify").addClass("good").removeClass("hidden");
     });
   }
 }
