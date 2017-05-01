@@ -14,8 +14,8 @@ $(function(){
       },
       function(data){
         if(data == 1){
-          $("#errorMessage").html("<strong>SUCCESS: </strong>Logged In");
-          $("#errorMessage").removeClass("hidden error").addClass("good");
+          $("#errorMessage").addClass("hidden");
+          window.location.href = "home.php";
         }else{
           $("#errorMessage").html(data);
           $("#errorMessage").removeClass("hidden");

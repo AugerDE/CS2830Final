@@ -11,7 +11,12 @@
         $usrnm = checkInput($_POST['usrnm']);
         $psswd = checkInput($_POST['psswd']);
         $status = login($usrnm, $psswd);
-        echo $status;
+        if($status == 1){
+          $_SESSION['user'] = $usrnm;
+          echo $status;
+        }else{
+          echo $status;
+        }
         break;
     }
   }
