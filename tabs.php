@@ -16,16 +16,6 @@
     $action = $_POST['action'];
     $_SESSION['tab'] = $action;
     switch($action){
-      case "photos":
-        echo displayPhotos();
-        break;
-
-      case "updatephoto":
-        $src = checkInput($_POST['src']);
-        $alt = checkInput($_POST['alt']);
-        echo updatePhoto($src, $alt, $usrnm);
-        break;
-
       case "empty":
         echo emptyFormMessage();
         break;
@@ -48,28 +38,6 @@
 
       case "home":
         echo getHomeDash();
-        break;
-
-      case "userupdate":
-        $new = checkInput($_POST['newUser']);
-        echo updateUserName($new, $usrnm);
-        $_SESSION['user'] = $new;
-        break;
-
-      case "emailupdate":
-        $email = checkInput($_POST['newEmail']);
-        echo updateUserEmail($email, $usrnm);
-        break;
-
-      case "passcheck":
-        $pass = checkInput($_POST['pass']);
-        $newPass = checkInput($_POST['newPass']);
-        $stat = checkPassword($pass, $usrnm);
-        if($stat != 1){
-          echo $stat;
-        }else{
-          echo updatePassword($newPass, $usrnm);
-        }
         break;
 
       case "notes":
