@@ -35,6 +35,7 @@ th, td{
   text-align: right;
 }*/
 #profile, #logout{
+  height: 50%;
   width: 100%;
 }
 .caption{
