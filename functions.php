@@ -413,9 +413,9 @@
                       <button class="btn btn-danger hidden" id="userUpdateCanc" onclick="cancelUserUpdate('.$user.')">
                         <span class="glyphicon glyphicon-remove"></span>
                       </button>
-                      <div id="usernameError" class="hidden">
+                      <p id="usernameError" class="hidden">
                         <strong>ERROR: </strong>Invalid Username
-                      </div>';
+                      </p>';
     $profile .=    "</div>
                     <br />
                     <strong>Email: </strong>
