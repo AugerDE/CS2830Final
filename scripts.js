@@ -92,37 +92,29 @@ function editTask(name, desc, date, time, stat){
 
 function deleteTask(name, desc, date, time, stat){
   $("#notify").addClass("hidden");
-  $("#notify").hide();
-  $.post('tabs.php', {
-    action: 'delete',
-    name: name,
-    desc: desc,
-    date: date,
-    time: time,
-    stat: stat
-  },
-  function(data){
-    $("#content").html(data);
-  });
+  $("#addTaskBtn").addClass("hidden");
+  $("#deltask").val(name);
+  $("#delname").val(name);
+  $("#deldesc").val(desc);
+  $("#deldate").val(date);
+  $("#deltime").val(time);
+  $("#delstat").val(stat);
+  $("#deleteTaskForm").removeClass("hidden");
 }
 
 function removeTask(){
-  $("#notify").hide();
-  var task = $("#task").val();
-  $.post('tabs.php', {
-    action: 'remove',
-    task: task
-  },
-  function(data){
-    $("#content").html(data);
-    $.post('tabs.php', {
-      action: 'deletesuccess'
-    },
-    function(data){
-      $("#notify").show();
-      $("#notify").html(data);
-    });
-  });
+  var task = $("#deltask").val();
+  var name = $("#delname").val();
+  var desc = $("#deldesc").val();
+  var date = $("#deldate").val();
+  var time = $("#deltime").val();
+  var stat = $("#delstat").val();
+  console.log(task);
+  console.log(name);
+  console.log(desc);
+  console.log(date);
+  console.log(time);
+  console.log(stat);
 }
 
 function cancel(){

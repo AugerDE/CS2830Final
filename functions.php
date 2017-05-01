@@ -233,6 +233,24 @@
                      <span class='glyphicon glyphicon-remove'></span>
                    </button>
                  </th>
+               <div>
+               <div class='form-inline hidden' id='deleteTaskForm'>
+                 <input type='hidden' id='deltask'/>
+                 <th><input disabled type='text' class='form-control' id='delname'/></th>
+                 <th><input disabled type='text' class='form-control' id='deldesc'/></th>
+                 <th><input disabled type='text' class='form-control' id='deldate'/></th>
+                 <th><input disabled type='text' class='form-control' id='deltime'/></th>
+                 <th><input disabled type='text' class='form-control' id='delstat'/></th>
+                 <th>
+                   <button class='btn btn-info' onclick='removeTask()'>
+                     <span class='glyphicon glyphicon-ok'></span>
+                   </button>
+                 </th>
+                 <th>
+                   <button class='btn btn-danger' onclick='cancel()'>
+                     <span class='glyphicon glyphicon-remove'></span>
+                   </button>
+                 </th>
                <div>";
 
     $stmt->close();
