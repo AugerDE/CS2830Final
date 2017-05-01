@@ -62,14 +62,9 @@
         $date = checkInput($_POST['date']);
         $time = checkInput($_POST['time']);
         $stat = checkInput($_POST['stat']);
-        if(empty($name) || empty($desc) || empty($date) || empty($time) || empty($stat)){
-          echo "empty";
-        }else{
-          updateTask($task, $name, $desc, $date, $time, $stat, $usrnm);
-          $tasks = getTasks($usrnm);
-          $new = addTaskButton();
-          echo $tasks.$new;
-        }
+        updateTask($task, $name, $desc, $date, $time, $stat, $usrnm);
+        $tasks = getTasks($usrnm);
+        echo $tasks;
         break;
 
       case "delete":
