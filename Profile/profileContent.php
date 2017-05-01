@@ -1,4 +1,5 @@
 <?php
+  include("../../secure/connect.php");
   function getProfile($usrnm){
     $conn = connectToDB();
     $SQL = "SELECT Users.userName, userMail, src, alt

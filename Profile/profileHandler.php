@@ -10,7 +10,7 @@
 
   $usrnm = (isset($_SESSION['user']) ? $_SESSION['user'] : NULL);
 
-  include("../functions.php");
+  include("../profileContent.php");
 
   if(isset($_POST['action'])){
     $action = $_POST['action'];
