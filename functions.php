@@ -448,6 +448,7 @@
                         <span class="glyphicon glyphicon-remove"></span>
                       </button>
                     </div>
+                    <button class="btn btn-success" id="passUpdateBtn" onclick="passwordInput()">Update Password</button>
                     <div id="emptyPassError" class="hidden">
                       <strong>ERROR: </strong>All Inputs Required
                     </div>
@@ -460,7 +461,6 @@
                     <div id="passUpdateSuccess" class="hidden">
                       Password Successfully Updated
                     </div>
-                    <button class="btn btn-success" id="passUpdateBtn" onclick="passwordInput()">Update Password</button>
                   </div>
                 </div>';
     $stmt->close();
