@@ -19,13 +19,7 @@ $(function(){
     $("#notes").removeClass("clear");
   });
 
-  $("#tasks").click(function(){
-    $("#home").addClass("clear");
-    $("#tasks").removeClass("clear");
-    $("#videos").addClass("clear");
-    $("#notes").addClass("clear");
-    loadTab("tasks");
-  });
+  
 
   $("#videos").click(function(){
     $("#notify").hide();

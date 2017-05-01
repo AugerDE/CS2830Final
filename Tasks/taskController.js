@@ -1,3 +1,13 @@
+$(function(){
+  $("#tasks").click(function(){
+    $("#home").addClass("clear");
+    $("#tasks").removeClass("clear");
+    $("#videos").addClass("clear");
+    $("#notes").addClass("clear");
+    loadTasks();
+  });
+});
+
 function loadTasks(){
   var user = $("#profile").val();
   $("#notify").addClass("hidden");
