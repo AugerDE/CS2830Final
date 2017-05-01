@@ -55,10 +55,8 @@ th, td{
   display: none;
 }
 .errmsg{
-  background-color: #ffe6e6;
   color: #990000;
 }
 .sucmsg{
-  background-color: #d6f5d6;
   color: #008000;
 }
