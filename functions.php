@@ -430,7 +430,7 @@
                     <br />
                     <div class="input-group hidden" id="psswdForm">
                       <strong>Current Password:</strong>
-                      <input type="password" class="form-control" id="ogPass" />
+                      <input type="password" class="form-control" id="ogPass" /><br />
                       <strong>Re-Enter Password:</strong>
                       <input type="password" class="form-control" id="ogPassConf" />
                       <strong>New Password:</strong>
