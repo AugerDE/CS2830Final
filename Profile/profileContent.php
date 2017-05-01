@@ -100,7 +100,7 @@
   }
 
   function displayPhotos(){
-    $dir = "Profile/images/";
+    $dir = "images/";
     $images = "";
     $images .= "<div class='row'><div class='col-sm-12'>";
     $i = 0;
@@ -110,7 +110,7 @@
         $i++;
         $location = "'".$dir.$file."'";
         $alt = "'".$file."'";
-        $images .= '<button class="btnImg" onclick="changePhoto('.$location.', '.$alt.')">';
+        $images .= '<button class="btnImg" onclick="changePhoto(Profile/'.$location.', '.$alt.')">';
         $images .= "<img src='Profile/images/".$file."' alt=".$file." class='imgBtn' />";
         $images .= "</button>";
       }
