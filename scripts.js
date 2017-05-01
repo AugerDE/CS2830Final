@@ -137,7 +137,7 @@ function updateTask(){
     function(data){
       $("#content").html(data);
       $("#updateSuccess").removeClass("hidden");
-    
+    });
   }
 }
 
