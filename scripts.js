@@ -348,6 +348,8 @@ function confirmPassUpdate(){
     },
     function(data){
       if(data == 1){
+        $("#psswdForm").addClass("hidden");
+        $("#passUpdateBtn").removeClass("hidden");
         $("#passUpdateSuccess").removeClass("hidden");
       }else{
         $("#incorrectPass").removeClass("hidden");

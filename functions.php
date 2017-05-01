@@ -447,18 +447,18 @@
                       <button class="btn btn-danger" id="passCanc" onclick="cancelPassUpdate()">
                         <span class="glyphicon glyphicon-remove"></span>
                       </button>
-                      <div id="emptyPassError" class="hidden">
-                        <strong>ERROR: </strong>All Inputs Required
-                      </div>
-                      <div id="passMatchError" class="hidden">
-                        <strong>ERROR: </strong>Passwords Do Not Match
-                      </div>
-                      <div id="incorrectPass" class="hidden">
-                        <strong>ERROR: </strong>Incorrect Password
-                      </div>
-                      <div id="passUpdateSuccess" class="hidden">
-                        Password Successfully Updated
-                      </div>
+                    </div>
+                    <div id="emptyPassError" class="hidden">
+                      <strong>ERROR: </strong>All Inputs Required
+                    </div>
+                    <div id="passMatchError" class="hidden">
+                      <strong>ERROR: </strong>Passwords Do Not Match
+                    </div>
+                    <div id="incorrectPass" class="hidden">
+                      <strong>ERROR: </strong>Incorrect Password
+                    </div>
+                    <div id="passUpdateSuccess" class="hidden">
+                      Password Successfully Updated
                     </div>
                     <button class="btn btn-success" id="passUpdateBtn" onclick="passwordInput()">Update Password</button>
                   </div>
