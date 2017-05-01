@@ -54,9 +54,11 @@ th, td{
 .hidden{
   display: none;
 }
-.errmsg{
-  color: red;
+div.errmsg{
+  background-color: #ffe6e6;
+  color: #990000;
 }
-.sucmsg{
-  color: green;
+div.sucmsg{
+  background-color: #d6f5d6;
+  color: #008000;
 }
