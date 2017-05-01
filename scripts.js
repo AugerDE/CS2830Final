@@ -267,3 +267,32 @@ function cancelUserUpdate(user){
   $("#userUpdateConf").addClass("hidden");
   $("#userUpdateCanc").addClass("hidden");
 }
+
+function emailInput(){
+  console.log($("#emailToUpdate").val());
+  $("#emailToUpdate").prop("disabled", false);
+  $("#emailUpdateBtn").addClass("hidden");
+  $("#emailUpdateConf").removeClass("hidden");
+  $("#emailUpdateCanc").removeClass("hidden");
+}
+
+function cancelEmailUpdate(email){
+  $("#emailToUpdate").val(email);
+  $("#emailToUpdate").prop("disabled", true);
+  $("#emailUpdateBtn").removeClass("hidden");
+  $("#emailUpdateConf").addClass("hidden");
+  $("#emailUpdateCanc").addClass("hidden");
+}
+
+function confirmEmailUpdate(email){
+  var newEmail = $("#emailToUpdate").val();
+  if(newEmail != email && newEmail != ""){
+    $.post('tabs.php', {
+      action: 'emailupdate',
+      newEmail: newEmail
+    },
+    function(data){
+      loadTab("profile");
+    });
+  }
+}

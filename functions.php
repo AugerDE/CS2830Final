@@ -417,13 +417,20 @@
                     <br />
                     <strong>Email: </strong>
                     <div class='form-inline'>
-                      <input type='text' class='form-control' disabled value='$row[1]' />
-                      <button class='btn btn-info'>Update</button>
+                      <input type='text' class='form-control' id='emailToUpdate' disabled value='$row[1]' />";
+    $email = "'".$row[1]."'";
+                      '<button class="btn btn-info" id="emailUpdateBtn" onclick="emailInput()">Update</button>
+                       <button class="btn btn-success hidden" id="emailUpdateConf" onclick="confirmEmailUpdate('.$email.')">
+                         <span class="glyphicon glyphicon-ok"></span>
+                       </button>
+                       <button class="btn btn-danger hidden" id="emailUpdateCanc" onclick="cancelEmailUpdate('.$email.')">
+                         <span class="glyphicon glyphicon-remove"></span>
+                       </button>
                     </div>
                     <br />
-                    <button class='btn btn-success'>Update Password</button>
+                    <button class="btn btn-success">Update Password</button>
                   </div>
-                </div>";
+                </div>';
     $stmt->close();
     $conn->close();
     return $profile;
@@ -488,5 +495,24 @@
     $stmt->close();
     $conn->close();
     return getProfile($new);
+  }
+
+  function updateUserEmail($email, $usrnm){
+    $conn = connectToDB();
+    $SQL = "UPDATE Users
+            SET userMail=?
+            WHERE userName=?";
+    $stmt = $conn->stmt_init();
+    if(!$stmt->prepare($SQL)){
+      $error = stmtErrorMessage($stmt->error);
+      $stmt->close();
+      $conn->close();
+      return $error;
+    }
+    $stmt->bind_param("ss", $email, $usrnm);
+    $stmt->execute();
+    $stmt->close();
+    $conn->close();
+    return getProfile($usrnm);
   }
 ?>

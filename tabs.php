@@ -56,6 +56,11 @@
         $_SESSION['user'] = $new;
         break;
 
+      case "emailupdate":
+        $email = checkInput($_POST['newEmail']);
+        echo updateUserEmail($email, $usrnm);
+        break;
+
       case "notes":
         break;
 
