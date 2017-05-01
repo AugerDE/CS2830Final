@@ -444,14 +444,6 @@
                     </div>
                     <button class="btn btn-success" id="passUpdateBtn" onclick="passwordInput()">Update Password</button>
                   </div>
-                  <div class="col-sm-5">
-                    <div class="errorMessage hidden" id="sameUsername">
-                      <strong>ERROR: </strong>Usernames Match
-                    </div>
-                    <div class="errorMessage hidden" id="usernameEmpty">
-                      <strong>ERROR: </strong>Empty Username
-                    </div>
-                  </div>
                 </div>';
     $stmt->close();
     $conn->close();

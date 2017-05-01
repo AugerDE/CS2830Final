@@ -259,14 +259,14 @@ function confirmUserUpdate(user){
       $(".dropdown-toggle").html(newUser + " <span class='caret'></span>");
       loadTab("profile");
     });
-  }else{
-    if(newUser == user){
-      $("#sameUsername").removeClass("hidden");
-    }
-    if(newUser == ""){
-      $("#usernameEmpty").removeClass("hidden");
-    }
-  }
+  }//else{
+  //   if(newUser == user){
+  //     $("#sameUsername").removeClass("hidden");
+  //   }
+  //   if(newUser == ""){
+  //     $("#usernameEmpty").removeClass("hidden");
+  //   }
+  // }
 }
 
 function cancelUserUpdate(user){
