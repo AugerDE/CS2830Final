@@ -67,11 +67,11 @@
                     <br />
                     <div class="form-inline hidden" id="psswdForm">
                       <strong>Current Password:</strong><br />
-                      <input type="password" class="form-control" id="ogPass" placeholder="Password"/><br /><br />
+                      <input type="password" class="form-control" id="ogPass"/><br /><br />
                       <strong>Re-Enter Password:</strong><br />
-                      <input type="password" class="form-control" id="ogPassConf" placeholder="Confirm Password"/><br /><br />
+                      <input type="password" class="form-control" id="ogPassConf"/><br /><br />
                       <strong>New Password:</strong><br />
-                      <input type="password" class="form-control" id="newPass" placeholder="New Password"/>
+                      <input type="password" class="form-control" id="newPass"/>
                       <button class="btn btn-success" id="passConf" onclick="confirmPassUpdate()">
                         <span class="glyphicon glyphicon-ok"></span>
                       </button>
