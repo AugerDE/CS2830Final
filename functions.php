@@ -429,8 +429,8 @@
                     </div>
                     <br />
                     <div class="form-inline hidden" id="psswdForm">
-                      <input type="password" class="form-control" id="ogPass" placeholder="Password"/>
-                      <input type="password" class="form-control" id="ogPassConf" placeholder="Confirm Password"/>
+                      <input type="password" class="form-control" id="ogPass" placeholder="Password"/><br />
+                      <input type="password" class="form-control" id="ogPassConf" placeholder="Confirm Password"/><br />
                       <input type="password" class="form-control" id="newPass" placeholder="New Password"/>
                       <button class="btn btn-success" id="passConf" onclick="confirmPassUpdate()">
                         <span class="glyphicon glyphicon-ok"></span>
