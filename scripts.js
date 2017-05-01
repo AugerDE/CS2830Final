@@ -67,18 +67,13 @@ function loadTab(tab){
 }
 
 function editTask(name, desc, date, time, stat){
-  $("#notify").hide();
-  $.post('tabs.php', {
-    action: 'edit',
-    name: name,
-    desc: desc,
-    date: date,
-    time: time,
-    stat: stat
-  },
-  function(data){
-    $("#content").html(data);
-  });
+  $("#addTaskBtn").addClass("hidden");
+  $("#tskname").val(name);
+  $("#tskdesc").val(desc);
+  $("#tskdate").val(date);
+  $("#tsktime").val(time);
+  $("#tskstat").val(stat);
+  $("#editTaskForm").removeClass("hidden");
 }
 
 function deleteTask(name, desc, date, time, stat){
@@ -127,6 +122,11 @@ function updateTask(){
   var date = $("#tskdate").val();
   var time = $("#tsktime").val();
   var stat = $("#tskstat").val();
+  if(name == "" || desc == "" || date == "" || time == "" || stat == ""){
+    $("#emptyAddForm").removeClass("hidden");
+  }else{
+
+  }
   $.post('tabs.php', {
     action: 'update',
     task: task,
@@ -137,24 +137,8 @@ function updateTask(){
     stat: stat
   },
   function(data){
-    if(data == "empty"){
-      $.post('tabs.php', {
-        action: "empty"
-      },
-      function(data){
-        $("#notify").show();
-        $("#notify").html(data);
-      });
-    }else{
-      $("#content").html(data);
-      $.post('tabs.php', {
-        action: 'updatesuccess'
-      },
-      function(data){
-        $("#notify").show();
-        $("#notify").html(data);
-      });
-    }
+    $("#content").html(data);
+    $("#updateSuccess").removeClass("hidden");
   });
 }
 

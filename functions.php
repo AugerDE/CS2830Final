@@ -216,11 +216,32 @@
                    </button>
                  </th>
                </div>
+               <div class='form-inline hidden' id='editTaskForm'>
+                 <input type='hidden' id='task' value='$row[0]' />
+                 <th><input type='text' class='form-control' id='tskname'/></th>
+                 <th><input type='text' class='form-control' id='tskdesc'/></th>
+                 <th><input type='text' class='form-control' id='tskdate'/></th>
+                 <th><input type='text' class='form-control' id='tsktime'/></th>
+                 <th><input type='text' class='form-control' id='tskstat'/></th>
+                 <th>
+                   <button class='btn btn-info' onclick='updateTask()'>
+                     <span class='glyphicon glyphicon-ok'></span>
+                   </button>
+                 </th>
+                 <th>
+                   <button class='btn btn-danger' onclick='cancel()'>
+                     <span class='glyphicon glyphicon-remove'></span>
+                   </button>
+                 </th>
+               <div>
                <div class='hidden' id='emptyAddForm'>
                  <strong>ERROR: </strong>All Fields Required
                </div>
                <div class='hidden' id='addSuccess'>
                  <strong>SUCCESS: </strong>Your Task Has Been Added
+               </div>
+               <div class='hidden' id='updateSuccess'>
+                 <strong>SUCCESS: </strong>Task Successfully Updated
                </div>";
     $stmt->close();
     $conn->close();
