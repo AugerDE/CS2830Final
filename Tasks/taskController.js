@@ -11,7 +11,7 @@ $(function(){
 function loadTasks(){
   var user = $("#profile").val();
   $("#notify").addClass("hidden");
-  $.post('tabs.php', {
+  $.post('Tasks/taskHandler.php', {
     action: 'tasks'
   },
   function(data){
@@ -47,7 +47,7 @@ function deleteTask(name, desc, date, time, stat){
 
 function removeTask(){
   var task = $("#deltask").val();
-  $.post('tabs.php', {
+  $.post('Tasks/taskHandler.php', {
     action: 'remove',
     task: task
   },
@@ -74,7 +74,7 @@ function updateTask(){
     $("#notify").html("<strong>ERROR: </strong>All Inputs Required");
     $("#notify").addClass("error").removeClass("hidden");
   }else{
-    $.post('tabs.php', {
+    $.post('Tasks/taskHandler.php', {
       action: 'update',
       task: task,
       name: name,
@@ -108,7 +108,7 @@ function addTask(){
     $("#notify").html("<strong>ERROR: </strong>All Inputs Required");
     $("#notify").addClass("error").removeClass("hidden");
   }else{
-    $.post('tabs.php', {
+    $.post('Tasks/taskHandler.php', {
       action: 'add',
       name: name,
       desc: desc,
