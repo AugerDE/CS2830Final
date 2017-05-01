@@ -252,8 +252,6 @@
     return $inputs;
   }
 
-
-
   function updateMessage(){
     return "<div class='panel-footer good'>
               Task Successfully Updated
