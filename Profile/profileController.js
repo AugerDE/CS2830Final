@@ -1,5 +1,5 @@
 function loadProfile(){
-  $.post('profileHandler.php', {
+  $.post('Profile/profileHandler.php', {
     action: "profile"
   },
   function(data){
