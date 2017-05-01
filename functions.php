@@ -428,11 +428,11 @@
                        </button>
                     </div>
                     <br />
-                    <div class="form-control hidden" id="psswdForm">
+                    <div class="form-inline hidden" id="psswdForm">
                       <strong>Current Password:</strong><br />
-                      <input type="password" class="form-control" id="ogPass" placeholder="Password"/>
+                      <input type="password" class="form-control" id="ogPass" placeholder="Password"/><br />
                       <strong>Re-Enter Password:</strong><br />
-                      <input type="password" class="form-control" id="ogPassConf" placeholder="Confirm Password"/>
+                      <input type="password" class="form-control" id="ogPassConf" placeholder="Confirm Password"/><br />
                       <strong>New Password:</strong><br />
                       <input type="password" class="form-control" id="newPass" placeholder="New Password"/>
                       <button class="btn btn-success" id="passConf" onclick="confirmPassUpdate()">
