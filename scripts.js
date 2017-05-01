@@ -68,11 +68,11 @@ function loadTab(tab){
 
 function editTask(name, desc, date, time, stat){
   $("#addTaskBtn").addClass("hidden");
-  // $("#name").val(name);
-  // $("#desc").val(desc);
-  // $("#date").val(date);
-  // $("#time").val(time);
-  // $("#stat").val(stat);
+  $("#name").val(name);
+  $("#desc").val(desc);
+  $("#date").val(date);
+  $("#time").val(time);
+  $("#stat").val(stat);
   $("#editTaskForm").removeClass("hidden");
 }
 
@@ -115,18 +115,18 @@ function cancel(){
 }
 
 function updateTask(){
-  console.log("Old Task: " + task);
-  console.log("New Task: " + name);
-  console.log("    Desc: " + desc);
-  console.log("    Date: " + date);
-  console.log("    Time: " + time);
-  console.log("    Stat: " + stat);
   var task = $("#task").val();
   var name = $("#name").val();
   var desc = $("#desc").val();
   var date = $("#date").val();
   var time = $("#time").val();
   var stat = $("#stat").val();
+  console.log("Old Task: " + task);
+  console.log("New Task: " + name);
+  console.log("    Desc: " + desc);
+  console.log("    Date: " + date);
+  console.log("    Time: " + time);
+  console.log("    Stat: " + stat);
   if(name == "" || desc == "" || date == "" || time == "" || stat == ""){
     $("#emptyAddForm").removeClass("hidden");
   }else{
