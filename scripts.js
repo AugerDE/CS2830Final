@@ -79,6 +79,7 @@ function loadTasks(){
 }
 
 function editTask(name, desc, date, time, stat){
+  $("#notify").addClass("hidden");
   $("#addTaskBtn").addClass("hidden");
   $("#task").val(name);
   $("#name").val(name);
@@ -90,6 +91,7 @@ function editTask(name, desc, date, time, stat){
 }
 
 function deleteTask(name, desc, date, time, stat){
+  $("#notify").addClass("hidden");
   $("#notify").hide();
   $.post('tabs.php', {
     action: 'delete',
@@ -128,6 +130,7 @@ function cancel(){
 }
 
 function updateTask(){
+  $("#notify").addClass("hidden");
   var task = $("#task").val();
   var name = $("#name").val();
   var desc = $("#desc").val();
@@ -156,11 +159,13 @@ function updateTask(){
 }
 
 function addForm(){
+  $("#notify").addClass("hidden");
   $("#addTaskBtn").addClass("hidden");
   $("#addTaskForm").removeClass("hidden");
 }
 
 function addTask(){
+  $("#notify").addClass("hidden");
   var name = $("#tskname").val();
   var desc = $("#tskdesc").val();
   var date = $("#tskdate").val();
