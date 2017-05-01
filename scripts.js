@@ -66,6 +66,7 @@ function loadTab(tab){
 }
 
 function loadTasks(){
+  var user = $("#profile").val();
   $("#notify").addClass("hidden");
   $.post('tabs.php', {
     action: 'tasks'
