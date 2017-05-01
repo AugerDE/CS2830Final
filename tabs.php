@@ -50,6 +50,11 @@
         echo getHomeDash();
         break;
 
+      case "userupdate":
+        $new = checkInput($_POST['newUser']);
+        echo updateUserName($new, $usrnm);
+        break;
+
       case "notes":
         break;
 

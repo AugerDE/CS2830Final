@@ -470,4 +470,23 @@
     $conn->close();
     return getProfile($usrnm);
   }
+
+  function updateUserName($new, $old){
+    $conn = connectToDB();
+    $SQL = "UPDATE Users
+            SET userName=?
+            WHERE userName=?";
+    $stmt = $conn->stmt_init();
+    if(!$stmt->prepare($SQL)){
+      $error = stmtErrorMessage($stmt->error);
+      $stmt->close();
+      $conn->close();
+      return $error;
+    }
+    $stmt->bind_param("ss", $new, $old);
+    $stmt->execute();
+    $stmt->close();
+    $conn->close();
+    return getProfile($new);
+  }
 ?>

@@ -246,8 +246,16 @@ function usernameInput(){
 }
 
 function confirmUserUpdate(user){
-  console.log("Old: " + user);
-  console.log("New: " + $("#userToUpdate").val());
+  var newUser = $("#userToUpdate").val();
+  if(newUser != user && newUser != null){
+    $.post('tabs.php', {
+      action: 'userupdate',
+      newUser: newUser
+    },
+    function(data){
+      $("#content").html(data);
+    });
+  }
 }
 
 function cancelUserUpdate(user){
