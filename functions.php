@@ -570,7 +570,7 @@
       $stat = 0;
     }
     $stmt->close();
-    $conn->close():
+    $conn->close();
     return $stat;
   }
 
