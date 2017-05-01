@@ -430,9 +430,9 @@
                     <br />
                     <div class="form-inline hidden" id="psswdForm">
                       <strong>Current Password:</strong><br />
-                      <input type="password" class="form-control" id="ogPass" placeholder="Password"/><br />
+                      <input type="password" class="form-control" id="ogPass" placeholder="Password"/><br /><br />
                       <strong>Re-Enter Password:</strong><br />
-                      <input type="password" class="form-control" id="ogPassConf" placeholder="Confirm Password"/><br />
+                      <input type="password" class="form-control" id="ogPassConf" placeholder="Confirm Password"/><br /><br />
                       <strong>New Password:</strong><br />
                       <input type="password" class="form-control" id="newPass" placeholder="New Password"/>
                       <button class="btn btn-success" id="passConf" onclick="confirmPassUpdate()">
