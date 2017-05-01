@@ -53,6 +53,7 @@
       case "userupdate":
         $new = checkInput($_POST['newUser']);
         echo updateUserName($new, $usrnm);
+        $_SESSION['user'] = $new;
         break;
 
       case "notes":
