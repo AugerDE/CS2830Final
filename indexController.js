@@ -5,9 +5,9 @@ $(function(){
     var psswd = $("#psswd").val();
     if(usrnm == "" || psswd == ""){
       $("#errorMessage").html("<strong>ERROR: </strong>All Fields Required");
-      $("#errorMessage").removeClass("hidden");
+      $("#errorMessage").addClass("error").removeClass("hidden");
     }else{
-      
+
     }
   });
 
