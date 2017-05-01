@@ -218,11 +218,11 @@
                </div>
                <div class='form-inline hidden' id='editTaskForm'>
                  <input type='hidden' id='task' value='$row[0]' />
-                 <th><input type='text' class='form-control' id='tskname'/></th>
-                 <th><input type='text' class='form-control' id='tskdesc'/></th>
-                 <th><input type='text' class='form-control' id='tskdate'/></th>
-                 <th><input type='text' class='form-control' id='tsktime'/></th>
-                 <th><input type='text' class='form-control' id='tskstat'/></th>
+                 <th><input type='text' class='form-control' id='name'/></th>
+                 <th><input type='text' class='form-control' id='desc'/></th>
+                 <th><input type='text' class='form-control' id='date'/></th>
+                 <th><input type='text' class='form-control' id='time'/></th>
+                 <th><input type='text' class='form-control' id='stat'/></th>
                  <th>
                    <button class='btn btn-info' onclick='updateTask()'>
                      <span class='glyphicon glyphicon-ok'></span>
@@ -241,7 +241,7 @@
                  <strong>SUCCESS: </strong>Your Task Has Been Added
                </div>
                <div class='hidden' id='updateSuccess'>
-                 <strong>SUCCESS: </strong>Task Successfully Updated
+                 <strong>SUCCESS: </strong>Task Successfully Upda
                </div>";
     $stmt->close();
     $conn->close();

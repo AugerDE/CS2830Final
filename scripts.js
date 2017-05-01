@@ -68,11 +68,11 @@ function loadTab(tab){
 
 function editTask(name, desc, date, time, stat){
   $("#addTaskBtn").addClass("hidden");
-  $("#tskname").val(name);
-  $("#tskdesc").val(desc);
-  $("#tskdate").val(date);
-  $("#tsktime").val(time);
-  $("#tskstat").val(stat);
+  $("#name").val(name);
+  $("#desc").val(desc);
+  $("#date").val(date);
+  $("#time").val(time);
+  $("#stat").val(stat);
   $("#editTaskForm").removeClass("hidden");
 }
 
@@ -138,7 +138,7 @@ function updateTask(){
   },
   function(data){
     $("#content").html(data);
-    $("#updateSuccess").removeClass("hidden");
+    $("#updateSuccess").removeClass("hidden
   });
 }
 
