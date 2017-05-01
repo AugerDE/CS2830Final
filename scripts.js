@@ -247,7 +247,7 @@ function usernameInput(){
 
 function confirmUserUpdate(user){
   var newUser = $("#userToUpdate").val();
-  if(newUser != user && newUser != null){
+  if(newUser != user && newUser != ""){
     $.post('tabs.php', {
       action: 'userupdate',
       newUser: newUser
