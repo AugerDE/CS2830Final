@@ -218,11 +218,11 @@
                </div>
                <div class='form-inline hidden' id='editTaskForm'>
                  <input type='hidden' id='task' value='$row[0]' />
-                 <th><input type='text' class='form-control' id='name'/></th>
-                 <th><input type='text' class='form-control' id='desc'/></th>
-                 <th><input type='text' class='form-control' id='date'/></th>
-                 <th><input type='text' class='form-control' id='time'/></th>
-                 <th><input type='text' class='form-control' id='stat'/></th>
+                 <th><input type='text' class='form-control' id='name' value='$row[0]'/></th>
+                 <th><input type='text' class='form-control' id='desc' value='$row[1]'/></th>
+                 <th><input type='text' class='form-control' id='date' value='$row[2]'/></th>
+                 <th><input type='text' class='form-control' id='time' value='$row[3]'/></th>
+                 <th><input type='text' class='form-control' id='stat' value='$row[4]'/></th>
                  <th>
                    <button class='btn btn-info' onclick='updateTask()'>
                      <span class='glyphicon glyphicon-ok'></span>

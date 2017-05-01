@@ -68,11 +68,11 @@ function loadTab(tab){
 
 function editTask(name, desc, date, time, stat){
   $("#addTaskBtn").addClass("hidden");
-  $("#name").val(name);
-  $("#desc").val(desc);
-  $("#date").val(date);
-  $("#time").val(time);
-  $("#stat").val(stat);
+  // $("#name").val(name);
+  // $("#desc").val(desc);
+  // $("#date").val(date);
+  // $("#time").val(time);
+  // $("#stat").val(stat);
   $("#editTaskForm").removeClass("hidden");
 }
 
