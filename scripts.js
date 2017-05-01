@@ -253,8 +253,8 @@ function confirmUserUpdate(user){
       newUser: newUser
     },
     function(data){
-      $("#content").html(data);
       $("#profile").val(newUser);
+      loadTab("profile");
     });
   }
 }
