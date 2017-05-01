@@ -35,23 +35,21 @@
                   <div class="panel panel-default">
                     <div class="panel-heading">Log-In</div>
                     <div class="panel-body">
-                      <form action="index.php" method="POST">
-                        <div>
-                          <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input type="text" class="form-control" name="usrnm" placeholder="Username" />
-                          </div>
-                          <br />
-                          <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                            <input type="password" class="form-control" name="psswd" placeholder="Password" />
-                          </div>
-                          <br />
-                          <div class="input-group">
-                            <input type="submit" name="login" class="btn btn-success" value="Log-In" />
-                          </div>
+                      <div>
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                          <input type="text" class="form-control" id="usrnm" placeholder="Username" />
                         </div>
-                      </form>
+                        <br />
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                          <input type="password" class="form-control" id="psswd" placeholder="Password" />
+                        </div>
+                        <br />
+                        <div class="input-group">
+                          <button id="login" class="btn btn-success"/>Log-In</button>
+                        </div>
+                      </div>
                     </div>
                     <?php
                       if(isset($_POST['login'])){
