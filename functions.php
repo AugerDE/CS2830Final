@@ -419,7 +419,7 @@
                     <div class='form-inline'>
                       <input type='text' class='form-control' id='emailToUpdate' disabled value='$row[1]' />";
     $email = "'".$row[1]."'";
-                      '<button class="btn btn-info" id="emailUpdateBtn" onclick="emailInput()">Update</button>
+    $profile .=       '<button class="btn btn-info" id="emailUpdateBtn" onclick="emailInput()">Update</button>
                        <button class="btn btn-success hidden" id="emailUpdateConf" onclick="confirmEmailUpdate('.$email.')">
                          <span class="glyphicon glyphicon-ok"></span>
                        </button>
