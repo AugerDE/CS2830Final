@@ -111,7 +111,6 @@ function removeTask(){
 }
 
 function cancel(){
-  $("#notify").hide();
   loadTab("tasks");
 }
 
