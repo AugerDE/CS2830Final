@@ -10,7 +10,7 @@
 
   $usrnm = (isset($_SESSION['user']) ? $_SESSION['user'] : NULL);
 
-  include("../profileContent.php");
+  include("profileContent.php");
 
   if(isset($_POST['action'])){
     $action = $_POST['action'];
@@ -18,7 +18,7 @@
       case "profile":
         echo getProfile($usrnm);
         break;
-        
+
       case "photos":
         echo displayPhotos();
         break;
