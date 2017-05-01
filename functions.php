@@ -434,6 +434,7 @@
                       <input type="password" class="form-control" id="ogPassConf" placeholder="Confirm Password"/>
                       <br />
                       <input type="password" class="form-control" id="newPass" placeholder="New Password"/>
+                      <br />
                       <button class="btn btn-success" id="passConf" onclick="confirmPassUpdate()">
                         <span class="glyphicon glyphicon-ok"></span>
                       </button>
