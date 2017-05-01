@@ -108,9 +108,9 @@
     foreach(new DirectoryIterator($dir) as $file){
       if($file->isFile()){
         $i++;
-        $location = "'".$dir.$file."'";
+        $location = "'Profile/".$dir.$file."'";
         $alt = "'".$file."'";
-        $images .= '<button class="btnImg" onclick="changePhoto(Profile/'.$location.', '.$alt.')">';
+        $images .= '<button class="btnImg" onclick="changePhoto('.$location.', '.$alt.')">';
         $images .= "<img src='Profile/images/".$file."' alt=".$file." class='imgBtn' />";
         $images .= "</button>";
       }
