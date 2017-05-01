@@ -125,21 +125,20 @@ function updateTask(){
   if(name == "" || desc == "" || date == "" || time == "" || stat == ""){
     $("#emptyAddForm").removeClass("hidden");
   }else{
-
+    $.post('tabs.php', {
+      action: 'update',
+      task: task,
+      name: name,
+      desc: desc,
+      date: date,
+      time: time,
+      stat: stat
+    },
+    function(data){
+      $("#content").html(data);
+      $("#updateSuccess").removeClass("hidden");
+    });
   }
-  $.post('tabs.php', {
-    action: 'update',
-    task: task,
-    name: name,
-    desc: desc,
-    date: date,
-    time: time,
-    stat: stat
-  },
-  function(data){
-    $("#content").html(data);
-    $("#updateSuccess").removeClass("hidden");
-  });
 }
 
 function addForm(){
