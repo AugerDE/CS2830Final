@@ -217,7 +217,7 @@
                  </th>
                </div>
                <div class='form-inline hidden' id='editTaskForm'>
-                 <input type='hidden' id='task' value='$row[0]' />
+                 <input type='hidden' id='task'/>
                  <th><input type='text' class='form-control' id='name'/></th>
                  <th><input type='text' class='form-control' id='desc'/></th>
                  <th><input type='text' class='form-control' id='date'/></th>
