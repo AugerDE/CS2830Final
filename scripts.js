@@ -254,6 +254,7 @@ function confirmUserUpdate(user){
     },
     function(data){
       $("#profile").val(newUser);
+      $(".dropdown-toggle").html(newUser);
       loadTab("profile");
     });
   }
