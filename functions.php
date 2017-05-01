@@ -429,15 +429,19 @@
                     </div>
                     <br />
                     <div class="form-inline hidden" id="psswdForm">
-                      <th><input type="password" class="form-control" id="ogPass" placeholder="Password"/></th>
+                      <th><input type="password" class="form-control" id="ogPass" placeholder="Password"/></th></th>
                       <th><input type="password" class="form-control" id="ogPassConf" placeholder="Confirm Password"/></th>
                       <th><input type="password" class="form-control" id="newPass" placeholder="New Password"/></th>
-                      <button class="btn btn-success" id="passConf" onclick="confirmPassUpdate()">
-                        <span class="glyphicon glyphicon-ok"></span>
-                      </button>
-                      <button class="btn btn-danger" id="passCanc" onclick="cancelPassUpdate()">
-                        <span class="glyphicon glyphicon-remove"></span>
-                      </button>
+                      <th>
+                        <button class="btn btn-success" id="passConf" onclick="confirmPassUpdate()">
+                          <span class="glyphicon glyphicon-ok"></span>
+                        </button>
+                      </th>
+                      <th>
+                        <button class="btn btn-danger" id="passCanc" onclick="cancelPassUpdate()">
+                          <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                      </th>
                     </div>
                     <button class="btn btn-success" id="passUpdateBtn" onclick="passwordInput()">Update Password</button>
                   </div>
