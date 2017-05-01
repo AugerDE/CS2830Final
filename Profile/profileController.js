@@ -20,7 +20,7 @@ function profile(){
 }
 
 function showPhotos(){
-  $.post('profileHandler.php', {
+  $.post('Profile/profileHandler.php', {
     action: 'photos'
   },
   function(data){
@@ -29,7 +29,7 @@ function showPhotos(){
 }
 
 function changePhoto(file, alt){
-  $.post('profileHandler.php', {
+  $.post('Profile/profileHandler.php', {
     action: 'updatephoto',
     src: file,
     alt: alt
@@ -50,7 +50,7 @@ function usernameInput(){
 function confirmUserUpdate(user){
   var newUser = $("#userToUpdate").val();
   if(newUser != user && newUser != ""){
-    $.post('profileHandler.php', {
+    $.post('Profile/profileHandler.php', {
       action: 'userupdate',
       newUser: newUser
     },
@@ -93,7 +93,7 @@ function cancelEmailUpdate(email){
 function confirmEmailUpdate(email){
   var newEmail = $("#emailToUpdate").val();
   if(newEmail != email && newEmail != ""){
-    $.post('profileHandler.php', {
+    $.post('Profile/profileHandler.php', {
       action: 'emailupdate',
       newEmail: newEmail
     },
@@ -143,7 +143,7 @@ function confirmPassUpdate(){
   else if(ogPass == newPass){
     $("#incorrectPass").removeClass("hidden");
   }else{
-    $.post('profileHandler.php', {
+    $.post('Profile/profileHandler.php', {
       action: 'passcheck',
       pass: ogPass,
       newPass: newPass
