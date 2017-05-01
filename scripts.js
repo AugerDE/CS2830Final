@@ -296,3 +296,18 @@ function confirmEmailUpdate(email){
     });
   }
 }
+
+function passwordInput(){
+  $("#passUpdateBtn").addClass("hidden");
+  $("#psswdForm").removeClass("hidden");
+  $("#passConf").removeClass("hidden");
+  $("#passCanc").removeClass("hidden");
+}
+
+function cancelPassUpdate(){
+  $("#passCanc").addClass("hidden");
+  $("#psswdForm").addClass("hidden");
+  $("#passConf").addClass("hidden");
+  $("#passCanc").addClass("hidden");
+  $("#passUpdateBtn").removeClass("hidden");
+}

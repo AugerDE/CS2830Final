@@ -428,7 +428,20 @@
                        </button>
                     </div>
                     <br />
-                    <button class="btn btn-success">Update Password</button>
+                    <div class="input-group hidden" id="psswdForm">
+                      <input type="password" class="form-control" id="ogPass" />
+                      <input type="password" class="form-control" id="ogPassConf" />
+                      <input type="password" class="form-control" id="newPass" />
+                    </div>
+                    <div class="form-inline">
+                      <button class="btn btn-success" id="passUpdateBtn" onclick="passwordInput()">Update Password</button>
+                      <button class="btn btn-success hidden" id="passConf" onclick="confirmPassUpdate()">
+                        <span class="glyphicon glyphicon-ok"></span>
+                      </button>
+                      <button class="btn btn-danger hidden" id="passCanc" onclick="cancelPassUpdate()">
+                        <span class="glyphicon glyphicon-remove"></span>
+                      </button>
+                    </div>
                   </div>
                 </div>';
     $stmt->close();
