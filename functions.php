@@ -413,7 +413,7 @@
                       <button class="btn btn-danger hidden" id="userUpdateCanc" onclick="cancelUserUpdate('.$user.')">
                         <span class="glyphicon glyphicon-remove"></span>
                       </button>
-                      <div id="usernameError" class="hidden err-msg">
+                      <div id="usernameError" class="hidden error">
                         <strong>ERROR: </strong>Invalid Username
                       </div>';
     $profile .=    "</div>
@@ -429,7 +429,7 @@
                        <button class="btn btn-danger hidden" id="emailUpdateCanc" onclick="cancelEmailUpdate('.$email.')">
                          <span class="glyphicon glyphicon-remove"></span>
                        </button>
-                       <div id="emailError" class="hidden err-msg">
+                       <div id="emailError" class="hidden error">
                          <strong>ERROR: </strong>Invalid Email
                        </div>
                     </div>
@@ -449,16 +449,16 @@
                       </button>
                     </div>
                     <button class="btn btn-success" id="passUpdateBtn" onclick="passwordInput()">Update Password</button>
-                    <div id="emptyPassError" class="hidden err-msg">
+                    <div id="emptyPassError" class="hidden error">
                       <strong>ERROR: </strong>All Inputs Required
                     </div>
-                    <div id="passMatchError" class="hidden err-msg">
+                    <div id="passMatchError" class="hidden error">
                       <strong>ERROR: </strong>Passwords Do Not Match
                     </div>
-                    <div id="incorrectPass" class="hidden err-msg">
+                    <div id="incorrectPass" class="hidden error">
                       <strong>ERROR: </strong>Incorrect Password
                     </div>
-                    <div id="passUpdateSuccess" class="hidden suc-msg">
+                    <div id="passUpdateSuccess" class="hidden good">
                       Password Successfully Updated
                     </div>
                   </div>
