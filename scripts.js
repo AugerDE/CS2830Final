@@ -159,13 +159,8 @@ function updateTask(){
 }
 
 function addForm(){
-  $("#notify").hide();
-  $.post('tabs.php', {
-    action: 'showadd'
-  },
-  function(data){
-    $("#content").html(data);
-  });
+  $("#addTaskBtn").addClass("hidden");
+  $("#addTaskForm").removeClass("hidden");
 }
 
 function addTask(){
