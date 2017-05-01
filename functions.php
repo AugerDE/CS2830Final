@@ -428,7 +428,7 @@
                        </button>
                     </div>
                     <br />
-                    <div class="form-inline hidden" id="psswdForm">
+                    <div class="input-group hidden" id="psswdForm">
                       <strong>Current Password:</strong><br />
                       <input type="password" class="form-control" id="ogPass" placeholder="Password"/>
                       <strong>Re-Enter Password:</strong><br />
