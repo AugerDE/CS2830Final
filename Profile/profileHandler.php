@@ -15,6 +15,10 @@
   if(isset($_POST['action'])){
     $action = $_POST['action'];
     switch($action){
+      case "profile":
+        echo getProfile($usrnm);
+        break;
+        
       case "photos":
         echo displayPhotos();
         break;

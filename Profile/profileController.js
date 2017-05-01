@@ -1,10 +1,22 @@
+function loadProfile(){
+  $.post('profileHandler.php', {
+    action: "profile"
+  },
+  function(data){
+    $("#content").html(data);
+    var user = $("#profile").val();
+    $("#panelType").removeClass("panel-success panel-warning panel-danger").addClass("panel-info");
+    $("#contentHeader").html(user + "'s Profile");
+  });
+}
+
 function profile(){
   $("#notify").hide();
   $("#home").addClass("clear");
   $("#tasks").addClass("clear");
   $("#videos").addClass("clear");
   $("#notes").addClass("clear");
-  loadTab("profile");
+  loadProfile();
 }
 
 function showPhotos(){
@@ -45,7 +57,7 @@ function confirmUserUpdate(user){
     function(data){
       $("#profile").val(newUser);
       $(".dropdown-toggle").html(newUser + " <span class='caret'></span>");
-      loadTab("profile");
+      loadProfile();
     });
   }else{
     $("#usernameError").removeClass("hidden");
@@ -86,7 +98,7 @@ function confirmEmailUpdate(email){
       newEmail: newEmail
     },
     function(data){
-      loadTab("profile");
+      loadProfile();
     });
   }else{
     $("#emailError").removeClass("hidden");

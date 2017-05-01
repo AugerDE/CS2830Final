@@ -62,10 +62,6 @@ function loadTab(tab){
         $("#panelType").removeClass("panel-success panel-warning panel-info").addClass("panel-danger");
         $("#contentHeader").html(user + "'s Videos");
         break;
-      case "profile":
-        $("#panelType").removeClass("panel-success panel-warning panel-danger").addClass("panel-info");
-        $("#contentHeader").html(user + "'s Profile");
-        break;
     }
   });
 }
