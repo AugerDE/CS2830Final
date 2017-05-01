@@ -313,6 +313,9 @@ function passwordInput(){
 }
 
 function cancelPassUpdate(){
+  $("#ogPass").val("");
+  $("#ogPassConf").val("");
+  $("#newPass").val("");
   $("#emptyPassError").addClass("hidden");
   $("#passMatchError").addClass("hidden");
   $("#passUpdateSuccess").addClass("hidden");
