@@ -241,7 +241,7 @@
                  <strong>SUCCESS: </strong>Your Task Has Been Added
                </div>
                <div class='hidden' id='updateSuccess'>
-                 <strong>SUCCESS: </strong>Task Successfully Upda
+                 <strong>SUCCESS: </strong>Task Successfully Updated
                </div>";
     $stmt->close();
     $conn->close();

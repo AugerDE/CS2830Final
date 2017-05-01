@@ -115,6 +115,12 @@ function cancel(){
 }
 
 function updateTask(){
+  console.log("Old Task: " + task);
+  console.log("New Task: " + name);
+  console.log("    Desc: " + desc);
+  console.log("    Date: " + date);
+  console.log("    Time: " + time);
+  console.log("    Stat: " + stat);
   var task = $("#task").val();
   var name = $("#name").val();
   var desc = $("#desc").val();
