@@ -2,6 +2,8 @@
   session_start();
   ob_start();
 
+
+
   include("../secure/connect.php");
 
   if(isset($_POST['action'])){
@@ -13,6 +15,7 @@
         $status = login($usrnm, $psswd);
         if($status == 1){
           $_SESSION['user'] = $usrnm;
+          $_SESSION['status'] = "active";
           echo $status;
         }else{
           echo $status;
