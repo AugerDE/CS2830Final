@@ -43,10 +43,7 @@
       case "notes":
         break;
 
-      case "tasks":
-        $tasks = getTasks($usrnm);
-        echo $tasks;
-        break;
+
 
       case "edit":
         $name = checkInput($_POST['name']);
@@ -55,17 +52,7 @@
         echo $tasks.$task;
         break;
 
-      case "update":
-        $task = checkInput($_POST['task']);
-        $name = checkInput($_POST['name']);
-        $desc = checkInput($_POST['desc']);
-        $date = checkInput($_POST['date']);
-        $time = checkInput($_POST['time']);
-        $stat = checkInput($_POST['stat']);
-        updateTask($task, $name, $desc, $date, $time, $stat, $usrnm);
-        $tasks = getTasks($usrnm);
-        echo $tasks;
-        break;
+
 
       case "delete":
         $name = checkInput($_POST['name']);
@@ -74,12 +61,7 @@
         echo $tasks.$task;
         break;
 
-      case "remove":
-        $task = checkInput($_POST['task']);
-        deleteTask($task, $usrnm);
-        $tasks = getTasks($usrnm);
-        echo $tasks;
-        break;
+
 
       case "showadd":
         $tasks = getTasks($usrnm);
@@ -87,16 +69,7 @@
         echo $tasks.$form;
         break;
 
-      case "add":
-        $name = checkInput($_POST['name']);
-        $desc = checkInput($_POST['desc']);
-        $date = checkInput($_POST['date']);
-        $time = checkInput($_POST['time']);
-        $stat = checkInput($_POST['stat']);
-        addTask($name, $desc, $date, $time, $stat, $usrnm);
-        $tasks = getTasks($usrnm);
-        echo $tasks;
-        break;
+      
 
       case "video":
         break;
