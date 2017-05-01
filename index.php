@@ -51,7 +51,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="panel-footer hidden" id="errorMessage">
+                    <div class="panel-footer error hidden" id="errorMessage">
 
                     </div>
                   </div>
