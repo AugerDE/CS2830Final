@@ -199,6 +199,7 @@
                    <span class='glyphicon glyphicon-plus'></span> Add a Task
                  </button>
                </div>
+
                <div class='form-inline hidden' id='addTaskForm'>
                  <th><input type='text' class='form-control' id='tskname' placeholder='Task Name'/></th>
                  <th><input type='text' class='form-control' id='tskdesc' placeholder='Task Description'/></th>
@@ -216,6 +217,7 @@
                    </button>
                  </th>
                </div>
+
                <div class='form-inline hidden' id='editTaskForm'>
                  <input type='hidden' id='task'/>
                  <th><input type='text' class='form-control' id='name'/></th>
@@ -234,6 +236,7 @@
                    </button>
                  </th>
                <div>
+
                <div class='form-inline hidden' id='deleteTaskForm'>
                  <input type='hidden' id='deltask'/>
                  <th><input disabled type='text' class='form-control' id='delname'/></th>
