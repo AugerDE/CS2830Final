@@ -94,7 +94,7 @@
   }
 
   function displayPhotos(){
-    $dir = "Profile/images/";
+    $dir = "images/";
     $images = "";
     $images .= "<div class='row'><div class='col-sm-12'>";
     $i = 0;
