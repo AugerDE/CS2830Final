@@ -63,7 +63,7 @@ function confirmUserUpdate(user){
     function(data){
       if(data == 1){
         $("#profile").val(newUser);
-        $("#contentHeader").html(userUser + "'s Profile");
+        $("#contentHeader").html(newUser + "'s Profile");
         $("#notify").html("<strong>SUCCESS: </strong>Username Updated");
         $("#notify").addClass("good");
       }else{
