@@ -25,7 +25,7 @@ $(function(){
   });
 
   $("#register").click(function(){
-    $("#registerMessage").addClass("hidden");
+    $("#registerMessage").removeClass("error good").addClass("hidden");
     var email = $("#email").val();
     var usrnm = $("#newUsrnm").val();
     var psswd = $("#newPsswd").val();
@@ -37,7 +37,22 @@ $(function(){
       $("#registerMessage").html("<strong>ERROR: </strong>Passwords Do Not Match");
       $("#registerMessage").addClass("error");
     }else{
-
+      $.post('indexHandler.php', {
+        action: 'register',
+        email: email,
+        usrnm: usrnm,
+        psswd: psswd,
+        pconf: pconf
+      },
+      function(data){
+        if(data == 1){
+          $("#registerMessage").html("<strong>USER CREATED: </strong>Now Just Log-In!");
+          $("#registerMessage").addClass("good");
+        }else{
+          $("#registerMessage").html(data);
+          $("#registerMessage").addClass("error");
+        }
+      });
     }
     $("#registerMessage").removeClass("hidden");
   });

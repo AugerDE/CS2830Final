@@ -19,6 +19,21 @@
           echo $status;
         }
         break;
+
+      case "register":
+        $email = checkInput($_POST['email']);
+        $usrnm = checkInput($_POST['usrnm']);
+        $psswd = checkInput($_POST['psswd']);
+        $pconf = checkInput($_POST['pconf']);
+        $status = register($email, $usrnm, $psswd, $pconf);
+        if($status == 1){
+          $_SESSION['user'] = $usrnm;
+          $_SESSION['status'] = "active";
+          echo $status;
+        }else{
+          echo $status;
+        }
+        break;
     }
   }
 
@@ -49,5 +64,46 @@
     $stmt->close();
     $conn->close();
     return $status;
+  }
+
+  function register($email, $usrnm, $psswd, $pconf){
+    $conn = connectToDB();
+    $SQL = "SELECT * FROM Users WHERE userName=?";
+    $stmt = $conn->stmt_init();
+    if(!$stmt->prepare($SQL)){
+      $error = "<strong>ERROR: </strong>".$stmt->error;
+      $stmt->close();
+      $conn->close();
+      return $error;
+    }
+    $stmt->bind_param("s", $usrnm);
+    $stmt->execute();
+    $output = mysqli_stmt_get_result($stmt);
+    $row = $output->fetch_array(MYSQLI_NUM);
+    if($row[0] == $usrnm){
+      $status = "<strong>ERROR: </strong>This Username is Taken";
+    }else{
+      $status = addUser($email, $usrnm, $psswd, $conn);
+    }
+    $stmt->close();
+    $conn->close();
+    return $status;
+  }
+
+  function addUser($email, $usrnm, $psswd, $conn){
+    $phash = password_hash($psswd, PASSWORD_DEFAULT);
+    $SQL = "INSERT INTO Users(userName, passHash, userMail)
+            VALUES(?, ?, ?)";
+    $stmt = $conn->stmt_init();
+    if(!$stmt->prepare($SQL)){
+      $error = "<strong>ERROR: </strong>".$stmt->error;
+      $stmt->close();
+      $conn->close();
+      return $error;
+    }
+    $stmt->bind_param("sss", $usrnm, $phash, $email);
+    $stmt->execute();
+    $stmt->close();
+    return 1;
   }
 ?>
