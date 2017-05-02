@@ -19,6 +19,12 @@
     }
     $stmt->bind_param("s", $usrnm);
     $stmt->execute();
+    $num = mysqli_stmt_num_rows($stmt);
+    if($num == 0){
+      $stmt->close();
+      $conn->close();
+      return emptyTaskTable();
+    }
     $tasks = mysqli_stmt_get_result($stmt);
     $table = "";
     $table .= "<table class='table table-striped' id='taskTable'>
@@ -175,6 +181,38 @@
     $stmt->execute();
     $stmt->close();
     $conn->close();
+  }
+
+  function emptyTaskTable(){
+    return "<table class='table table-striped' id='emptyTable'>
+              <thead>
+                <tr>
+                  <th>It Looks Like You Don't Have Any Tasks Yet!</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Press the Add a Task Button to get started</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class='form-inline hidden' id='addTaskForm'>
+              <th><input type='text' class='form-control' id='tskname' placeholder='Task Name'/></th>
+              <th><input type='text' class='form-control' id='tskdesc' placeholder='Task Description'/></th>
+              <th><input type='text' class='form-control' id='tskdate' placeholder='Task Date'/></th>
+              <th><input type='text' class='form-control' id='tsktime' placeholder='Task Time'/></th>
+              <th><input type='text' class='form-control' id='tskstat' placeholder='Task Status'/></th>
+              <th>
+                <button class='btn btn-success' onclick='addTask()'>
+                  <span class='glyphicon glyphicon-plus'></span>
+                </button>
+              </th>
+              <th>
+                <button class='btn btn-danger' onclick='cancel()'>
+                  <span class='glyphicon glyphicon-remove'></span>
+                </button>
+              </th>
+            </div>";
   }
 
 ?>

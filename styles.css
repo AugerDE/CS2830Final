@@ -53,3 +53,6 @@ th, td{
 .hidden{
   display: none;
 }
+#emptyTable{
+  width: 100%;
+}
