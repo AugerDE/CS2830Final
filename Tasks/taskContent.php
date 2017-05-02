@@ -20,6 +20,12 @@
     $stmt->bind_param("s", $usrnm);
     $stmt->execute();
     $tasks = mysqli_stmt_get_result($stmt);
+    $num = mysqli_stmt_num_rows($stmt);
+    if($num == 0){
+      $stmt->close();
+      $conn->close();
+      return emptyTaskTable();
+    }
     $table = "";
     $table .= "<table class='table table-striped' id='taskTable'>
                  <thead>
@@ -122,11 +128,7 @@
 
     $stmt->close();
     $conn->close();
-    if($i == 0){
-      return emptyTaskTable();
-    }else{
-      return $table;
-    }
+    return $table;
   }
 
   function deleteTask($task, $usrnm){
