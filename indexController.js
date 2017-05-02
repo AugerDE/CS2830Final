@@ -48,6 +48,10 @@ $(function(){
         if(data == 1){
           $("#registerMessage").html("<strong>USER CREATED: </strong>Now Just Log-In!");
           $("#registerMessage").addClass("good");
+          $("#email").val("");
+          $("#newUsrnm").val("");
+          $("#newPsswd").val("");
+          $("#psswdConf").val("");
         }else{
           $("#registerMessage").html(data);
           $("#registerMessage").addClass("error");
