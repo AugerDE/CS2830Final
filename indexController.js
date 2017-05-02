@@ -29,10 +29,16 @@ $(function(){
     var usrnm = $("#newUsrnm").val();
     var psswd = $("#newPsswd").val();
     var pconf = $("#psswdConf").val();
-    console.log(email);
-    console.log(usrnm);
-    console.log(psswd);
-    console.log(pconf);
+    if(email == "" || usrnm == "" || psswd == "" || pconf == ""){
+      $("#registerMessage").html("<strong>ERROR: </strong>All Fields Required");
+      $("#registerMessage").addClass("error");
+    }else if(psswd != pconf){
+      $("#registerMessage").html("<strong>ERROR: </strong>Passwords Do Not Match");
+      $("#registerMessage").addClass("error");
+    }else{
+
+    }
+    $("#registerMessage").removeClass("hidden");
   });
 
 });
