@@ -29,6 +29,7 @@ function showPhotos(){
 }
 
 function changePhoto(file, alt){
+  console.log(file + " " + alt);
   $.post('Profile/profileHandler.php', {
     action: 'updatephoto',
     src: file,
