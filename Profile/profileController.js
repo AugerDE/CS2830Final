@@ -1,4 +1,5 @@
 function loadProfile(){
+  $("#notify").addClass("hidden").removeClass("error good");
   $.post('Profile/profileHandler.php', {
     action: "profile"
   },
@@ -11,6 +12,7 @@ function loadProfile(){
 }
 
 function profile(){
+  $("#notify").addClass("hidden").removeClass("error good");
   $("#home").addClass("clear");
   $("#tasks").addClass("clear");
   $("#videos").addClass("clear");
@@ -19,6 +21,7 @@ function profile(){
 }
 
 function showPhotos(){
+  $("#notify").addClass("hidden").removeClass("error good");
   $.post('Profile/profileHandler.php', {
     action: 'photos'
   },
@@ -39,6 +42,7 @@ function changePhoto(file, alt){
 }
 
 function usernameInput(){
+  $("#notify").addClass("hidden").removeClass("error good");
   $("#usernameError").addClass("hidden");
   $("#userToUpdate").prop("disabled", false);
   $("#userUpdateBtn").addClass("hidden");
@@ -87,6 +91,7 @@ function cancelUserUpdate(user){
 }
 
 function emailInput(){
+  $("#notify").addClass("hidden").removeClass("error good");
   $("#emailError").addClass("hidden");
   $("#emailToUpdate").prop("disabled", false);
   $("#emailUpdateBtn").addClass("hidden");
