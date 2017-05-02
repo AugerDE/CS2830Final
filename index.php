@@ -51,7 +51,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="panel-footer error hidden" id="errorMessage">
+                    <div class="panel-footer error hidden" id="loginMessage">
 
                     </div>
                   </div>
@@ -60,48 +60,35 @@
                   <div class="panel panel-default">
                     <div class="panel-heading">Register</div>
                     <div class="panel-body">
-                      <form action="index.php" method="POST">
-                        <div>
-                          <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                            <input type="text" class="form-control" name="email" placeholder="Email" />
-                          </div>
-                          <br />
-                          <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input type="text" class="form-control" name="usrnm" placeholder="Username" />
-                          </div>
-                          <br />
-                          <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                            <input type="password" class="form-control" name="psswd" placeholder="Password" />
-                          </div>
-                          <br />
-                          <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                            <input type="password" class="form-control" name="pconf" placeholder="Confirm Password" />
-                          </div>
-                          <br />
-                          <div class="input-group">
-                            <input type="submit" name="register" class="btn btn-info" value="Register" />
-                          </div>
+                      <div>
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                          <input type="text" class="form-control" id="email" placeholder="Email" />
                         </div>
-                      </form>
+                        <br />
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                          <input type="text" class="form-control" id="newUsrnm" placeholder="Username" />
+                        </div>
+                        <br />
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                          <input type="password" class="form-control" id="newPsswd" placeholder="Password" />
+                        </div>
+                        <br />
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                          <input type="password" class="form-control" id="psswdConf" placeholder="Confirm Password" />
+                        </div>
+                        <br />
+                        <div class="input-group">
+                          <button id="register" class="btn btn-info"/>Register</button>
+                        </div>
+                      </div>
                     </div>
-                    <?php
-                      if(isset($_POST['register'])){
-                        $email = checkInput($_POST['email']);
-                        $usrnm = checkInput($_POST['usrnm']);
-                        $psswd = checkInput($_POST['psswd']);
-                        $pconf = checkInput($_POST['pconf']);
-                        $status = register($email, $usrnm, $psswd, $pconf);
-                        if($status == 1){
-                          echo registerSuccessMessage();
-                        }else{
-                          echo $status;
-                        }
-                      }
-                    ?>
+                    <div class="panel-footer hidden" id="registerMessage">
+
+                    </div>
                   </div>
                 </div>
               </div>

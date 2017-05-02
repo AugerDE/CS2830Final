@@ -2,8 +2,6 @@
   session_start();
   ob_start();
 
-
-
   include("../secure/connect.php");
 
   if(isset($_POST['action'])){

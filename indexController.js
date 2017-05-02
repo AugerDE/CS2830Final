@@ -4,8 +4,8 @@ $(function(){
     var usrnm = $("#usrnm").val();
     var psswd = $("#psswd").val();
     if(usrnm == "" || psswd == ""){
-      $("#errorMessage").html("<strong>ERROR: </strong>All Fields Required");
-      $("#errorMessage").removeClass("hidden");
+      $("#loginMessage").html("<strong>ERROR: </strong>All Fields Required");
+      $("#loginMessage").removeClass("hidden");
     }else{
       $.post('indexHandler.php', {
         action: 'login',
@@ -14,14 +14,25 @@ $(function(){
       },
       function(data){
         if(data == 1){
-          $("#errorMessage").addClass("hidden");
+          $("#loginMessage").addClass("hidden");
           window.location.href = "home.php";
         }else{
-          $("#errorMessage").html(data);
-          $("#errorMessage").removeClass("hidden");
+          $("#loginMessage").html(data);
+          $("#loginMessage").removeClass("hidden");
         }
       });
     }
+  });
+
+  $("#register").click(function(){
+    var email = $("#email").val();
+    var usrnm = $("#newUsrnm").val();
+    var psswd = $("#newPsswd").val();
+    var pconf = $("#psswdConf").val();
+    console.log(email);
+    console.log(usrnm);
+    console.log(psswd);
+    console.log(pconf);
   });
 
 });
