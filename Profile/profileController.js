@@ -75,6 +75,7 @@ function confirmUserUpdate(user){
 }
 
 function cancelUserUpdate(user){
+  $("#notify").addClass("hidden").removeClass("error good");
   $("#usernameError").addClass("hidden");
   $("#userToUpdate").val(user);
   $("#userToUpdate").prop("disabled", true);
