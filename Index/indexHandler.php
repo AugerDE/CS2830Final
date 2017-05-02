@@ -3,10 +3,15 @@
   ob_start();
 
   include("../secure/connect.php");
+  include("indexContent.php");
 
   if(isset($_POST['action'])){
     $action = $_POST['action'];
     switch($action){
+      case "content":
+        echo getContent();
+        break;
+
       case "login":
         $usrnm = checkInput($_POST['usrnm']);
         $psswd = checkInput($_POST['psswd']);
