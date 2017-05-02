@@ -166,6 +166,10 @@
   }
 
   function updateUserName($new, $old){
+    $exists = checkExists($new);
+    if($exists != 1){
+      return $exists;
+    }
     $conn = connectToDB();
     $SQL = "UPDATE Users
             SET userName=?

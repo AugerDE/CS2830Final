@@ -62,11 +62,8 @@ function confirmUserUpdate(user){
     },
     function(data){
       if(data == 1){
-        $("#contentHeader").html(newUser + "'s Profile");
         $("#profile").val(newUser);
-        $(".dropdown-toggle").html(newUser + " <span class='caret'></span>");
-        $("#userToUpdate").val(newUser);
-        $("#userToUpdate").prop("disabled", true);
+        $("#contentHeader").html(user + "'s Profile");
         $("#notify").html("<strong>SUCCESS: </strong>Username Updated");
         $("#notify").addClass("good");
       }else{
@@ -81,7 +78,7 @@ function confirmUserUpdate(user){
 function cancelUserUpdate(user){
   $("#notify").addClass("hidden").removeClass("error good");
   $("#usernameError").addClass("hidden");
-  $("#userToUpdate").val(user);
+  $("#userToUpdate").val($("#profile").val());
   $("#userToUpdate").prop("disabled", true);
   $("#userUpdateBtn").removeClass("hidden");
   $("#userUpdateConf").addClass("hidden");

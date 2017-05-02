@@ -31,8 +31,11 @@
 
       case "userupdate":
         $new = checkInput($_POST['newUser']);
-        echo updateUserName($new, $usrnm);
-        $_SESSION['user'] = $new;
+        $status = updateUserName($new, $usrnm);
+        if($status == 1){
+          $_SESSION['user'] = $new;
+        }
+        echo $status;
         break;
 
       case "emailupdate":
