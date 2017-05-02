@@ -1,7 +1,6 @@
 <?php
   function getContent(){
     return "<div class='row'>
-
               <div class='col-sm-6'>
                 <div class='panel panel-default'>
                   <div class='panel-heading'>Log-In</div>
@@ -26,7 +25,6 @@
                   </div>
                 </div>
               </div>
-
               <div class='col-sm-6'>
                 <div class='panel panel-default'>
                   <div class='panel-heading'>Register</div>
@@ -61,7 +59,6 @@
                   </div>
                 </div>
               </div>
-
             </div>";
   }
 ?>

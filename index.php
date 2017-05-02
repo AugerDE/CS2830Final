@@ -1,7 +1,3 @@
-<?php
-  include("functions.php");
-?>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -23,18 +19,15 @@
           </div>
         </div>
       </nav>
-
       <div class="row">
         <div class="col-sm-12">
           <div class="panel panel-info">
             <div class="panel-heading"><h2>Final Project</h2></div>
             <div class="panel-body" id="content">
-
             </div>
           </div>
         </div>
       </div>
-
     </div>
   </body>
 </html>
