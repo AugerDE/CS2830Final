@@ -49,10 +49,10 @@ function usernameInput(){
 function confirmUserUpdate(user){
   $("#notify").addClass("hidden").removeClass("error good");
   var newUser = $("#userToUpdate").val();
-  if(newUser != ""){
+  if(newUser == ""){
     $("#notify").html("<strong>ERROR: </strong>Username Cannot Be Empty");
     $("#notify").addClass("error");
-  }else if(newUser != user){
+  }else if(newUser == user){
     $("#notify").html("<strong>ERROR: </strong>New Username Cannot Be The Same");
     $("#notify").addClass("error");
   }else{
