@@ -104,6 +104,24 @@
     $stmt->bind_param("sss", $usrnm, $phash, $email);
     $stmt->execute();
     $stmt->close();
+    return addPic($usrnm, $conn);
+  }
+
+  function addPic($usrnm, $conn){
+    $src = "Profile/images/cool.gif";
+    $alt = "cool.gif";
+    $SQL = "INSERT INTO Pics(userName, src, alt)
+            VALUES(?, ?, ?)";
+    $stmt = $conn->stmt_init();
+    if(!$stmt->prepare($SQL)){
+      $error = "<strong>ERROR: </strong>".$stmt->error;
+      $stmt->close();
+      $conn->close();
+      return $error;
+    }
+    $stmt->bind_param("sss", $usrnm, $src, $alt);
+    $stmt->execute();
+    $stmt->close();
     return 1;
   }
 ?>
