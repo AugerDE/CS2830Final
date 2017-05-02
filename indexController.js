@@ -46,6 +46,7 @@ $(function(){
       },
       function(data){
         if(data == 1){
+          clearForm();
           $("#registerMessage").html("<strong>USER CREATED: </strong>Now Just Log-In!");
           $("#registerMessage").addClass("good");
         }else{
