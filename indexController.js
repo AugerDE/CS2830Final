@@ -46,10 +46,10 @@ $(function(){
       },
       function(data){
         if(data == 1){
-          $("#email").val("");
-          $("#newUsrnm").val("");
-          $("#newPsswd").val("");
-          $("#psswdConf").val("");
+          $("#email").val() = "";
+          $("#newUsrnm").val() = "";
+          $("#newPsswd").val() = "";
+          $("#psswdConf").val() = "";
           $("#registerMessage").html("<strong>USER CREATED: </strong>Now Just Log-In!");
           $("#registerMessage").addClass("good");
         }else{
