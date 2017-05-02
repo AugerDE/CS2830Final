@@ -125,7 +125,7 @@
     if($i == 0){
       return emptyTaskTable();
     }else{
-      return $table;  
+      return $table;
     }
   }
 
@@ -196,7 +196,7 @@
                 </tr>
               </tbody>
             </table>
-            <div class='form-inline hidden' id='addTaskForm'>
+            <div class='form-inline' id='addTaskForm'>
               <th><input type='text' class='form-control' id='tskname' placeholder='Task Name'/></th>
               <th><input type='text' class='form-control' id='tskdesc' placeholder='Task Description'/></th>
               <th><input type='text' class='form-control' id='tskdate' placeholder='Task Date'/></th>
