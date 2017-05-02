@@ -1,5 +1,4 @@
 function loadProfile(){
-  $("#notify").addClass("hidden").removeClass("error good");
   $.post('Profile/profileHandler.php', {
     action: "profile"
   },
