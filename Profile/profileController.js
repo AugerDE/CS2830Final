@@ -64,7 +64,8 @@ function confirmUserUpdate(user){
       if(data == 1){
         $("#profile").val(newUser);
         $(".dropdown-toggle").html(newUser + " <span class='caret'></span>");
-        loadProfile();
+        $("#userToUpdate").val(user);
+        $("#userToUpdate").prop("disabled", true);
       }else{
         $("#notify").html(data);
         $("#notify").addClass("error");
@@ -93,6 +94,7 @@ function emailInput(){
 }
 
 function cancelEmailUpdate(email){
+  $("#notify").addClass("hidden").removeClass("error good");
   $("#emailError").addClass("hidden");
   $("#emailToUpdate").val(email);
   $("#emailToUpdate").prop("disabled", true);
