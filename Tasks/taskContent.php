@@ -19,13 +19,12 @@
     }
     $stmt->bind_param("s", $usrnm);
     $stmt->execute();
-    $num = mysqli_stmt_num_rows($stmt);
-    if($num == 0){
+    $tasks = mysqli_stmt_get_result($stmt);
+    if(empty($tasks)){
       $stmt->close();
       $conn->close();
       return emptyTaskTable();
     }
-    $tasks = mysqli_stmt_get_result($stmt);
     $table = "";
     $table .= "<table class='table table-striped' id='taskTable'>
                  <thead>
