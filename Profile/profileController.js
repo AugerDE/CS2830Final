@@ -63,6 +63,7 @@ function confirmUserUpdate(user){
     function(data){
       if(data == 1){
         $("#profile").val(newUser);
+        $(".dropdown-toggle").html(newUser);
         loadProfile();
         $("#notify").html("<strong>SUCCESS: </strong>Username Updated");
         $("#notify").addClass("good");
