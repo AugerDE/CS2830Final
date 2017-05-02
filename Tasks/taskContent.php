@@ -40,9 +40,7 @@
                    </tr>
                  </thead>
                 <tbody>";
-    $i = 0;
     while($row = $tasks->fetch_array(MYSQLI_NUM)){
-      $i++;
       $taskName = "'".$row[0]."'";
       $taskDesc = "'".$row[1]."'";
       $taskDate = "'".$row[2]."'";
