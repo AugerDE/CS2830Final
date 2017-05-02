@@ -11,7 +11,6 @@ function loadProfile(){
 }
 
 function profile(){
-  $("#notify").hide();
   $("#home").addClass("clear");
   $("#tasks").addClass("clear");
   $("#videos").addClass("clear");
@@ -29,7 +28,6 @@ function showPhotos(){
 }
 
 function changePhoto(file, alt){
-  console.log(file + " " + alt);
   $.post('Profile/profileHandler.php', {
     action: 'updatephoto',
     src: file,
@@ -49,20 +47,31 @@ function usernameInput(){
 }
 
 function confirmUserUpdate(user){
+  $("#notify").addClass("hidden").removeClass("error good");
   var newUser = $("#userToUpdate").val();
-  if(newUser != user && newUser != ""){
+  if(newUser != ""){
+    $("#notify").html("<strong>ERROR: </strong>Username Cannot Be Empty");
+    $("#notify").addClass("error");
+  }else if(newUser != user){
+    $("#notify").html("<strong>ERROR: </strong>New Username Cannot Be The Same");
+    $("#notify").addClass("error");
+  }else{
     $.post('Profile/profileHandler.php', {
       action: 'userupdate',
       newUser: newUser
     },
     function(data){
-      $("#profile").val(newUser);
-      $(".dropdown-toggle").html(newUser + " <span class='caret'></span>");
-      loadProfile();
+      if(data == 1){
+        $("#profile").val(newUser);
+        $(".dropdown-toggle").html(newUser + " <span class='caret'></span>");
+        loadProfile();
+      }else{
+        $("#notify").html(data);
+        $("#notify").addClass("error");
+      }
     });
-  }else{
-    $("#usernameError").removeClass("hidden");
   }
+  $("#notify").removeClass("hidden");
 }
 
 function cancelUserUpdate(user){

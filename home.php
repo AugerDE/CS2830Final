@@ -75,7 +75,8 @@
             <div class="panel-body" id="content">
 
             </div>
-            <div id="notify" class="hidden"></div>
+            <div id="notify" class="panel-footer hidden">
+            </div>
           </div>
         </div>
       </div>

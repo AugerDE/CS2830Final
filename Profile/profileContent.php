@@ -14,7 +14,7 @@
             AND Pics.userName=?";
     $stmt = $conn->stmt_init();
     if(!$stmt->prepare($SQL)){
-      $error = stmtErrorMessage($stmt->error);
+      $error = "<strong>ERROR: </strong>".$stmt->error;
       $stmt->close();
       $conn->close();
       return $error;
@@ -129,7 +129,7 @@
             WHERE userName=?";
     $stmt = $conn->stmt_init();
     if(!$stmt->prepare($SQL)){
-      $error = stmtErrorMessage($stmt->error);
+      $error = "<strong>ERROR: </strong>".$stmt->error;
       $stmt->close();
       $conn->close();
       return $error;
@@ -141,6 +141,30 @@
     return getProfile($usrnm);
   }
 
+  function checkExists($new){
+    $conn = connectToDB();
+    $SQL = "SELECT * FROM Users
+            WHERE userName=?";
+    $stmt = $conn->stmt_init();
+    if(!$stmt->prepare($SQL)){
+      $stmt->close();
+      $conn->close();
+      return 0;
+    }
+    $stmt->bind_param("s", $new);
+    $stmt->execute();
+    $result = mysqli_stmt_get_result($stmt);
+    $row = $result->fetch_array(MYSQLI_NUM);
+    if(empty($row[0])){
+      $status = 1;
+    }else{
+      $status = "<strong>ERROR: </strong>This Username is Taken";
+    }
+    $stmt->close();
+    $conn->close();
+    return $status;
+  }
+
   function updateUserName($new, $old){
     $conn = connectToDB();
     $SQL = "UPDATE Users
@@ -148,7 +172,7 @@
             WHERE userName=?";
     $stmt = $conn->stmt_init();
     if(!$stmt->prepare($SQL)){
-      $error = stmtErrorMessage($stmt->error);
+      $error = "<strong>ERROR: </strong>".$stmt->error;
       $stmt->close();
       $conn->close();
       return $error;
@@ -157,7 +181,7 @@
     $stmt->execute();
     $stmt->close();
     $conn->close();
-    return getProfile($new);
+    return 1;
   }
 
   function updateUserEmail($email, $usrnm){
@@ -167,7 +191,7 @@
             WHERE userName=?";
     $stmt = $conn->stmt_init();
     if(!$stmt->prepare($SQL)){
-      $error = stmtErrorMessage($stmt->error);
+      $error = "<strong>ERROR: </strong>".$stmt->error;
       $stmt->close();
       $conn->close();
       return $error;
@@ -186,7 +210,7 @@
             WHERE userName=?";
     $stmt = $conn->stmt_init();
     if(!$stmt->prepare($SQL)){
-      $error = stmtErrorMessage($stmt->error);
+      $error = "<strong>ERROR: </strong>".$stmt->error;
       $stmt->close();
       $conn->close();
       return $error;
@@ -198,7 +222,7 @@
     if(password_verify($pass, $row[0])){
       $stat = 1;
     }else{
-      $stat = 0;
+      $stat = "<strong>ERROR: </strong>Incorrect Password";
     }
     $stmt->close();
     $conn->close();
@@ -213,7 +237,7 @@
             WHERE userName=?";
     $stmt = $conn->stmt_init();
     if(!$stmt->prepare($SQL)){
-      $error = stmtErrorMessage($stmt->error);
+      $error = "<strong>ERROR: </strong>".$stmt->error;
       $stmt->close();
       $conn->close();
       return $error;
