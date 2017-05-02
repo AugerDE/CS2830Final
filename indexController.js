@@ -25,6 +25,7 @@ $(function(){
   });
 
   $("#register").click(function(){
+    $("#registerMessage").addClass("hidden");
     var email = $("#email").val();
     var usrnm = $("#newUsrnm").val();
     var psswd = $("#newPsswd").val();
