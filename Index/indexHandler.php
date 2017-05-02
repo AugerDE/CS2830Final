@@ -2,7 +2,7 @@
   session_start();
   ob_start();
 
-  include("../secure/connect.php");
+  include("../../secure/connect.php");
   include("indexContent.php");
 
   if(isset($_POST['action'])){
