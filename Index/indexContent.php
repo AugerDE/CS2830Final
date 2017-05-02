@@ -53,7 +53,7 @@
                       </div>
                       <br />
                       <div class='input-group'>
-                        <button class='btn btn-success' onclick='register()'>Log-In</button>
+                        <button class='btn btn-info' onclick='register()'>Register</button>
                       </div>
                     </div>
                   </div>
