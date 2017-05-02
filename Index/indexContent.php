@@ -3,8 +3,8 @@
     return "<div class='row'>
 
               <div class='col-sm-6'>
-                <div class='panel-default'>
-                  <div class='panel-heading'>Log-In</div>
+                <div class='panel panel-default'>
+                  <div class='panel panel-heading'>Log-In</div>
                   <div class='panel-body'>
                     <div>
                       <div class='input-group'>
@@ -28,8 +28,8 @@
               </div>
 
               <div class='col-sm-6'>
-                <div class='panel-default'>
-                  <div class='panel-heading'>Register</div>
+                <div class='panel panel-default'>
+                  <div class='panel panel-heading'>Register</div>
                   <div class='panel-body'>
                     <div>
                       <div class='input-group'>
