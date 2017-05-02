@@ -66,6 +66,8 @@ function confirmUserUpdate(user){
         $(".dropdown-toggle").html(newUser + " <span class='caret'></span>");
         $("#userToUpdate").val(newUser);
         $("#userToUpdate").prop("disabled", true);
+        $("#notify").html("<strong>SUCCESS: </strong>Username Updated");
+        $("#notify").addClass("good");
       }else{
         $("#notify").html(data);
         $("#notify").addClass("error");
