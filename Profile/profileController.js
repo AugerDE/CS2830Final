@@ -42,7 +42,6 @@ function changePhoto(file, alt){
 
 function usernameInput(){
   $("#notify").addClass("hidden").removeClass("error good");
-  $("#usernameError").addClass("hidden");
   $("#userToUpdate").prop("disabled", false);
   $("#userUpdateBtn").addClass("hidden");
   $("#userUpdateConf").removeClass("hidden");
@@ -92,7 +91,6 @@ function confirmEmailUpdate(email){
 
 function cancelUserUpdate(user){
   $("#notify").addClass("hidden").removeClass("error good");
-  $("#usernameError").addClass("hidden");
   $("#userToUpdate").val($("#profile").val());
   $("#userToUpdate").prop("disabled", true);
   $("#userUpdateBtn").removeClass("hidden");
@@ -102,7 +100,6 @@ function cancelUserUpdate(user){
 
 function emailInput(){
   $("#notify").addClass("hidden").removeClass("error good");
-  $("#emailError").addClass("hidden");
   $("#emailToUpdate").prop("disabled", false);
   $("#emailUpdateBtn").addClass("hidden");
   $("#emailUpdateConf").removeClass("hidden");
@@ -111,7 +108,6 @@ function emailInput(){
 
 function cancelEmailUpdate(email){
   $("#notify").addClass("hidden").removeClass("error good");
-  $("#emailError").addClass("hidden");
   $("#emailToUpdate").val(email);
   $("#emailToUpdate").prop("disabled", true);
   $("#emailUpdateBtn").removeClass("hidden");
