@@ -43,6 +43,10 @@ function register(){
   },
   function(data){
     if(data == 1){
+      $("#email").val("");
+      $("#newUser").val("");
+      $("#newPsswd").val("");
+      $("#psswdConf").val("");
       $("#registerMessage").html("<strong>USER CREATED: </strong>Now Just Log-in!");
       $("#registerMessage").addClass("good");
     }else{
