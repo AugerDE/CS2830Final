@@ -61,7 +61,7 @@ th, td{
   width: 200px;
   border-color: gray;
   border-style: solid;
-  border-width: 10px 2px 2px 2px;
+  border-width: 1px 2px 2px 2px;
   border-radius: 5px;
 }
 .noteTitle{
@@ -73,7 +73,7 @@ th, td{
 textarea{
   border-color: gray;
   border-style: solid;
-  border-width: 10px 0px 0px 0px;
+  border-width: 1px 0px 0px 0px;
   outline: none;
   resize: none;
   height: 86%;
