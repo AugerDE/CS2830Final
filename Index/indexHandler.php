@@ -48,6 +48,9 @@
   }
 
   function login($usrnm, $psswd){
+    if(empty($usrnm) || empty($psswd)){
+      return "<strong>ERROR: </strong>All Inputs Required";
+    }
     $conn = connectToDB();
     $SQL = "SELECT * FROM Users WHERE userName=?";
     $stmt = $conn->stmt_init();

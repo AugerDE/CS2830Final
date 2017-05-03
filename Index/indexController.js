@@ -41,8 +41,4 @@ function register(){
   var usrnm = $("#newUser").val();
   var psswd = $("#newPsswd").val();
   var pconf = $("#psswdConf").val();
-  console.log(email);
-  console.log(usrnm);
-  console.log(psswd);
-  console.log(pconf);
 }
