@@ -62,6 +62,7 @@ th, td{
   border-color: black;
   border-style: solid;
   border-width: 10px 2px 2px 2px;
+  border-radius: 5px;
 }
 .noteTitle{
   width: 100%;
