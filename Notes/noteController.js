@@ -14,6 +14,8 @@ function loadNotes(){
   },
   function(data){
     $("#content").html(data);
-    $(".note").draggable();
+    $(".note").draggable({
+      containment: "#content"
+    });
   });
 }
