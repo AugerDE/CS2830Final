@@ -60,7 +60,7 @@ th, td{
   height: 200px;
   width: 200px;
   border-color: gainsboro;
-  background-color: #f2f2f2;
+  background-color: gainsboro;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
   border-radius: 5px;
@@ -83,7 +83,7 @@ textarea{
   resize: none;
   height: 86%;
   width: 100%;
-  background-color: transparent;
+  background-color: #f2f2f2;
 }
 .closeNote{
   margin-left: 164px;
