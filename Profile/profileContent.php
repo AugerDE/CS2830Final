@@ -166,6 +166,12 @@
   }
 
   function updateUserName($new, $old){
+    if(empty($new)){
+      return "<strong>ERROR: </strong>New Username Cannot Be Empty";
+    }
+    if($new == $old){
+      return "<strong>ERROR: </strong>New Username Cannot Be The Same";
+    }
     $exists = checkExists($new);
     if($exists != 1){
       return $exists;
@@ -204,7 +210,7 @@
     $stmt->execute();
     $stmt->close();
     $conn->close();
-    return getProfile($usrnm);
+    return 1;
   }
 
   function checkPassword($pass, $usrnm){

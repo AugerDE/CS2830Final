@@ -52,31 +52,38 @@ function usernameInput(){
 function confirmUserUpdate(user){
   $("#notify").addClass("hidden").removeClass("error good");
   var newUser = $("#userToUpdate").val();
-  if(newUser == ""){
-    $("#notify").html("<strong>ERROR: </strong>Username Cannot Be Empty");
-    $("#notify").addClass("error");
-  }else if(newUser == user){
-    $("#notify").html("<strong>ERROR: </strong>New Username Cannot Be The Same");
-    $("#notify").addClass("error");
-  }else{
+  $.post('Profile/profileHandler.php', {
+    action: 'userupdate',
+    newUser: newUser
+  },
+  function(data){
+    if(data == 1){
+      $("#profile").val(newUser);
+      $(".dropdown-toggle").html(newUser + " <span class='caret'></span>");
+      loadProfile();
+      $("#notify").html("<strong>SUCCESS: </strong>Username Updated");
+      $("#notify").addClass("good");
+    }else{
+      $("#notify").html(data);
+      $("#notify").addClass("error");
+    }
+  });
+  $("#notify").removeClass("hidden");
+}
+
+function confirmEmailUpdate(email){
+  var newEmail = $("#emailToUpdate").val();
+  if(newEmail != email && newEmail != ""){
     $.post('Profile/profileHandler.php', {
-      action: 'userupdate',
-      newUser: newUser
+      action: 'emailupdate',
+      newEmail: newEmail
     },
     function(data){
-      if(data == 1){
-        $("#profile").val(newUser);
-        $(".dropdown-toggle").html(newUser + " <span class='caret'></span>");
-        loadProfile();
-        $("#notify").html("<strong>SUCCESS: </strong>Username Updated");
-        $("#notify").addClass("good");
-      }else{
-        $("#notify").html(data);
-        $("#notify").addClass("error");
-      }
+      loadProfile();
     });
+  }else{
+    $("#emailError").removeClass("hidden");
   }
-  $("#notify").removeClass("hidden");
 }
 
 function cancelUserUpdate(user){
@@ -106,21 +113,6 @@ function cancelEmailUpdate(email){
   $("#emailUpdateBtn").removeClass("hidden");
   $("#emailUpdateConf").addClass("hidden");
   $("#emailUpdateCanc").addClass("hidden");
-}
-
-function confirmEmailUpdate(email){
-  var newEmail = $("#emailToUpdate").val();
-  if(newEmail != email && newEmail != ""){
-    $.post('Profile/profileHandler.php', {
-      action: 'emailupdate',
-      newEmail: newEmail
-    },
-    function(data){
-      loadProfile();
-    });
-  }else{
-    $("#emailError").removeClass("hidden");
-  }
 }
 
 function passwordInput(){
