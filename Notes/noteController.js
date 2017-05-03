@@ -9,7 +9,7 @@ $(function(){
 });
 
 function loadNotes(){
-  $.post('Notes/noteController.php', {
+  $.post('Notes/noteHandler.php', {
     action: 'load'
   },
   function(data){
