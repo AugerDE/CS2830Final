@@ -116,6 +116,7 @@ function cancelEmailUpdate(email){
 }
 
 function passwordInput(){
+  $("#notify").addClass("hidden");
   $("#passUpdateBtn").addClass("hidden");
   $("#psswdForm").removeClass("hidden");
 }
@@ -126,6 +127,7 @@ function cancelPassUpdate(){
   $("#newPass").val("");
   $("#psswdForm").addClass("hidden");
   $("#passUpdateBtn").removeClass("hidden");
+  $("#notify").addClass("hidden");
 }
 
 function confirmPassUpdate(){
