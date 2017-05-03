@@ -8,9 +8,7 @@
 
   function getNotes(){
     return "<div class='notes'>
-              <button class='btn btn-sm btn-danger closeNote'>
-                <span class='glyphicon glyphicon-remove'></span>
-              </button>
+              <button class='btn btn-sm btn-danger closeNote'>X</button>
               <textarea spellcheck='false'></textarea>
             </div>
             <div class='notes'>
