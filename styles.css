@@ -66,6 +66,7 @@ th, td{
   border-radius: 5px;
 }
 .noteTitle{
+  padding: 5px;
   width: 100%;
   outline: none;
   border: none;
