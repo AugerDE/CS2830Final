@@ -45,10 +45,11 @@ function register(){
     if(data == 1){
       load();
       $("#registerMessage").html("<strong>USER CREATED: </strong>Now Just Log-in!");
-      $("#registerMessage").addClass("good").removeClass("hidden");
+      $("#registerMessage").addClass("good");
     }else{
       $("#registerMessage").html(data);
-      $("#registerMessage").addClass("error").removeClass("hidden");
+      $("#registerMessage").addClass("error");
     }
   });
+  $("#registerMessage").removeClass("hidden");
 }
