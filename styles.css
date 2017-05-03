@@ -59,7 +59,9 @@ th, td{
 .notes{
   height: 200px;
   width: 200px;
-  border: 20px 2px 2px 2px solid black;
+  border-color: black;
+  border-style: solid;
+  border-width: 20px 2px 2px 2px;
 }
 .noteTitle{
   width: 100%;
