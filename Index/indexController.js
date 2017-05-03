@@ -1,13 +1,15 @@
 $(function(){
+  load();
+});
 
+function load(){
   $.post('Index/indexHandler.php', {
     action: 'content'
   },
   function(data){
     $("#content").html(data);
   });
-
-});
+}
 
 function login(){
   var usrnm = $("#usrnm").val();
