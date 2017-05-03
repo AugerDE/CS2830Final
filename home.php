@@ -33,7 +33,7 @@
     <script src="scripts.js"></script>
     <script src="Profile/profileController.js"></script>
     <script src="Tasks/taskController.js"></script>
-    <script src="Noets/noteController.js"></script>
+    <script src="Notes/noteController.js"></script>
   </head>
   <body>
     <div class="container">
