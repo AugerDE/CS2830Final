@@ -60,7 +60,7 @@ th, td{
   height: 200px;
   width: 200px;
   border: 2px solid black;
-  border-top: 25px;
+  border-top: 25px solid black;
 }
 textarea{
   resize: none;
