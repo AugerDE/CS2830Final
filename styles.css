@@ -61,3 +61,7 @@ th, td{
   width: 200px;
   border: 2px solid black;
 }
+textarea{
+  height: 100%;
+  width: 100%;
+}

@@ -8,25 +8,7 @@
 
   function getNotes(){
     return "<div class='note'>
-              a
-              a
-              a
-              a
-              a
-            </div>
-            <div class='note'>
-              a
-              a
-              a
-              a
-              a
-            </div>
-            <div class='note'>
-              a
-              a
-              a
-              a
-              a
+              <textarea></textarea>
             </div>";
   }
 ?>
