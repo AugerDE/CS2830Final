@@ -24,8 +24,7 @@ function login(){
       window.location.href = "home.php";
     }else{
       $("#loginMessage").html(data);
-      $("#loginMessage").addClass("error");
-      $("#loginMessage").removeClass("hidden");
+      $("#loginMessage").addClass("error").removeClass("hidden");
     }
   });
 }
@@ -35,4 +34,21 @@ function register(){
   var usrnm = $("#newUser").val();
   var psswd = $("#newPsswd").val();
   var pconf = $("#psswdConf").val();
+  $.post('Index/indexHandler.php', {
+    action: 'register',
+    email: email,
+    usrnm: usrnm,
+    psswd: psswd,
+    pconf: pconf
+  },
+  function(data){
+    if(data == 1){
+      load();
+      $("#registerMessage").html("<strong>USER CREATED: </strong>Now Just Log-in!");
+      $("#registerMessage").addClass("good").removeClass("hidden");
+    }else{
+      $("#registerMessage").html(data);
+      $("#registerMessage").addClass("error").removeClass("hidden");
+    }
+  });
 }

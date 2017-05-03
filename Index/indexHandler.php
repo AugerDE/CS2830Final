@@ -75,6 +75,11 @@
   }
 
   function register($email, $usrnm, $psswd, $pconf){
+    if(empty($email) || empty($usrnm) || empty($psswd) || empty($pconf)){
+      return "<strong>ERROR: </strong>All Inputs Required";
+    }else if($psswd != $pconf){
+      return "<strong>ERROR: </strong>Passwords Don't Match";
+    }
     $conn = connectToDB();
     $SQL = "SELECT * FROM Users WHERE userName=?";
     $stmt = $conn->stmt_init();
