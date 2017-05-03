@@ -8,15 +8,15 @@
 
   function getNotes(){
     return "<div class='notes'>
-              <input class='noteTitle' type='text' spellcheck='false' /><button class='btn btn-sm btn-danger closeNote'></button>
+              <button class='btn btn-sm btn-danger closeNote'></button>
               <textarea spellcheck='false'></textarea>
             </div>
             <div class='notes'>
-              <input class='noteTitle' type='text' spellcheck='false' />
+              <button class='btn btn-sm btn-danger closeNote'></button>
               <textarea spellcheck='false'></textarea>
             </div>
             <div class='notes'>
-              <input class='noteTitle' type='text' spellcheck='false' />
+              <button class='btn btn-sm btn-danger closeNote'></button>
               <textarea spellcheck='false'></textarea>
             </div>";
   }
