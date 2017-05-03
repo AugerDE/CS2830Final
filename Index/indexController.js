@@ -18,8 +18,8 @@ function login(){
   }else{
     $.post('Index/indexHandler.php', {
       action: 'login',
-      usrnm: 'usrnm',
-      psswd: 'psswd'
+      usrnm: usrnm,
+      psswd: psswd
     },
     function(data){
       if(data == 1){
