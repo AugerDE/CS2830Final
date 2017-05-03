@@ -76,9 +76,9 @@ th, td{
   background-color: transparent;
 }
 textarea{
-  border-color: gainsboro;
+  /*border-color: gainsboro;
   border-style: solid;
-  border-width: 1px 0px 0px 0px;
+  border-width: 1px 0px 0px 0px;*/
   outline: none;
   resize: none;
   height: 86%;
