@@ -50,7 +50,7 @@
                   <td>$row[4]</td>";
 
       $table .=  '<td>
-                    <button class="btn btn-success" onclick="editTask('.$taskName.', '.$taskDesc.', '.$taskDate.', '.$taskTime.', '.$taskStat.')">Update</button>
+                    <button class="btn btn-info" onclick="editTask('.$taskName.', '.$taskDesc.', '.$taskDate.', '.$taskTime.', '.$taskStat.')">Update</button>
                   </td>
                   <td>
                     <button class="btn btn-danger" onclick="deleteTask('.$taskName.', '.$taskDesc.', '.$taskDate.', '.$taskTime.', '.$taskStat.')">Delete</button>
