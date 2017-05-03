@@ -15,6 +15,7 @@ function login(){
   if(usrnm == "" || psswd == ""){
     $("#loginMessage").html("<strong>ERROR: </strong>All Inputs Required");
     $("#loginMessage").addClass("error");
+    $("#loginMessage").removeClass("hidden");
   }else{
     $.post('Index/indexHandler.php', {
       action: 'login',
@@ -27,8 +28,8 @@ function login(){
       }else{
         $("#loginMessage").html(data);
         $("#loginMessage").addClass("error");
+        $("#loginMessage").removeClass("hidden");
       }
     });
   }
-  $("#loginMessage").removeClass("hidden");
 }
