@@ -56,3 +56,6 @@ th, td{
 #emptyTable{
   width: 100%;
 }
+.note{
+  border: 2px solid black;
+}

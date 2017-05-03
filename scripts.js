@@ -11,15 +11,7 @@ $(function(){
     loadTab("home");
   });
 
-  $("#notes").click(function(){
-    $("#notify").hide();
-    $("#home").addClass("clear");
-    $("#tasks").addClass("clear");
-    $("#videos").addClass("clear");
-    $("#notes").removeClass("clear");
-  });
 
-  
 
   $("#videos").click(function(){
     $("#notify").hide();

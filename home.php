@@ -28,10 +28,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="jquery-ui-1.11.4.custom/jquery-ui.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <script src="scripts.js"></script>
     <script src="Profile/profileController.js"></script>
     <script src="Tasks/taskController.js"></script>
+    <script src="Noets/noteController.js"></script>
   </head>
   <body>
     <div class="container">
