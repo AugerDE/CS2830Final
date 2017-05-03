@@ -43,10 +43,7 @@
                       </button>
                       <button class="btn btn-danger hidden" id="userUpdateCanc" onclick="cancelUserUpdate('.$user.')">
                         <span class="glyphicon glyphicon-remove"></span>
-                      </button>
-                      <div id="usernameError" class="hidden">
-                        <strong>ERROR: </strong>Invalid Username
-                      </div>';
+                      </button>';
     $profile .=    "</div>
                     <br />
                     <strong>Email: </strong>
@@ -60,9 +57,6 @@
                        <button class="btn btn-danger hidden" id="emailUpdateCanc" onclick="cancelEmailUpdate('.$email.')">
                          <span class="glyphicon glyphicon-remove"></span>
                        </button>
-                       <div id="emailError" class="hidden">
-                         <strong>ERROR: </strong>Invalid Email
-                       </div>
                     </div>
                     <br />
                     <div class="form-inline hidden" id="psswdForm">

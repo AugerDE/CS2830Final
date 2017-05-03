@@ -35,7 +35,6 @@
   </head>
   <body>
     <div class="container">
-
       <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -67,20 +66,17 @@
           </ul>
         </div>
       </nav>
-
       <div class="row">
         <div class="col-sm-12">
           <div class="panel panel-info" id="panelType">
             <div class="panel-heading"><h2 id="contentHeader"></h2></div>
             <div class="panel-body" id="content">
-
             </div>
             <div id="notify" class="panel-footer hidden">
             </div>
           </div>
         </div>
       </div>
-
     </div>
   </body>
 </html>
