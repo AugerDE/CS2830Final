@@ -8,7 +8,7 @@
 
   function getNotes(){
     return "<div class='notes'>
-              <input type='text' />
+              <input class='noteTitle' type='text' />
               <textarea spellcheck='false'></textarea>
             </div>";
   }

@@ -60,6 +60,9 @@ th, td{
   height: 200px;
   width: 200px;
 }
+.noteTitle{
+  width: 100%;
+}
 textarea{
   resize: none;
   height: 100%;
