@@ -10,6 +10,14 @@
     return "<div class='notes'>
               <input class='noteTitle' type='text' spellcheck='false' />
               <textarea spellcheck='false'></textarea>
+            </div>
+            <div class='notes'>
+              <input class='noteTitle' type='text' spellcheck='false' />
+              <textarea spellcheck='false'></textarea>
+            </div>
+            <div class='notes'>
+              <input class='noteTitle' type='text' spellcheck='false' />
+              <textarea spellcheck='false'></textarea>
             </div>";
   }
 ?>
