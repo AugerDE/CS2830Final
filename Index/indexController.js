@@ -33,3 +33,14 @@ function login(){
     });
   }
 }
+
+function register(){
+  var email = $("#email").val();
+  var usrnm = $("#newUser").val();
+  var psswd = $("#newPsswd").val();
+  var pconf = $("#psswdConf").val();
+  console.log(email);
+  console.log(usrnm);
+  console.log(psswd);
+  console.log(pconf);
+}
