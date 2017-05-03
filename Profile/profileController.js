@@ -120,10 +120,6 @@ function cancelEmailUpdate(email){
 }
 
 function passwordInput(){
-  $("#emptyPassError").addClass("hidden");
-  $("#passMatchError").addClass("hidden");
-  $("#passUpdateSuccess").addClass("hidden");
-  $("#incorrectPass").addClass("hidden");
   $("#passUpdateBtn").addClass("hidden");
   $("#psswdForm").removeClass("hidden");
 }
@@ -132,43 +128,29 @@ function cancelPassUpdate(){
   $("#ogPass").val("");
   $("#ogPassConf").val("");
   $("#newPass").val("");
-  $("#emptyPassError").addClass("hidden");
-  $("#passMatchError").addClass("hidden");
-  $("#passUpdateSuccess").addClass("hidden");
-  $("#incorrectPass").addClass("hidden");
   $("#psswdForm").addClass("hidden");
   $("#passUpdateBtn").removeClass("hidden");
 }
 
 function confirmPassUpdate(){
-  $("#emptyPassError").addClass("hidden");
-  $("#passMatchError").addClass("hidden");
-  $("#passUpdateSuccess").addClass("hidden");
-  $("#incorrectPass").addClass("hidden");
   var ogPass = $("#ogPass").val();
   var ogPassConf = $("#ogPassConf").val();
   var newPass = $("#newPass").val();
-  if(ogPass == "" || ogPassConf == "" || newPass == ""){
-    $("#emptyPassError").removeClass("hidden");
-  }
-  else if(ogPass != ogPassConf){
-    $("#passMatchError").removeClass("hidden");
-  }
-  else if(ogPass == newPass){
-    $("#incorrectPass").removeClass("hidden");
-  }else{
-    $.post('Profile/profileHandler.php', {
-      action: 'passcheck',
-      pass: ogPass,
-      newPass: newPass
-    },
-    function(data){
-      if(data == 1){
-        cancelPassUpdate();
-        $("#passUpdateSuccess").removeClass("hidden");
-      }else{
-        $("#incorrectPass").removeClass("hidden");
-      }
-    });
-  }
+  $.post('Profile/profileHandler.php', {
+    action: 'passcheck',
+    pass: ogPass,
+    newPass: newPass,
+    passConf: ogPassConf
+  },
+  function(data){
+    if(data == 1){
+      cancelPassUpdate();
+      $("#notify").html("<strong>SUCCESS: </strong>Password Successfully Updated");
+      $("#notify").addClass("good");
+    }else{
+      $("#notify").html(data);
+      $("#notify").addClass("error");
+    }
+  });
+  $("#notify").removeClass("hidden");
 }

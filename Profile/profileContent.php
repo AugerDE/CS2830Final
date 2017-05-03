@@ -80,18 +80,6 @@
                       </button>
                     </div>
                     <button class="btn btn-success" id="passUpdateBtn" onclick="passwordInput()">Update Password</button>
-                    <div id="emptyPassError" class="hidden">
-                      <strong>ERROR: </strong>All Inputs Required
-                    </div>
-                    <div id="passMatchError" class="hidden">
-                      <strong>ERROR: </strong>Passwords Do Not Match
-                    </div>
-                    <div id="incorrectPass" class="hidden">
-                      <strong>ERROR: </strong>Incorrect Password
-                    </div>
-                    <div id="passUpdateSuccess" class="hidden">
-                      Password Successfully Updated
-                    </div>
                   </div>
                 </div>';
     $stmt->close();
@@ -245,7 +233,20 @@
     return $stat;
   }
 
-  function updatePassword($newPass, $usrnm){
+  function updatePassword($pass, $pconf, $newPass, $usrnm){
+    if(empty($pass) || empty($pconf) || empty($newPass)){
+      return "<strong>ERROR: </strong>All Inputs Required";
+    }
+    if($pass != $pconf){
+      return "<strong>ERROR: </strong>Passwords Don't Match";
+    }
+    if($newPass == $pass){
+      return "<strong>ERROR: </strong>New Password Cannot Be The Same";
+    }
+    $stat = checkPassword($pass, $usrnm);
+    if($stat != 1){
+      return $stat;
+    }
     $pHash = password_hash($newPass, PASSWORD_DEFAULT);
     $conn = connectToDB();
     $SQL = "UPDATE Users
