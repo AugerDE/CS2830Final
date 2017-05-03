@@ -75,7 +75,7 @@ function confirmEmailUpdate(email){
   $.post('Profile/profileHandler.php', {
     action: 'emailupdate',
     newEmail: newEmail,
-    oldEmail, email
+    oldEmail: email
   },
   function(data){
     if(data == 1){
