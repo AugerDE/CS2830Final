@@ -65,8 +65,8 @@ function confirmUserUpdate(user){
       $("#notify").html(data);
       $("#notify").addClass("error");
     }
+    $("#notify").removeClass("hidden");
   });
-  $("#notify").removeClass("hidden");
 }
 
 function confirmEmailUpdate(email){
@@ -85,8 +85,8 @@ function confirmEmailUpdate(email){
       $("#notify").html(data);
       $("#notify").addClass("error");
     }
+    $("#notify").removeClass("hidden");
   });
-  $("#notify").removeClass("hidden");
 }
 
 function cancelUserUpdate(user){
@@ -149,6 +149,6 @@ function confirmPassUpdate(){
       $("#notify").html(data);
       $("#notify").addClass("error");
     }
+    $("#notify").removeClass("hidden");
   });
-  $("#notify").removeClass("hidden");
 }
