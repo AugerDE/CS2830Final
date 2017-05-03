@@ -59,11 +59,16 @@ th, td{
 .notes{
   height: 200px;
   width: 200px;
+  border-top: 20px solid black;
 }
 .noteTitle{
   width: 100%;
+  border: 2px solid black;
+  outline: none;
 }
 textarea{
+  border: 2px solid black;
+  outline: none;
   resize: none;
   height: 100%;
   width: 100%;
