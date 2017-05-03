@@ -194,7 +194,13 @@
     return 1;
   }
 
-  function updateUserEmail($email, $usrnm){
+  function updateUserEmail($email, $old, $usrnm){
+    if(empty($email)){
+      return "<strong>ERROR: </strong>New Email Cannot Be Empty";
+    }
+    if($email == $old){
+      return "<strong>ERROR: </strong>New Email Cannot Be The Same";
+    }
     $conn = connectToDB();
     $SQL = "UPDATE Users
             SET userMail=?

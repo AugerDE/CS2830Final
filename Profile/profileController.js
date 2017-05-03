@@ -50,7 +50,6 @@ function usernameInput(){
 }
 
 function confirmUserUpdate(user){
-  $("#notify").addClass("hidden").removeClass("error good");
   var newUser = $("#userToUpdate").val();
   $.post('Profile/profileHandler.php', {
     action: 'userupdate',
@@ -73,17 +72,22 @@ function confirmUserUpdate(user){
 
 function confirmEmailUpdate(email){
   var newEmail = $("#emailToUpdate").val();
-  if(newEmail != email && newEmail != ""){
-    $.post('Profile/profileHandler.php', {
-      action: 'emailupdate',
-      newEmail: newEmail
-    },
-    function(data){
+  $.post('Profile/profileHandler.php', {
+    action: 'emailupdate',
+    newEmail: newEmail,
+    oldEmail, email
+  },
+  function(data){
+    if(data == 1){
       loadProfile();
-    });
-  }else{
-    $("#emailError").removeClass("hidden");
-  }
+      $("#notify").html("<strong>SUCCESS: </strong>Email Updated");
+      $("#notify").addClass("good");
+    }else{
+      $("#notify").html(data);
+      $("#notify").addClass("error");
+    }
+  });
+  $("#notify").removeClass("hidden");
 }
 
 function cancelUserUpdate(user){

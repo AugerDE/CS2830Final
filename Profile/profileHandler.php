@@ -40,7 +40,8 @@
 
       case "emailupdate":
         $email = checkInput($_POST['newEmail']);
-        echo updateUserEmail($email, $usrnm);
+        $old = checkInput($_POST['oldEmail']);
+        echo updateUserEmail($email, $old, $usrnm);
         break;
 
       case "passcheck":
