@@ -86,7 +86,7 @@ textarea{
   background-color: transparent;
 }
 .closeNote{
-  text-align: right;
+  margin-left: 80%;
   height: 25px;
   width: 25px;
 }
