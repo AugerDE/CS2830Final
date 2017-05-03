@@ -56,10 +56,11 @@ th, td{
 #emptyTable{
   width: 100%;
 }
-.note{
+.notes{
   height: 200px;
   width: 200px;
   border: 2px solid black;
+  border-top: 25px;
 }
 textarea{
   resize: none;
