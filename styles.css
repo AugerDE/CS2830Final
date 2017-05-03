@@ -67,7 +67,8 @@ th, td{
 }
 .noteTitle{
   padding: 5px;
-  width: 100%;
+  width: 90%;
+  font-weight: bold;
   outline: none;
   border: none;
   background-color: transparent;
