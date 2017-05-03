@@ -68,7 +68,9 @@ th, td{
   outline: none;
 }
 textarea{
-  border-top: 5px solid black;
+  border-color: black;
+  border-style: solid;
+  border-width: 10px 0px 0px 0px;
   outline: none;
   resize: none;
   height: 87%;
