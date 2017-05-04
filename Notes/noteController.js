@@ -17,7 +17,8 @@ function loadNotes(){
     $("#content").html(data);
     var user = $("#profile").val();
     $("#panelType").removeClass("panel-info panel-warning panel-danger").addClass("panel-success");
-    $("#contentHeader").html(user + "'s Notes" + "<button class='btn btn-success' onclick='addNote()'>Add a Note</button> <button class='btn btn-info' onclick='saveNotes()'>Save Notes</button>");
+    var btn = getButtons();
+    $("#contentHeader").html(user + "'s Notes" + btn);
     $(".notes").draggable({
       containment: "#content"
     });
@@ -25,7 +26,6 @@ function loadNotes(){
 }
 
 function addNote(){
-  console.log("click");
   $.post('Notes/noteHandler.php', {
     action: 'add'
   },
@@ -79,4 +79,12 @@ function saveNotes(){
     });
     i++;
   });
+}
+
+function getButtons(){
+  var button = "<div class='form-inline' id='noteBtns'>";
+      button += "<button class='btn btn-success' onclick='addNote()'>Add a Note</button>";
+      button += "<button class='btn btn-info' onclick='saveNotes()'>Save Notes</button>";
+      button += "</div>";
+  return button;
 }

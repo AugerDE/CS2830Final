@@ -94,3 +94,6 @@ textarea{
 .noteContainer{
   height: 700px;
 }
+#noteBtns{
+  text-align: right;
+}
