@@ -109,7 +109,7 @@
 
   function saveNote($cont, $x, $y, $usrnm){
     $conn = connectToDB();
-    $SQL = "INSERT INTO Notes(userName, noteCont, x, y)
+    $SQL = "INSERT INTO Notes(userName, noteCont, y, x)
             VALUES(?, ?, ?, ?)";
     $stmt = $conn->stmt_init();
     if(!$stmt->prepare($SQL)){
@@ -119,7 +119,7 @@
     }
     $x = $x."px";
     $y = $y."px";
-    $stmt->bind_param("ssss", $usrnm, $cont, $x, $y);
+    $stmt->bind_param("ssss", $usrnm, $cont, $y, $x);
     $stmt->execute();
     $stmt->close();
     $conn->close();
