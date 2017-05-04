@@ -82,9 +82,6 @@ function saveNotes(){
 }
 
 function getButtons(){
-  var button = "<div class='form-inline' id='noteBtns'>";
-      button += "<button class='btn btn-success' onclick='addNote()'>Add a Note</button>";
-      button += "<button class='btn btn-info' onclick='saveNotes()'>Save Notes</button>";
-      button += "</div>";
+  var button = "<div id='noteBtns'><button class='btn btn-success' onclick='addNote()'>Add a Note</button> <button class='btn btn-info' onclick='saveNotes()'>Save Notes</button></div>";
   return button;
 }
