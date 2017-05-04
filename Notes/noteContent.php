@@ -25,7 +25,7 @@
       $x = "'".$row[1]."'";
       $y = "'".$row[2]."'";
       $notes .= '<div class="notes" style="top:'$row[1]'; left:'$row[2]';">
-                   <button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$row[1].', '.$row[2].')">
+                   <button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$y.', '.$x.')">
                      <span class="glyphicon glyphicon-remove"></span>
                    </button>
                    <textarea spellcheck="false">$row[0]</textarea>
