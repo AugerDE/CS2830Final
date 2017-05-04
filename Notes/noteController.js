@@ -60,8 +60,7 @@ function saveNotes(){
     newT = text.val();
     x = div.offset().left - div.parent().offset().left;
     y = div.offset().top - div.parent().offset().top;
-    console.log("x :" + x);
-    console.log("y :" + y);
+    console.log("( " + x + ", " + y +" )");
     console.log("");
     // $.post('Notes/noteHandler.php', {
     //   action: 'save',
