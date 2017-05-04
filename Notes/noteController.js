@@ -63,12 +63,22 @@ function saveNotes(){
     i++;
   });
 
+  y = 0;
   for(i = 0; i < text.length; i++){
     cont = text[i].innerHTML;
     x = divs[i].offsetLeft - 31;
     y = divs[i].offsetTop - 100;
-    console.log(x);
-    console.log(y);
-    console.log(cont);
+    $.post('Notes/noteHandler.php', {
+      action: "save",
+      cont: cont,
+      x: x,
+      y: y
+    },
+    function(data){
+      y++;
+      if(y == text.length){
+        loadNotes();
+      }
+    });
   }
 }

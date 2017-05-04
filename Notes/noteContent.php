@@ -107,7 +107,7 @@
     return 1;
   }
 
-  function saveTask($cont, $x, $y, $usrnm){
+  function saveNote($cont, $x, $y, $usrnm){
     $conn = connectToDB();
     $SQL = "INSERT INTO Notes(userName, noteCont, x, y)
             VALUES(?, ?, ?, ?)";
@@ -115,7 +115,7 @@
     if(!$stmt->prepare($SQL)){
       $stmt->close();
       $conn->close();
-      return $stmt->error;
+      exit();
     }
     $stmt->bind_param("ssss", $usrnm, $cont, $x, $y);
     $stmt->execute();
