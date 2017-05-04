@@ -8,7 +8,7 @@
 
   function getNotes($usrnm){
     $conn = connectToDB();
-    $SQL = "SELECT noteCont
+    $SQL = "SELECT noteCont, y, x
             FROM Notes
             WHERE userName=?";
     $stmt = $conn->stmt_init();
@@ -22,7 +22,7 @@
     $result = mysqli_stmt_get_result($stmt);
     $notes = "";
     while($row = $result->fetch_array(MYSQLI_NUM)){
-      $notes .= "<div class='notes'>
+      $notes .= "<div class='notes' style='top:$row[1]; left:$row[2];'>
                    <button class='btn btn-sm btn-danger closeNote'>
                      <span class='glyphicon glyphicon-remove'></span>
                    </button>
