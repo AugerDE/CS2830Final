@@ -64,6 +64,7 @@ function saveNotes(){
     offy = div.parent().offset().top;
     divx = x - offx;
     divy = y - offy;
+    divy -= 200 * index;
     console.log(index + ":");
     console.log(oldT);
     console.log("( " + x + ", " + y +" )");
