@@ -56,8 +56,22 @@ function saveNotes(){
   $(".noteContainer").children().each(function(index, value){
     text = $("textarea").eq(index);
     div = $(".notes").eq(index).offset();
-    console.log(text.html());
-    console.log(text.val());
+    oldT = text.html();
+    newT = text.val();
+    x = div.left;
+    y = div.top;
+    $.post('Notes/noteHandler.php', {
+      action: 'save',
+      oldText: oldT,
+      newText: newT,
+      x: x,
+      y: y
+    },
+    function(data){
+      if(data != 1){
+        $("#notify").html(data).removeClass("hidden");
+      }
+    });
   });
 }
 
