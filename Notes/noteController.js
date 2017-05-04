@@ -59,7 +59,7 @@ function saveNotes(){
   var i = 0;
   $("#content textarea").each(function(cont){
     text = $("textarea");
-    console.log(text.eq(i));
+    console.log(text.eq(i).html());
     i++;
   });
 
