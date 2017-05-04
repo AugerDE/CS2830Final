@@ -75,4 +75,6 @@ function saveNotes(){
   right = y.join(',');
   html = cont.join(',');
   console.log(left);
+  console.log(right);
+  console.log(html);
 }
