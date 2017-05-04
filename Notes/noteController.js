@@ -64,8 +64,10 @@ function saveNotes(){
     console.log("New: " + newText);
     console.log("Old: " + oldText);
     pos = $(".notes");
-    console.log("Top: " + pos.eq(i).position().top);
-    console.log("Left: " + pos.eq(i).position().left);
+    x = pos.eq(i).position().left - 31;
+    y = pos.eq(i).position().top - 100;
+    console.log("Top: " + y);
+    console.log("Left: " + x);
     i++;
   });
 
