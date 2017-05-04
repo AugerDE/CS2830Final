@@ -119,8 +119,6 @@
       $conn->close();
       return $stmt->error;
     }
-    $x = $x;
-    $y = $y;
     $stmt->bind_param("sssss", $new, $y, $x, $old, $usrnm);
     $stmt->execute();
     $stmt->close();
