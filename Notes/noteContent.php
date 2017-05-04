@@ -21,9 +21,15 @@
     $stmt->execute();
     $result = mysqli_stmt_get_result($stmt);
     $notes = "<div class='noteContainer'>";
+    $x = 0;
+    $y = 0;
     while($row = $result->fetch_array(MYSQLI_NUM)){
-      $x = "'".$row[1]."px'";
-      $y = "'".$row[2]."px'";
+      if($x >= 700){
+        $x = 0;
+        $y += 200;
+      }
+      $x = "'".$x."'";
+      $y = "'".$y."'";
       $cont = "'".$row[0]."'";
       $notes .= "<div class='notes' style='top:$y; left:$x;'>";
       $notes .=   '<button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$y.', '.$x.', '.$cont.')">';
@@ -31,6 +37,7 @@
                    </button>";
       $notes .=   "<textarea spellcheck='false'>$row[0]</textarea>
                  </div>";
+      $x += 200;
     }
     $notes .= "</div>";
     $stmt->close();
