@@ -41,7 +41,7 @@ function addNote(){
 function deleteNote(cont){
   $.post('Notes/noteHandler.php', {
     action: 'delete',
-    cont: cont
+    content: cont
   },
   function(data){
     if(data == 1){
