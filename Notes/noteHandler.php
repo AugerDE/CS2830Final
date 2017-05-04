@@ -31,10 +31,11 @@
         break;
 
       case "save":
+        $i = checkInput($_POST['i']);
         $cont = checkInput($_POST['cont']);
         $x = checkInput($_POST['x']);
         $y = checkInput($_POST['y']);
-        saveNote($cont, $x, $y, $usrnm);
+        saveNote($cont, $x, $y, $i, $usrnm);
         break;
     }
   }
