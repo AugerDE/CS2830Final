@@ -20,6 +20,7 @@
     $stmt->bind_param("s", $usrnm);
     $stmt->execute();
     $result = mysqli_stmt_get_result($stmt);
+    $notes = "";
     while($row = $result->fetch_array(MYSQLI_NUM)){
       $y = "'".$row[1]."'";
       $x = "'".$row[2]."'";
