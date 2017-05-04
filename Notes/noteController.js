@@ -58,6 +58,6 @@ function saveNotes(){
   text = [];
   for(i = 0; i < divs.length; i++){
     text[i] = divs[i].getElementsByTagName['textarea'];
-    console.log(text[i]);
+    console.log(text[i].innerHTML);
   }
 }
