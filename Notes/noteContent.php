@@ -64,7 +64,7 @@
       $conn->close();
       return $stmt->error;
     }
-    $stmt->bind_param("ssss", $x, $y, $cont, $usrnm);
+    $stmt->bind_param("ss", $cont, $usrnm);
     $stmt->execute();
     $stmt->close();
     $conn->close();
