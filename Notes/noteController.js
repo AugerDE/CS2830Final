@@ -54,7 +54,7 @@ function deleteNote(y, x, cont){
 }
 
 function saveNotes(){
-  $("textarea").each(function(cont){
+  $("textarea").html().each(function(cont){
     console.log(cont);
   });
 }
