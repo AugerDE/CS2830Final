@@ -22,8 +22,10 @@
     $result = mysqli_stmt_get_result($stmt);
     $notes = "";
     while($row = $result->fetch_array(MYSQLI_NUM)){
+      $y = $row[1]."px";
+      $x = $row[2]."px";
       $cont = "'".$row[0]."'";
-      $notes .= "<div class='notes' style='top:$row[1]; left:$row[2];'>";
+      $notes .= "<div class='notes' style='top:$y; left:$x;'>";
       $notes .=   '<button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$cont.')">';
       $notes .=     "<span class='glyphicon glyphicon-remove'></span>
                    </button>";
