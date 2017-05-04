@@ -58,25 +58,6 @@ function saveNotes(){
   divs = [];
   var i = 0;
   text = document.getElementsByTagName('textarea');
-  console.log(text);
+  console.log(text.innerHTML);
 
-  y = 0;
-  for(i = 0; i < text.length; i++){
-    cont = text[i].innerHTML;
-    x = divs[i].offsetLeft - 31;
-    y = divs[i].offsetTop - 100;
-    // $.post('Notes/noteHandler.php', {
-    //   action: "save",
-    //   cont: cont,
-    //   x: x,
-    //   y: y,
-    //   i: i
-    // },
-    // function(data){
-    //   if(data != 1){
-    //     $("#notify").html(data).removeClass("hidden");
-    //   }
-    // });
-  }
-  // loadNotes();
 }
