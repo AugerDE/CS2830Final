@@ -25,7 +25,7 @@
       $x = "'".$row[1]."'";
       $y = "'".$row[2]."'";
       $cont = "'".$row[0]."'";
-      $notes .= "<div class='notes' style='top:0; left:0;'>";
+      $notes .= "<div class='notes' style='top:$row[1]; left:$row[2];'>";
       $notes .=   '<button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$y.', '.$x.', '.$cont.')">';
       $notes .=     "<span class='glyphicon glyphicon-remove'></span>
                    </button>";
@@ -119,8 +119,8 @@
       $conn->close();
       return $stmt->error;
     }
-    $x = $x."px";
-    $y = $y."px";
+    $x = $x;
+    $y = $y;
     $stmt->bind_param("sssss", $new, $y, $x, $old, $usrnm);
     $stmt->execute();
     $stmt->close();
