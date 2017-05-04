@@ -30,8 +30,6 @@ function addNote(){
   function(data){
     if(data == 1){
       loadNotes();
-    }else{
-      $("#content").html(data);
     }
   });
 }
