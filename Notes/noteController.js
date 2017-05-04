@@ -57,7 +57,11 @@ function saveNotes(){
   text = [];
   divs = [];
   var i = 0;
-  text = document.getElementsByTagName('textarea');
-  console.log(text.innerHTML);
+  $("#content textarea").each(function(cont){
+    text = $("textarea");
+    console.log(text.eq(i));
+    i++;
+  });
+
 
 }
