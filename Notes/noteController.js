@@ -70,18 +70,18 @@ function saveNotes(){
     console.log("( " + offx + ", " + offy +" )");
     console.log("( " + divx + ", " + divy +" )");
     console.log("");
-    // $.post('Notes/noteHandler.php', {
-    //   action: 'save',
-    //   oldText: oldT,
-    //   newText: newT,
-    //   x: x,
-    //   y: y
-    // },
-    // function(data){
-    //   if(data != 1){
-    //     $("#notify").html(data).removeClass("hidden");
-    //   }
-    // });
+    $.post('Notes/noteHandler.php', {
+      action: 'save',
+      oldText: oldT,
+      newText: newT,
+      x: divx,
+      y: divy
+    },
+    function(data){
+      if(data != 1){
+        $("#notify").html(data).removeClass("hidden");
+      }
+    });
   });
 }
 
