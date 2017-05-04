@@ -91,4 +91,35 @@
     $conn->close();
     return 1;
   }
+
+  function clearNotes($usrnm){
+    $conn = connectToDB();
+    $DEL = "DELETE FROM Notes WHERE userName=?";
+    $stmt = $conn->stmt_init();
+    if(!$stmt->prepare($DEL)){
+      $stmt->close();
+      $conn->close();
+      return $stmt->error;
+    }
+    $stmt->bind_param("s", $usrnm);
+    $stmt->execute();
+    $stmt->close();
+    return 1;
+  }
+
+  function saveTask($cont, $x, $y, $usrnm){
+    $conn = connectToDB();
+    $SQL = "INSERT INTO Notes(userName, noteCont, x, y)
+            VALUES(?, ?, ?, ?)";
+    $stmt = $conn->stmt_init();
+    if(!$stmt->prepare($SQL)){
+      $stmt->close();
+      $conn->close();
+      return $stmt->error;
+    }
+    $stmt->bind_param("ssss", $usrnm, $cont, $x, $y);
+    $stmt->execute();
+    $stmt->close();
+    $conn->close();
+  }
 ?>

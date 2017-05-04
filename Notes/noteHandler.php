@@ -29,6 +29,24 @@
         $cont = checkInput($_POST['cont']);
         echo deleteNote($x, $y, $cont, $usrnm);
         break;
+
+      case "save":
+        $cont = $_POST['cont'];
+        $html = explode(',', $cont);
+        $left = $_POST['x'];
+        $x = explode(',', $left);
+        $top = $_POST['y'];
+        $y = explode(',', $top);
+        $stat = clearNotes($usrnm);
+        if($stat == 1){
+          $len = count($x);
+          for($i = 0; $i < $len; $i++){
+            saveTask($cont[$i], $x[$i], $y[$i], $usrnm);
+          }
+        }else{
+          echo $stat;
+        }
+        break;
     }
   }
 ?>

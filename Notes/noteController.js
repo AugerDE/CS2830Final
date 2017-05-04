@@ -72,9 +72,15 @@ function saveNotes(){
     y[i] = divs[i].offsetTop - 100;
   }
   left = x.join(',');
-  right = y.join(',');
+  top = y.join(',');
   html = cont.join(',');
-  console.log(left);
-  console.log(right);
-  console.log(html);
+  $.post('Notes/noteHandler', {
+    action: "save",
+    x: left,
+    y: top,
+    cont: html
+  },
+  function(data){
+    loadNotes();
+  });
 }
