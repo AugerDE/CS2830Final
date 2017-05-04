@@ -55,11 +55,11 @@ function deleteNote(cont){
 function saveNotes(){
   $(".noteContainer").children().each(function(index, value){
     text = $("textarea").eq(index);
-    div = $(".notes").eq(index).offset();
+    div = $(".notes").eq(index);
     oldT = text.html();
     newT = text.val();
-    x = div.left - div.parent().offset().left;
-    y = div.top - div.parent().offset().top;
+    x = div.offset().left - div.parent().offset().left;
+    y = div.offset().top - div.parent().offset().top;
     $.post('Notes/noteHandler.php', {
       action: 'save',
       oldText: oldT,
