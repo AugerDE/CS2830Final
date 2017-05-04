@@ -37,17 +37,38 @@
     return $notes;
   }
 
+  function getNoteNum($usrnm){
+    $conn = connectToDB();
+    $SQL = "SELECT * FROM Notes WHERE userName=?";
+    $stmt = $conn->stmt_init();
+    if(!$stmt->prepare($SQL)){
+      exit();
+    }
+    $stmt->bind_param("s", $usrnm);
+    $stmt->execute();
+    $result = mysqli_stmt_get_result($stmt);
+    $i = 1;
+    while($row = $result->fetch_array(MYSQLI_NUM)){
+      $i++;
+    }
+    $stmt->close();
+    $conn->close();
+    return $i;
+  }
+
   function addNote($usrnm){
+    $num = getNoteNum($usrnm);
+    $cont = "New Note ".$num;
     $conn = connectToDB();
     $SQL = "INSERT INTO Notes(userName, noteCont, y, x)
-            VALUES(?, 'New Note', '0px', '0px')";
+            VALUES(?, ?, '0px', '0px')";
     $stmt = $conn->stmt_init();
     if(!$stmt->prepare($SQL)){
       $stmt->close();
       $conn->close();
       return $stmt->error;
     }
-    $stmt->bind_param("s", $usrnm);
+    $stmt->bind_param("ss", $usrnm, $cont);
     $stmt->execute();
     $stmt->close();
     $conn->close();
