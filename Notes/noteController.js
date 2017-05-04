@@ -23,6 +23,7 @@ function loadNotes(){
 }
 
 function addNote(){
+  console.log("click");
   $.post('Notes/noteHandler.php', {
     action: 'add'
   },
