@@ -60,18 +60,21 @@ function saveNotes(){
     newT = text.val();
     x = div.offset().left - div.parent().offset().left;
     y = div.offset().top - div.parent().offset().top;
-    $.post('Notes/noteHandler.php', {
-      action: 'save',
-      oldText: oldT,
-      newText: newT,
-      x: x,
-      y: y
-    },
-    function(data){
-      if(data != 1){
-        $("#notify").html(data).removeClass("hidden");
-      }
-    });
+    console.log("x :" + x);
+    console.log("y :" + y);
+    console.log("");
+    // $.post('Notes/noteHandler.php', {
+    //   action: 'save',
+    //   oldText: oldT,
+    //   newText: newT,
+    //   x: x,
+    //   y: y
+    // },
+    // function(data){
+    //   if(data != 1){
+    //     $("#notify").html(data).removeClass("hidden");
+    //   }
+    // });
   });
 }
 
