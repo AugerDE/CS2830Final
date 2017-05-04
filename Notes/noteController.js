@@ -57,11 +57,11 @@ function saveNotes(){
   text = [];
   var i = 0;
   $("textarea").each(function(cont){
-    text[i] = $("textarea")[i];
+    text[i] = $("textarea").html();
     i++;
   });
 
   for(i = 0; i < text.length; i++){
-    console.log(text[i].innerHTML);
+    console.log(text[i]);
   }
 }
