@@ -23,7 +23,7 @@
     $notes = "<div class='noteContainer'>";
     $top = 0;
     while($row = $result->fetch_array(MYSQLI_NUM)){
-      $y = "'".$y."'";
+      $y = "'".$row[1]."'";
       $cont = "'".$row[0]."'";
       $notes .= "<div class='notes' style='top:0; left:$top;'>";
       $notes .=   '<button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$y.', '.$y.', '.$cont.')">';
