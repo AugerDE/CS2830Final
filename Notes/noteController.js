@@ -60,7 +60,7 @@ function saveNotes(){
     oldT = text.html();
     newT = text.val();
     x = div.left - 31;
-    y = cont.top - 136;
+    y = div.top - 136;
     $.post('Notes/noteHandler.php', {
       action: 'save',
       oldText: oldT,
