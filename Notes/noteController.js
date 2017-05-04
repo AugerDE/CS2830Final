@@ -54,8 +54,10 @@ function deleteNote(cont){
 
 function saveNotes(){
   $(".noteContainer").children().each(function(index, value){
+    text = $("textarea").eq(index);
     div = $(".notes").eq(index);
-    console.log(div);
+    console.log(text.html());
+    console.log(text.val());
   });
 }
 
