@@ -67,9 +67,9 @@ function saveNotes(){
   });
   i = 0;
   $("#content .notes").each(function(){
-    pos = $(".notes").position();
-    console.log("Top: " + pos.eq(i).top);
-    console.log("Left: " + pos.eq(i).left);
+    position = $(".notes").offset();
+    console.log("Top: " + position.eq(i).top);
+    console.log("Left: " + position.eq(i).left);
     i++;
   });
 
