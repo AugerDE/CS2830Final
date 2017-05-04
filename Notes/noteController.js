@@ -58,8 +58,8 @@ function saveNotes(){
     div = $(".notes").eq(index);
     oldT = text.html();
     newT = text.val();
-    x = div.offset().left - div.parent().offset().left;
-    y = div.offset().top - div.parent().offset().top;
+    x = div.offset().left;
+    y = div.offset().top;
     offx = div.parent().offset().left;
     offy = div.parent().offset().top;
     console.log(index + ":");
