@@ -62,7 +62,7 @@ function saveNotes(){
     oldText = text.eq(i).html();
     pos = $(".notes");
     x = 0 + pos.eq(i).position().left;
-    y = 0 + pos.eq(i).position().top;
+    y = 0 + pos.eq(i).position().top - 136;
     $.post('Notes/noteHandler.php', {
       action: 'save',
       oldText: oldText,
