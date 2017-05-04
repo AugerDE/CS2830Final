@@ -71,10 +71,7 @@ function saveNotes(){
     x[i] = divs[i].offsetLeft - 31;
     y[i] = divs[i].offsetTop - 100;
   }
-  left = x.join(',');
-  top = y.join(',');
-  html = cont.join(',');
-  console.log(left);
-  console.log(top);
-  console.log(html);
+  console.log(x);
+  console.log(y);
+  console.log(cont);
 }
