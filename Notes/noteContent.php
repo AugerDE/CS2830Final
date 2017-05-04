@@ -40,7 +40,7 @@
   function addNote($usrnm){
     $conn = connectToDB();
     $SQL = "INSERT INTO Notes(userName, noteCont, y, x)
-            VALUES(?, 'New Note', '-200px', '0px')";
+            VALUES(?, 'New Note', '0px', '0px')";
     $stmt = $conn->stmt_init();
     if(!$stmt->prepare($SQL)){
       $stmt->close();
