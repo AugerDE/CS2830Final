@@ -26,7 +26,7 @@
       $y = "'".$y."'";
       $cont = "'".$row[0]."'";
       $notes .= "<div class='notes' style='top:$y; left:0;'>";
-      $notes .=   '<button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$y.', '.$x.', '.$cont.')">';
+      $notes .=   '<button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$y.', '.$y.', '.$cont.')">';
       $notes .=     "<span class='glyphicon glyphicon-remove'></span>
                    </button>";
       $notes .=   "<textarea spellcheck='false'>$row[0]</textarea>
