@@ -58,8 +58,10 @@ function saveNotes(){
     div = $(".notes").eq(index);
     pos = $(".noteContainer").offset();
     off = $(".notes").eq(index).position();
+    left = pos.left + off.left;
+    top = pos.top + off.top;
     console.log("Left: " + pos.left + " | Top: " + pos.top);
-    console.log(index + ") " + "Left: " + off.left + " | Top: " + off.top);
+    console.log(index + ") " + "Left: " + left + " | Top: " + top);
   });
 }
 
