@@ -56,7 +56,7 @@ function saveNotes(){
   text = [];
   divs = [];
   var i = 0;
-  $("#content textarea").each(function(){
+  $(".noteContainer textarea").each(function(){
     text = $("textarea");
     newText = text.eq(i).val();
     oldText = text.eq(i).html();
