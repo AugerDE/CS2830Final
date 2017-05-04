@@ -58,7 +58,8 @@ function saveNotes(){
   divs = [];
   var i = 0;
   $("textarea").each(function(cont){
-    text[i] = $("textarea")[i];
+    text[i] = $("textarea").html();
+    console.log(text[i]);
     divs[i] = $(".notes")[i];
     i++;
   });
@@ -68,7 +69,6 @@ function saveNotes(){
     cont = text[i].html();
     x = divs[i].offsetLeft - 31;
     y = divs[i].offsetTop - 100;
-    console.log(cont);
     // $.post('Notes/noteHandler.php', {
     //   action: "save",
     //   cont: cont,
