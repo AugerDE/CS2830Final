@@ -56,8 +56,8 @@ function saveNotes(){
   $(".noteContainer").children().each(function(index, value){
     text = $("textarea").eq(index);
     div = $(".notes").eq(index);
-    console.log(text.html());
-    console.log(text.val());
+    pos = $(".noteContainer").offset();
+    console.log("Left: " + pos.left + " | Top: " + pos.top);
   });
 }
 
