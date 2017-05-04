@@ -62,10 +62,13 @@ function saveNotes(){
     y = div.offset().top;
     offx = div.parent().offset().left;
     offy = div.parent().offset().top;
+    divx = x - offx;
+    divy = y - offy;
     console.log(index + ":");
     console.log(oldT);
     console.log("( " + x + ", " + y +" )");
     console.log("( " + offx + ", " + offy +" )");
+    console.log("( " + divx + ", " + divy +" )");
     console.log("");
     // $.post('Notes/noteHandler.php', {
     //   action: 'save',
