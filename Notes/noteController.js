@@ -58,8 +58,8 @@ function saveNotes(){
   divs = [];
   var i = 0;
   $("textarea").each(function(cont){
-    text[i] = $("textarea").html();
-    console.log(text[i]);
+    text[i] = $("textarea")[i];
+    console.log(text[i].innerHTML);
     divs[i] = $(".notes")[i];
     i++;
   });
