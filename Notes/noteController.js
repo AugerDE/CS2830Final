@@ -58,8 +58,8 @@ function saveNotes(){
     div = $(".notes").eq(index).offset();
     oldT = text.html();
     newT = text.val();
-    x = 438 - div.left;
-    y = 210 - div.top;
+    x = div.left - 438;
+    y = div.top - 210;
     $.post('Notes/noteHandler.php', {
       action: 'save',
       oldText: oldT,
