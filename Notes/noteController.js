@@ -74,13 +74,7 @@ function saveNotes(){
   left = x.join(',');
   top = y.join(',');
   html = cont.join(',');
-  $.post('Notes/noteHandler', {
-    action: "save",
-    x: left,
-    y: top,
-    cont: html
-  },
-  function(data){
-    loadNotes();
-  });
+  console.log(left);
+  console.log(top);
+  console.log(html);
 }
