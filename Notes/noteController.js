@@ -69,18 +69,18 @@ function saveNotes(){
     x = divs[i].offsetLeft - 31;
     y = divs[i].offsetTop - 100;
     console.log(cont);
-    $.post('Notes/noteHandler.php', {
-      action: "save",
-      cont: cont,
-      x: x,
-      y: y,
-      i: i
-    },
-    function(data){
-      if(data != 1){
-        $("#notify").html(data).removeClass("hidden");
-      }
-    });
+    // $.post('Notes/noteHandler.php', {
+    //   action: "save",
+    //   cont: cont,
+    //   x: x,
+    //   y: y,
+    //   i: i
+    // },
+    // function(data){
+    //   if(data != 1){
+    //     $("#notify").html(data).removeClass("hidden");
+    //   }
+    // });
   }
-  loadNotes();
+  // loadNotes();
 }
