@@ -63,5 +63,7 @@ function saveNotes(){
 
   for(i = 0; i < text.length; i++){
     console.log(text[i].innerHTML);
+    console.log(text[i].offsetLeft);
+    console.log(text[i].offsetTop);
   }
 }
