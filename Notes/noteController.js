@@ -61,15 +61,21 @@ function saveNotes(){
     text = $("textarea");
     newText = text.eq(i).val();
     oldText = text.eq(i).html();
-    console.log("New: " + newText);
-    console.log("Old: " + oldText);
     pos = $(".notes");
     x = pos.eq(i).position().left - 31;
     y = pos.eq(i).position().top - 100;
-    console.log("Top: " + y);
-    console.log("Left: " + x);
+    $.post('Notes/noteHandler.php', {
+      action: 'save',
+      oldText: oldText,
+      newText: newText,
+      x: x,
+      y: y
+    },
+    function(data){
+      if(data != 1){
+        $("#notify").html(data).removeClass("hidden");
+      }
+    });
     i++;
   });
-
-
 }
