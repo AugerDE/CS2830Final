@@ -62,6 +62,8 @@ function saveNotes(){
     y = div.offset().top - div.parent().offset().top;
     offx = div.parent().offset().left;
     offy = div.parent().offset().top;
+    console.log(index + ":");
+    console.log(oldT);
     console.log("( " + x + ", " + y +" )");
     console.log("( " + offx + ", " + offy +" )");
     console.log("");
