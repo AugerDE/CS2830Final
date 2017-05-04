@@ -5,6 +5,7 @@ $(function(){
     $("#videos").addClass("clear");
     $("#notes").removeClass("clear");
     $("#content").addClass("noteContainer");
+    $("#notify").html("<button class='btn btn-success' onclick='addNote()'>Add a Note</button>").removeClass("hidden");
     loadNotes();
   });
 });
