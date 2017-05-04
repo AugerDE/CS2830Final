@@ -68,17 +68,18 @@ function saveNotes(){
     cont = text[i].innerHTML;
     x = divs[i].offsetLeft - 31;
     y = divs[i].offsetTop - 100;
-    $.post('Notes/noteHandler.php', {
-      action: "save",
-      cont: cont,
-      x: x,
-      y: y
-    },
-    function(data){
-      y++;
-      if(y == text.length){
-        loadNotes();
-      }
-    });
+    console.log(cont);
+    // $.post('Notes/noteHandler.php', {
+    //   action: "save",
+    //   cont: cont,
+    //   x: x,
+    //   y: y
+    // },
+    // function(data){
+    //   y++;
+    //   if(y == text.length){
+    //     loadNotes();
+    //   }
+    // });
   }
 }
