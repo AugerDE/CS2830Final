@@ -65,10 +65,12 @@ function saveNotes(){
     console.log("Old: " + oldText);
     i++;
   });
+  i = 0;
   $("#content .notes").each(function(){
     pos = $(".notes").position();
-    console.log("Top: " + pos.top);
-    console.log("Left: " + pos.left);
+    console.log("Top: " + pos.eq(i).top);
+    console.log("Left: " + pos.eq(i).left);
+    i++;
   });
 
 
