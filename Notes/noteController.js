@@ -35,13 +35,15 @@ function addNote(){
 }
 
 function deleteNote(y, x, cont){
-  console.log(cont);
-  // $.post('Notes/noteHandler.php', {
-  //   action: 'delete',
-  //   x: x,
-  //   y: y
-  // },
-  // function(data){
-  //
-  // });
+  $.post('Notes/noteHandler.php', {
+    action: 'delete',
+    x: x,
+    y: y,
+    cont: cont
+  },
+  function(data){
+    if(data == 1){
+      loadNotes();
+    }
+  });
 }

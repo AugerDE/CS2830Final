@@ -54,9 +54,21 @@
     return 1;
   }
 
-  function deleteTask($x, $y, $usrnm){
+  function deleteNote($x, $y, $cont, $usrnm){
     $conn = connectToDB();
     $SQL = "DELETE FROM Notes
-            WHERE x=? AND y=?";
+            WHERE x=? AND y=?
+            AND noteCont=? AND userName=?";
+    $stmt = $conn->stmt_init();
+    if(!$stmt->prepare($SQL)){
+      $stmt->close();
+      $conn->close();
+      return $stmt->error;
+    }
+    $stmt->bind_param("ssss", $x, $y, $cont, $usrnm);
+    $stmt->execute();
+    $stmt->close();
+    $conn->close();
+    return 1;
   }
 ?>
