@@ -20,17 +20,16 @@
     $stmt->bind_param("s", $usrnm);
     $stmt->execute();
     $result = mysqli_stmt_get_result($stmt);
-    $top = 0;
     while($row = $result->fetch_array(MYSQLI_NUM)){
       $y = "'".$row[1]."'";
+      $x = "'".$row[2]."'";
       $cont = "'".$row[0]."'";
-      $notes .= "<div class='notes' style='top:0; left:$top;'>";
-      $notes .=   '<button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$y.', '.$y.', '.$cont.')">';
+      $notes .= "<div class='notes' style='top:$y; left:$x;'>";
+      $notes .=   '<button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$y.', '.$x.', '.$cont.')">';
       $notes .=     "<span class='glyphicon glyphicon-remove'></span>
                    </button>";
       $notes .=   "<textarea spellcheck='false'>$row[0]</textarea>
                  </div>";
-      $top += 200."px";
     }
     $stmt->close();
     $conn->close();
