@@ -55,13 +55,9 @@ function deleteNote(cont){
 function saveNotes(){
   $(".noteContainer").children().each(function(index, value){
     text = $("textarea").eq(index);
-    div = $(".notes").eq(index);
-    pos = $(".noteContainer").offset();
-    off = $(".notes").eq(index).position();
-    left = pos.left + off.left;
-    top = pos.top + off.top;
-    console.log("Left: " + pos.left + " | Top: " + pos.top);
-    console.log(index + ") " + "Left: " + left + " | Top: " + top);
+    div = $(".notes").eq(index).offset();
+    console.log(text.html());
+    console.log(text.val());
   });
 }
 
