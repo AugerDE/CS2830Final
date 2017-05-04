@@ -27,6 +27,8 @@ function addNote(){
     action: 'add'
   },
   function(data){
-    loadNotes();
+    if(data == 1){
+      loadNotes();
+    }
   });
 }

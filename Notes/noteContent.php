@@ -49,5 +49,6 @@
     $stmt->execute();
     $stmt->close();
     $conn->close();
+    return 1;
   }
 ?>

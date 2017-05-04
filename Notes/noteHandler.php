@@ -20,7 +20,7 @@
         break;
 
       case "add":
-        addNote($usrnm);
+        echo addNote($usrnm);
         break;
     }
   }
