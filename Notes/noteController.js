@@ -61,7 +61,7 @@ function saveNotes(){
     left = off.left + pos.left;
     topp = off.top + pos.top;
     console.log("Left: " + pos.left + " | Top: " + pos.top);
-    console.log(index + ") " + "Left: " + left + " | Top: " + topp);
+    console.log(index + ") " + "Left: " + off.left + " | Top: " + off.top);
   });
 }
 
