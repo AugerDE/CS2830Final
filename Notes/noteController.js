@@ -33,3 +33,8 @@ function addNote(){
     }
   });
 }
+
+function deleteNote(y, x){
+  console.log("x: " + x);
+  console.log("y: " + y);
+}
