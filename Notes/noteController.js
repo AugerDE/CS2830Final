@@ -57,12 +57,8 @@ function saveNotes(){
   text = [];
   divs = [];
   var i = 0;
-  $("#content textarea").each(function(cont){
-    text[i] = document.getElementsByTagName('textarea');
-    console.log(text[i].innerHTML);
-    divs[i] = $(".notes")[i];
-    i++;
-  });
+  text = document.getElementsByTagName('textarea');
+  console.log(text);
 
   y = 0;
   for(i = 0; i < text.length; i++){
