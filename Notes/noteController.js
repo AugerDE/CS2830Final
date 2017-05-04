@@ -59,7 +59,7 @@ function saveNotes(){
     pos = $(".noteContainer").offset();
     off = $(".notes").eq(index).offset();
     console.log("Left: " + pos.left + " | Top: " + pos.top);
-    console.log(index + ") " + "Left: " + (off.left + 438) + " | Top: " + (off.top + 210));
+    console.log(index + ") " + "Left: " + off.left + " | Top: " + off.top);
   });
 }
 
