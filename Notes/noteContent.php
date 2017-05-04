@@ -30,7 +30,7 @@
                    </button>";
       $notes .=   "<textarea spellcheck='false'>$row[0]</textarea>
                  </div>";
-      $top += 200".px";
+      $top += 200."px";
     }
     $stmt->close();
     $conn->close();
