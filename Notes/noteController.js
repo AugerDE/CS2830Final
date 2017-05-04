@@ -56,13 +56,13 @@ function saveNotes(){
   text = [];
   divs = [];
   var i = 0;
-  var y = 0;
+  var x = 0;
   $(".notes textarea").each(function(){
     text = $("textarea");
     newText = text.eq(i).val();
     oldText = text.eq(i).html();
     pos = $(".notes");
-    x = 0 + pos.eq(i).position().left;
+    y = 0 + pos.eq(i).position().top;
     $.post('Notes/noteHandler.php', {
       action: 'save',
       oldText: oldText,
