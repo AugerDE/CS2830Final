@@ -94,7 +94,7 @@ textarea{
 .noteContainer{
   width: 100%;
   height: 700px;
-  display: inline-block;
+  position: absolute;
 }
 #noteBtns{
   text-align: right;
