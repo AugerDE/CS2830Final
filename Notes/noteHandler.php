@@ -18,6 +18,10 @@
       case "load":
         echo getNotes($usrnm);
         break;
+
+      case "add":
+        addNote($usrnm);
+        break;
     }
   }
 ?>

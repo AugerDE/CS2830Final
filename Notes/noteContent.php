@@ -33,4 +33,21 @@
     $conn->close();
     return $notes;
   }
+
+  function addNote($usrnm){
+    $conn = connectToDB();
+    $SQL = "INSERT INTO Notes
+            VALUES(userName, noteCont, y, x)
+            VALUES(?, 'New Note', '0px', '0px')";
+    $stmt = $conn->stmt_init();
+    if(!$stmt->prepare($SQL)){
+      $stmt->close();
+      $conn->close();
+      return $stmt->error;
+    }
+    $stmt->bind_param("s", $usrnm);
+    $stmt->execute();
+    $stmt->close();
+    $conn->close();
+  }
 ?>
