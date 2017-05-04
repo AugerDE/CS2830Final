@@ -13,7 +13,9 @@
             WHERE userName=?";
     $stmt = $conn->stmt_init();
     if($stmt->prepare($SQL)){
-      exit();
+      $stmt->close();
+      $conn->close();
+      return $stmt->error;
     }
     $stmt->bind_param("s", $usrnm);
     $stmt->execute();
