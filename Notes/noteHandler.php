@@ -16,7 +16,7 @@
     $action = $_POST['action'];
     switch($action){
       case "load":
-        echo getNotes();
+        echo getNotes($usrnm);
         break;
     }
   }
