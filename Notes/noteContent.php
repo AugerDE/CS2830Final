@@ -25,11 +25,11 @@
       $x = "'".$row[1]."'";
       $y = "'".$row[2]."'";
       $notes .= "<div class='notes' style='top:$row[1]; left:$row[2];'>";
-      $notes .=     '<button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$y.', '.$x.')">
-                     <span class="glyphicon glyphicon-remove"></span>
+      $notes .=     '<button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$y.', '.$x.')">';
+      $notes .=     "<span class='glyphicon glyphicon-remove'></span>
                    </button>
-                   <textarea spellcheck="false">$row[0]</textarea>
-                 </div>';
+                   <textarea spellcheck='false'>$row[0]</textarea>
+                 </div>";
     }
     $stmt->close();
     $conn->close();
