@@ -63,15 +63,12 @@ function saveNotes(){
     i++;
   });
 
-  x = [];
-  y = [];
-  cont = [];
   for(i = 0; i < text.length; i++){
-    cont[i] = text[i].innerHTML;
-    x[i] = divs[i].offsetLeft - 31;
-    y[i] = divs[i].offsetTop - 100;
+    cont = text[i].innerHTML;
+    x = divs[i].offsetLeft - 31;
+    y = divs[i].offsetTop - 100;
+    console.log(x);
+    console.log(y);
+    console.log(cont);
   }
-  console.log(x);
-  console.log(y);
-  console.log(cont);
 }
