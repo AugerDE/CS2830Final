@@ -76,7 +76,7 @@ function saveNotes(){
       }
     });
     i++;
-    y += 200;
+    x += 200;
   });
 }
 
