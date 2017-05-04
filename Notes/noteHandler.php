@@ -35,7 +35,8 @@
         $cont = checkInput($_POST['cont']);
         $x = checkInput($_POST['x']);
         $y = checkInput($_POST['y']);
-        saveNote($cont, $x, $y, $i, $usrnm);
+        $stat = saveNote($cont, $x, $y, $i, $usrnm);
+        echo $stat;
         break;
     }
   }

@@ -77,10 +77,10 @@ function saveNotes(){
       i: i
     },
     function(data){
-      y++;
-      if(y == text.length){
-        loadNotes();
+      if(data != 1){
+        $("#notify").html(data).removeClass("hidden");
       }
     });
   }
+  loadNotes();
 }

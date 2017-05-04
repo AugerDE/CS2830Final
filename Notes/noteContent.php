@@ -117,7 +117,7 @@
     if(!$stmt->prepare($SQL)){
       $stmt->close();
       $conn->close();
-      exit();
+      return $stmt->error;
     }
     $x = $x."px";
     $y = $y."px";
@@ -125,5 +125,6 @@
     $stmt->execute();
     $stmt->close();
     $conn->close();
+    return 1;
   }
 ?>
