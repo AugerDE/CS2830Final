@@ -63,12 +63,16 @@ function saveNotes(){
     i++;
   });
 
+  x = [];
+  y = [];
+  cont = [];
   for(i = 0; i < text.length; i++){
-    cont = text[i].innerHTML;
-    x = divs[i].offsetLeft - 31;
-    y = divs[i].offsetTop - 100;
-    console.log(cont);
-    console.log(x);
-    console.log(y);
+    cont[i] = text[i].innerHTML;
+    x[i] = divs[i].offsetLeft - 31;
+    y[i] = divs[i].offsetTop - 100;
   }
+  left = x.join(',');
+  right = y.join(',');
+  html = cont.join(',');
+  console.log(left);
 }
