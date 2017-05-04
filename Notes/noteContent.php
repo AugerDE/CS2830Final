@@ -120,7 +120,7 @@
     }
     $x = $x."px";
     $y = $y."px";
-    $stmt->bind_param("ssss", $usrnm, $cont, $y, $x);
+    $stmt->bind_param("ssss", $usrnm, $cont, "0px", "0px");
     $stmt->execute();
     $stmt->close();
     $conn->close();
