@@ -108,7 +108,7 @@
   }
 
   function saveNote($cont, $x, $y, $i, $usrnm){
-    $old = "New Note ".$i;
+    $old = "New Note ".$i+1;
     $conn = connectToDB();
     $SQL = "UPDATE Notes
             SET x=?, y=?, noteCont=?
