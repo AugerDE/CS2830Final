@@ -63,10 +63,6 @@ function saveNotes(){
     oldText = text.eq(i).html();
     console.log("New: " + newText);
     console.log("Old: " + oldText);
-    i++;
-  });
-  i = 0;
-  $("#content .notes").each(function(){
     pos = $(".notes");
     console.log("Top: " + pos.eq(i).position().top);
     console.log("Left: " + pos.eq(i).position().left);
