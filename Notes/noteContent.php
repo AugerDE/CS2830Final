@@ -26,10 +26,10 @@
       $y = "'".$row[2]."'";
       $cont = "'".$row[0]."'";
       $notes .= "<div class='notes' style='top:$row[1]; left:$row[2];'>";
-      $notes .=     '<button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$y.', '.$x.', '.$cont.')">';
+      $notes .=   '<button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$y.', '.$x.', '.$cont.')">';
       $notes .=     "<span class='glyphicon glyphicon-remove'></span>
-                   </button>
-                   <textarea spellcheck='false'>$row[0]</textarea>
+                   </button>";
+      $notes .=   "<textarea spellcheck='false'>$row[0]</textarea>
                  </div>";
     }
     $stmt->close();
