@@ -13,8 +13,8 @@ function loadNotes(){
     action: 'load'
   },
   function(data){
-    $("#content").html("<div class='noteContainer'></div>");
-    $(".noteContainer").html(data);
+    $("#content").html("<div class='container' id='notes'></div>");
+    $("#notes").html(data);
     var user = $("#profile").val();
     $("#panelType").removeClass("panel-info panel-warning panel-danger").addClass("panel-success");
     var btn = getButtons();
@@ -56,7 +56,7 @@ function saveNotes(){
   text = [];
   divs = [];
   var i = 0;
-  $(".noteContainer textarea").each(function(){
+  $("#notes textarea").each(function(){
     text = $("textarea");
     newText = text.eq(i).val();
     oldText = text.eq(i).html();
