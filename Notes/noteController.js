@@ -57,13 +57,18 @@ function saveNotes(){
   text = [];
   divs = [];
   var i = 0;
-  $("#content textarea").each(function(cont){
+  $("#content textarea").each(function(){
     text = $("textarea");
     newText = text.eq(i).val();
     oldText = text.eq(i).html();
     console.log("New: " + newText);
     console.log("Old: " + oldText);
     i++;
+  });
+  $("#content .notes").each(function(){
+    pos = $(".notes").position();
+    console.log("Top: " + pos.top);
+    console.log("Left: " + pos.left);
   });
 
 
