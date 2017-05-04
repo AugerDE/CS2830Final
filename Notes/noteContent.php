@@ -22,11 +22,11 @@
     $result = mysqli_stmt_get_result($stmt);
     $notes = "";
     while($row = $result->fetch_array(MYSQLI_NUM)){
-      $y = "'".$row[1]."px'";
-      $x = "'".$row[2]."px'";
+      $y = "'".$row[1]."'";
+      $x = "'".$row[2]."'";
       $cont = "'".$row[0]."'";
       $notes .= "<div class='notes' style='top:$y; left:$x;'>";
-      $notes .=   '<button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$y.', '.$x.', '.$cont.')">';
+      $notes .=   '<button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$cont.')">';
       $notes .=     "<span class='glyphicon glyphicon-remove'></span>
                    </button>";
       $notes .=   "<textarea spellcheck='false'>$row[0]</textarea>
@@ -75,7 +75,7 @@
     return 1;
   }
 
-  function deleteNote($x, $y, $cont, $usrnm){
+  function deleteNote($cont, $usrnm){
     $conn = connectToDB();
     $SQL = "DELETE FROM Notes
             WHERE noteCont=? AND userName=?";
@@ -108,6 +108,8 @@
   }
 
   function saveNote($old, $new, $x, $y, $usrnm){
+    $x = $x."px";
+    $y = $y."px";
     $conn = connectToDB();
     $SQL = "UPDATE Notes
             SET noteCont=?, y=?, x=?
