@@ -65,7 +65,7 @@ function saveNotes(){
 
   y = 0;
   for(i = 0; i < text.length; i++){
-    cont = text[i].innerHTML;
+    cont = text[i].html();
     x = divs[i].offsetLeft - 31;
     y = divs[i].offsetTop - 100;
     console.log(cont);
