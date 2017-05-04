@@ -24,7 +24,7 @@
                    <button class='btn btn-sm btn-danger closeNote'>
                      <span class='glyphicon glyphicon-remove'></span>
                    </button>
-                   <textarea spellcheck='false'>".$row[0]."</textarea>
+                   <textarea spellcheck='false'>$row[0]</textarea>
                  </div>";
     }
     $stmt->close();
