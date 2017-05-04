@@ -53,31 +53,9 @@ function deleteNote(cont){
 }
 
 function saveNotes(){
-  text = [];
-  divs = [];
-  var i = 0;
-  $(".notes").each(function(){
-    // text = $("textarea");
-    // newText = text.eq(i).val();
-    // oldText = text.eq(i).html();
-    pos = $(".notes");
-    y = pos.eq(i).position().top;
-    x = pos.eq(i).position().left;
-    console.log(y);
-    console.log(x);
-    // $.post('Notes/noteHandler.php', {
-    //   action: 'save',
-    //   oldText: oldText,
-    //   newText: newText,
-    //   x: x,
-    //   y: y
-    // },
-    // function(data){
-    //   if(data != 1){
-    //     $("#notify").html(data).removeClass("hidden");
-    //   }
-    // });
-    // i++;
+  $(".noteContainer").children().each(function(index, value){
+    div = $(".notes").eq(index);
+    console.log(div);
   });
 }
 
