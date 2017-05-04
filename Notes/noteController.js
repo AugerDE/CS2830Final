@@ -59,9 +59,9 @@ function saveNotes(){
     pos = $(".noteContainer").offset();
     off = $(".notes").eq(index).offset();
     left = off.left + pos.left;
-    top = off.top + pos.top;
+    topp = off.top + pos.top;
     console.log("Left: " + pos.left + " | Top: " + pos.top);
-    console.log(index + ") " + "Left: " + left + " | Top: " + top);
+    console.log(index + ") " + "Left: " + left + " | Top: " + topp);
   });
 }
 
