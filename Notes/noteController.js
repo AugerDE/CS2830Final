@@ -34,7 +34,14 @@ function addNote(){
   });
 }
 
-function deleteNote(y, x){
-  console.log("x: " + x);
-  console.log("y: " + y);
+function deleteNote(y, x, cont){
+  console.log(cont);
+  // $.post('Notes/noteHandler.php', {
+  //   action: 'delete',
+  //   x: x,
+  //   y: y
+  // },
+  // function(data){
+  //
+  // });
 }

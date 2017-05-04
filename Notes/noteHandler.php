@@ -22,6 +22,12 @@
       case "add":
         echo addNote($usrnm);
         break;
+
+      case "delete":
+        $x = checkInput($_POST['x']);
+        $y = checkInput($_POST['y']);
+        echo deleteNote($x, $y, $usrnm);
+        break;
     }
   }
 ?>

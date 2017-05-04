@@ -24,8 +24,9 @@
     while($row = $result->fetch_array(MYSQLI_NUM)){
       $x = "'".$row[1]."'";
       $y = "'".$row[2]."'";
+      $cont = "'".$row[0]."'";
       $notes .= "<div class='notes' style='top:$row[1]; left:$row[2];'>";
-      $notes .=     '<button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$y.', '.$x.')">';
+      $notes .=     '<button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$y.', '.$x.', '.$cont.')">';
       $notes .=     "<span class='glyphicon glyphicon-remove'></span>
                    </button>
                    <textarea spellcheck='false'>$row[0]</textarea>
@@ -51,5 +52,11 @@
     $stmt->close();
     $conn->close();
     return 1;
+  }
+
+  function deleteTask($x, $y, $usrnm){
+    $conn = connectToDB();
+    $SQL = "DELETE FROM Notes
+            WHERE x=? AND y=?";
   }
 ?>
