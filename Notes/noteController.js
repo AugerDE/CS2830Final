@@ -30,6 +30,8 @@ function addNote(){
   function(data){
     if(data == 1){
       loadNotes();
+    }else{
+      $("#notify").html(data).removeClass("hidden");
     }
   });
 }
@@ -44,6 +46,8 @@ function deleteNote(y, x, cont){
   function(data){
     if(data == 1){
       loadNotes();
+    }else{
+      $("#notify").html(data).removeClass("hidden");
     }
   });
 }
