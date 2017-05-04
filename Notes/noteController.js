@@ -56,10 +56,10 @@ function saveNotes(){
   text = [];
   divs = [];
   var i = 0;
-  $(".noteContainer textarea").each(function(){
-    text = $("textarea");
-    newText = text.eq(i).val();
-    oldText = text.eq(i).html();
+  $(".noteContainer .notes").each(function(){
+    // text = $("textarea");
+    // newText = text.eq(i).val();
+    // oldText = text.eq(i).html();
     pos = $(".notes");
     y = pos.eq(i).position().top;
     x = pos.eq(i).position().left;
