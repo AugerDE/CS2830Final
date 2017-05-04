@@ -14,6 +14,7 @@ function loadNotes(){
   },
   function(data){
     $("#content").html(data).addClass("noteContainer");
+    $("#notify").html("<button class='btn btn-success'>Add a Note</button>").removeClass("hidden");
     $(".notes").draggable({
       containment: "#content"
     });
