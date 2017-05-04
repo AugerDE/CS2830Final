@@ -12,7 +12,7 @@
             FROM Notes
             WHERE userName=?";
     $stmt = $conn->stmt_init();
-    if($stmt->prepare($SQL)){
+    if(!$stmt->prepare($SQL)){
       $stmt->close();
       $conn->close();
       return $stmt->error;
