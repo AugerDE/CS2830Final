@@ -55,15 +55,17 @@ function deleteNote(y, x, cont){
 
 function saveNotes(){
   text = [];
+  divs = [];
   var i = 0;
   $("textarea").each(function(cont){
     text[i] = $("textarea")[i];
+    divs[i] = $(".notes")[i];
     i++;
   });
 
   for(i = 0; i < text.length; i++){
     console.log(text[i].innerHTML);
-    console.log(text[i].offsetLeft);
-    console.log(text[i].offsetTop);
+    console.log(divs[i].offsetLeft);
+    console.log(divs[i].offsetTop);
   }
 }
