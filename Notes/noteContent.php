@@ -57,8 +57,7 @@
   function deleteNote($x, $y, $cont, $usrnm){
     $conn = connectToDB();
     $SQL = "DELETE FROM Notes
-            WHERE x=? AND y=?
-            AND noteCont=? AND userName=?";
+            WHERE noteCont=? AND userName=?";
     $stmt = $conn->stmt_init();
     if(!$stmt->prepare($SQL)){
       $stmt->close();
