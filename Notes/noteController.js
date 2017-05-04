@@ -13,7 +13,7 @@ function loadNotes(){
     action: 'load'
   },
   function(data){
-    $("#content").html(data);
+    $("#content").html(data).addClass("noteContainer");
     $(".notes").draggable({
       containment: "#content"
     });
