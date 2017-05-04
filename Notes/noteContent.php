@@ -117,6 +117,8 @@
       $conn->close();
       exit();
     }
+    $x = $x."px";
+    $y = $y."px";
     $stmt->bind_param("ssss", $usrnm, $cont, $x, $y);
     $stmt->execute();
     $stmt->close();
