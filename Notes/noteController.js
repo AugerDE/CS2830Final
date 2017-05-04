@@ -52,3 +52,8 @@ function deleteNote(y, x, cont){
     }
   });
 }
+
+function saveNotes(){
+  var div = $("#element div");
+  console.log(div[0].html());
+}
