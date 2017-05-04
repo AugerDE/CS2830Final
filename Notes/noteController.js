@@ -68,8 +68,8 @@ function saveNotes(){
   i = 0;
   $("#content .notes").each(function(){
     position = $(".notes");
-    console.log("Top: " + position.eq(i).offset());
-    console.log("Left: " + position.eq(i).offset());
+    console.log("Top: " + position.eq(i).offset().top);
+    console.log("Left: " + position.eq(i).offset().left);
     i++;
   });
 
