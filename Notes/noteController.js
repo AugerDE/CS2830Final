@@ -14,7 +14,10 @@ function loadNotes(){
     action: 'load'
   },
   function(data){
-    $("#content").html(data + "<button class='btn btn-success' onclick='addNote()'>Add a Note</button> <button class='btn btn-info' onclick='saveNotes()'>Save Notes</button>");
+    $("#content").html(data);
+    var user = $("#profile").val();
+    $("#panelType").removeClass("panel-info panel-warning panel-danger").addClass("panel-success");
+    $("#contentHeader").html(user + "'s Notes" + "<button class='btn btn-success' onclick='addNote()'>Add a Note</button> <button class='btn btn-info' onclick='saveNotes()'>Save Notes</button>");
     $(".notes").draggable({
       containment: "#content"
     });
