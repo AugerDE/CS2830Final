@@ -20,7 +20,6 @@
     $stmt->bind_param("s", $usrnm);
     $stmt->execute();
     $result = mysqli_stmt_get_result($stmt);
-    $notes = "<div class='noteContainer'>";
     $top = 0;
     while($row = $result->fetch_array(MYSQLI_NUM)){
       $y = "'".$row[1]."'";
@@ -31,9 +30,8 @@
                    </button>";
       $notes .=   "<textarea spellcheck='false'>$row[0]</textarea>
                  </div>";
-      $top += 200;
+      $top += 200".px";
     }
-    $notes .= "</div>";
     $stmt->close();
     $conn->close();
     return $notes;

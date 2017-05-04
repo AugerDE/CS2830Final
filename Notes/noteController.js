@@ -13,7 +13,8 @@ function loadNotes(){
     action: 'load'
   },
   function(data){
-    $("#content").html(data);
+    $("#content").html("<div class='noteContainer'></div>");
+    $(".noteContainer").html(data);
     var user = $("#profile").val();
     $("#panelType").removeClass("panel-info panel-warning panel-danger").addClass("panel-success");
     var btn = getButtons();
