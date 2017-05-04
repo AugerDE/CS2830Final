@@ -21,17 +21,17 @@
     $stmt->execute();
     $result = mysqli_stmt_get_result($stmt);
     $notes = "<div class='noteContainer'>";
-    $y = 0;
+    $top = 0;
     while($row = $result->fetch_array(MYSQLI_NUM)){
       $y = "'".$y."'";
       $cont = "'".$row[0]."'";
-      $notes .= "<div class='notes' style='top:$y; left:0;'>";
+      $notes .= "<div class='notes' style='top:0; left:$top;'>";
       $notes .=   '<button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$y.', '.$y.', '.$cont.')">';
       $notes .=     "<span class='glyphicon glyphicon-remove'></span>
                    </button>";
       $notes .=   "<textarea spellcheck='false'>$row[0]</textarea>
                  </div>";
-      $y += 200;
+      $top += 200;
     }
     $notes .= "</div>";
     $stmt->close();
