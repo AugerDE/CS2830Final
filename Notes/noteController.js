@@ -66,7 +66,7 @@ function saveNotes(){
 
   y = 0;
   for(i = 0; i < text.length; i++){
-    cont = text[i].html();
+    cont = text[i].innerHTML;
     x = divs[i].offsetLeft - 31;
     y = divs[i].offsetTop - 100;
     // $.post('Notes/noteHandler.php', {
