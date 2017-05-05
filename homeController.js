@@ -6,7 +6,7 @@ $(function(){
     $("#tasks").addClass("clear");
     $("#videos").addClass("clear");
     $("#notes").addClass("clear");
-    loadTab();
+    loadHome();
   });
 });
 
