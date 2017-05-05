@@ -11,16 +11,6 @@ $(function(){
     loadTab("home");
   });
 
-
-
-  $("#videos").click(function(){
-    $("#notify").hide();
-    $("#home").addClass("clear");
-    $("#tasks").addClass("clear");
-    $("#videos").removeClass("clear");
-    $("#notes").addClass("clear");
-  });
-
 });
 
 function loadTab(tab){
