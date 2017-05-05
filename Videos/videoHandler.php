@@ -20,7 +20,7 @@
   }
 
   function getVideo(){
-    $thumb = "https://img.youtube.com/vi/3t1PQJmM8P4/default.jpg";
+    $thumb = "https://img.youtube.com/vi/3t1PQJmM8P4/mqdefault.jpg";
     $link = "https://www.youtube.com/embed/3t1PQJmM8P4";
     $imgsrc = "'".$thumb."'";
     $vidsrc = "'".$link."'";
