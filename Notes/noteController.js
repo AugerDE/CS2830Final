@@ -46,7 +46,7 @@ function newNote(num){
       note += "<button class='btn btn-sm btn-danger closeNote' onclick='deleteNote('" + num + "')'>";
       note += "<span class='glyphicon glyphicon-remove'></span>";
       note += "</button>";
-      note += "<textarea spellcheck='false'>New Note " + num + "></textarea>";
+      note += "<textarea spellcheck='false'>New Note " + num + "</textarea>";
       note += "</div>";
   return note;
 }
