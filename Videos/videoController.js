@@ -21,7 +21,6 @@ function loadVideos(){
 function changeVideo(thumb, vid){
   console.log(thumb);
   console.log(vid);
-  player = $("#vidPlayer");
-  player.src = vid;
+  $("#vidPlayer").attr('src', vid);
   $("#vidPlayer").removeClass("hidden");
 }
