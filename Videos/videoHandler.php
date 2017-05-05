@@ -28,7 +28,8 @@
     $vid = "<div class='col-sm-2'>";
     $vid .= '<button class="vidImg" onclick="changeVideo('.$imgsrc.', '.$vidsrc.')">';
     $vid .= "<img src='".$thumb."' class='vidBtn img-rounded' />
-             </button></div>";
+             </button></div>
+             <iframe id='vidPlayer' src='' height='500' width='600' class='hidden'></iframe>";
 
     return $vid;
   }
