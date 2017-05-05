@@ -30,12 +30,8 @@ function addNote(){
     action: 'add'
   },
   function(data){
-    if(data == 1){
-      saveNotes();
-      loadNotes();
-    }else{
-      $("#notify").html(data).removeClass("hidden");
-    }
+    saveNotes();
+    $(".noteContainer").append(data);
   });
 }
 

@@ -72,7 +72,15 @@
     $stmt->execute();
     $stmt->close();
     $conn->close();
-    return 1;
+    $note = "'".$cont."'";
+    $notes = "";
+    $notes .= "<div class='notes' style='top:0px; left:0px;'>";
+    $notes .=   '<button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$cont.')">';
+    $notes .=     "<span class='glyphicon glyphicon-remove'></span>
+                 </button>";
+    $notes .=   "<textarea spellcheck='false'>$cont</textarea>
+               </div>";
+    return $notes;
   }
 
   function deleteNote($cont, $usrnm){
