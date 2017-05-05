@@ -26,8 +26,8 @@
     $vidsrc = "'".$link."'";
 
     $vid = "<div class='col-sm-2'>";
-    $vid .= '<button class="btnImg" onclick="changeVideo('.$imgsrc.', '.$vidsrc.')">';
-    $vid .= "<img src='".$thumb."' class='imgBtn' />
+    $vid .= '<button class="vidImg" onclick="changeVideo('.$imgsrc.', '.$vidsrc.')">';
+    $vid .= "<img src='".$thumb."' class='vidBtn' />
              </button></div>";
 
     return $vid;

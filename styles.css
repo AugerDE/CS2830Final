@@ -99,3 +99,14 @@ textarea{
 #noteBtns{
   text-align: right;
 }
+.vidImg{
+  height: 150px;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid gainsboro;
+  margin-bottom: 10px;
+}
+.vidBtn{
+  width: 100%;
+  height: 75%;
+}
