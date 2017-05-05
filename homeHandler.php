@@ -23,7 +23,12 @@
                 <div class='panel panel-success'>
                   <div class='panel-heading'>Notes</div>
                   <div class='panel-body'>
-
+                    <p>
+                      This is where you will find your sticky
+                      notes! They can be updated, deleted and
+                      moved around. Be warned that any changes
+                      will be discarded if not saved.
+                    </p>
                   </div>
                 </div>
               </div>
