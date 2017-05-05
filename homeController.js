@@ -11,7 +11,7 @@ $(function(){
 });
 
 function loadHome(){
-  $.post('homeHandler.php'{
+  $.post('homeHandler.php', {
     action: 'load'
   },
   function(data){
