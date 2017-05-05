@@ -31,6 +31,7 @@ function addNote(){
   },
   function(data){
     if(data == 1){
+      saveNotes();
       loadNotes();
     }else{
       $("#notify").html(data).removeClass("hidden");
