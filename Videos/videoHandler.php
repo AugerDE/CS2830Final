@@ -14,24 +14,38 @@
     $action = $_GET['action'];
     switch($action){
       case "load":
-        echo getVideo();
+        echo getVideos();
         break;
     }
   }
 
-  function getVideo(){
-    $thumb = "https://img.youtube.com/vi/4TnQ99ESoKM/mqdefault.jpg";
-    $link = "https://www.youtube.com/embed/4TnQ99ESoKM";
+  include("../../secure/connect.php");
 
-    $imgsrc = "'".$thumb."'";
-    $vidsrc = "'".$link."'";
+  function getVideos(){
+    $conn = connectToDB();
+    $SQL = "SELECT thumb, src FROM Videos WHERE genre='funny'";
+    $stmt = $conn->stmt_init();
+    if(!$stmt->prepare($SQL)){
+      $stmt->close();
+      $conn->close();
+      return $stmt->error;
+    }
+    $stmt->execute();
+    $result = mysqli_stmt_get_result($stmt);
 
-    $vid = "<div class='col-sm-2'>";
-    $vid .= '<button class="vidImg" onclick="changeVideo('.$imgsrc.', '.$vidsrc.')">';
-    $vid .= "<img src='".$thumb."' class='vidBtn img-rounded' />
-             </button></div>
-             <iframe id='vidPlayer' src='' height='500' width='600' class='hidden' allowfullscreen></iframe>";
-
+    $vids = "<div class='row'><div class='col-sm-12'>";
+    while($row = $result->fetch_array(MYSQLI_NUM)){
+      $imgsrc = "'".$row[0]."'";
+      $vidsrc = "'".$row[1]."'";
+      $vids .= "<div class='col-sm-2'>";
+      $vids .= '<button class="vidImg" onclick="changeVideo('.$imgsrc.', '.$vidsrc.')">';
+      $vids .= "<img src='".$row[0]."' class='vidBtn img-rounded' />
+               </button></div>";
+    }
+    $vids .= "</div></div>";
+    $vids .= "<iframe id='vidPlayer' src='' height='500' width='600' class='hidden' allowfullscreen></iframe>";
+    $stmt->close();
+    $conn->close();
     return $vid;
   }
 ?>
