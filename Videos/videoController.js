@@ -10,13 +10,26 @@ $(function(){
 });
 
 function loadVideos(){
-  $.post('Videos/videoHandler.php', {
-    action: 'load'
-  },
-  function(data){
-    $("#content").html(data);
-    var user = $("#profile").val();
-    $("#panelType").removeClass("panel-success panel-warning panel-info").addClass("panel-danger");
-    $("#contentHeader").html(user + "'s Videos");
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  var player;
+  onYouTubeIframeAPIReady(player);
+}
+
+function onYouTubeIframeAPIReady(player) {
+  player = new YT.Player('content', {
+    height: '390',
+    width: '640',
+    videoId: 'M7lc1UVf-VE',
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
   });
+}
+
+function onPlayerReady(event){
+  event.targer.playVideo();
 }
