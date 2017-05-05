@@ -29,7 +29,7 @@
     $vid .= '<button class="vidImg" onclick="changeVideo('.$imgsrc.', '.$vidsrc.')">';
     $vid .= "<img src='".$thumb."' class='vidBtn img-rounded' />
              </button></div>
-             <iframe id='vidPlayer' src='' height='500' width='600' class='hidden'></iframe>";
+             <iframe id='vidPlayer' src='' height='500' width='600' class='hidden' allowfullscreen></iframe>";
 
     return $vid;
   }
