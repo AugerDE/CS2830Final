@@ -5,6 +5,8 @@ $(function(){
     $("#tasks").addClass("clear");
     $("#videos").removeClass("clear");
     $("#notes").addClass("clear");
+    $("#panelType").removeClass("panel-info panel-warning panel-success").addClass("panel-danger");
+    $("#contentHeader").html("Select your video genre");
     loadVideos("load");
   });
 });
