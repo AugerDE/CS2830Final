@@ -55,7 +55,7 @@
                     <p>
                       Your videos tab is where you can go
                       to try and decompress from the trials
-                      and tribulations from the school week.
+                      and tribulations of the school week.
                       You can select from funny, gaming, and
                       tech vidoes. Try not to spend too much
                       time here!
