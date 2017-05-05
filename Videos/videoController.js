@@ -15,21 +15,19 @@ function loadVideos(){
   var firstScriptTag = document.getElementsByTagName('script')[0];
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
   var player;
-  onYouTubeIframeAPIReady(player);
-}
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('content', {
+      height: '390',
+      width: '640',
+      videoId: 'M7lc1UVf-VE',
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      }
+    });
+  }
 
-function onYouTubeIframeAPIReady(player) {
-  player = new YT.Player('content', {
-    height: '390',
-    width: '640',
-    videoId: 'M7lc1UVf-VE',
-    events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
-    }
-  });
-}
-
-function onPlayerReady(event){
-  event.targer.playVideo();
+  function onPlayerReady(event){
+    event.targer.playVideo();
+  }
 }
