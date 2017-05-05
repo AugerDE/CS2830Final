@@ -1,4 +1,5 @@
 <?php
+  include("../../secure/connect.php");
   session_start();
   ob_start();
 
@@ -18,8 +19,6 @@
         break;
     }
   }
-
-  include("../../secure/connect.php");
 
   function getVideos(){
     $conn = connectToDB();
