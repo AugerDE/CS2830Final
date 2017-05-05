@@ -14,7 +14,7 @@
                       <br />
                       <div class='input-group'>
                         <span class='input-group-addon'><i class='glyphicon glyphicon-lock'></i></span>
-                        <input type='password' class='form-control' id='psswd' placeholder='Placeholder' />
+                        <input type='password' class='form-control' id='psswd' placeholder='Password' />
                       </div>
                       <br />
                       <div class='input-group'>
