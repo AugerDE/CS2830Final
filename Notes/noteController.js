@@ -35,9 +35,10 @@ function addNote(){
   // });
   var i = 1;
   $(".noteContainer").children().each(function(index){
+    off = $(".notes").eq(index).offset().top;
     i++;
   });
-  note = newNote(i, $(".notes").eq(i).offset().top);
+  note = newNote(i, off);
   cont = "New Note " + i;
   $.post('Notes/noteHandler.php', {
     action: 'add',
