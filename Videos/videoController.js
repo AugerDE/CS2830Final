@@ -22,6 +22,10 @@ function getFunny(){
   loadVideos("funny");
 }
 
+function getGaming(){
+  loadVideos("gaming");
+}
+
 function changeVideo(thumb, vid){
   console.log(thumb);
   console.log(vid);
