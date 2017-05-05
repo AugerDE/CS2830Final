@@ -17,7 +17,7 @@ function loadTasks(){
   function(data){
     $("#panelType").removeClass("panel-success panel-info panel-danger").addClass("panel-warning");
     $("#contentHeader").html(user + "'s Tasks");
-    $("#content").removeClass("noteContainer").html(data);
+    $("#content").html(data);
   });
 }
 

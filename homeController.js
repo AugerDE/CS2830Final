@@ -15,6 +15,9 @@ function loadHome(){
     action: 'load'
   },
   function(data){
+    var user = $("#profile").val();
+    $("#panelType").removeClass("panel-success panel-warning panel-danger").addClass("panel-info");
+    $("#contentHeader").html("Welcome to Your dashboard, " + user + "!");
     $("#content").html(data);
   });
 }
