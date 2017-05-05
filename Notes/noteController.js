@@ -26,26 +26,11 @@ function loadNotes(){
 }
 
 function addNote(){
-  // $.post('Notes/noteHandler.php', {
-  //   action: 'add'
-  // },
-  // function(data){
-  //   saveNotes();
-  //   loadNotes();
-  // });
-  var i = 1;
-  $(".noteContainer").children().each(function(index){
-    off = $(".notes").eq(index).offset().top;
-    i++;
-  });
-  note = newNote(i, off + 200);
-  cont = "New Note " + i;
   $.post('Notes/noteHandler.php', {
-    action: 'add',
-    cont: cont,
-    id: i
+    action: 'add'
   },
   function(data){
+    saveNotes();
     loadNotes();
   });
 }

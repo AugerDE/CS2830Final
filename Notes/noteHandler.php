@@ -20,9 +20,7 @@
         break;
 
       case "add":
-        $id = $_POST['id'];
-        $cont = $_POST['cont'];
-        echo addNote($id, $cont, $usrnm);
+        echo addNote($usrnm);
         break;
 
       case "delete":
