@@ -100,6 +100,7 @@ textarea{
   text-align: right;
 }
 .vidImg{
+  outline: none;
   height: 130px;
   width: 100%;
   background-color: transparent;
