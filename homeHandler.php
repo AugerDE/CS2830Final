@@ -36,7 +36,13 @@
                 <div class='panel panel-warning'>
                   <div class='panel-heading'>Tasks</div>
                   <div class='panel-body'>
-
+                    <p>
+                      This is your task table! You can add,
+                      update, and delete any task at any time.
+                      Make sure you have all of the forms
+                      filled out before updating or adding a
+                      task.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -44,7 +50,12 @@
                 <div class='panel panel-danger'>
                   <div class='panel-heading'>Videos</div>
                   <div class='panel-body'>
-
+                    <p>
+                      These are your videos! You can come
+                      here at any time to decompress from the
+                      stress of school work. You can choose
+                      between funny, gaming, and tech videos!
+                    </p>
                   </div>
                 </div>
               </div>
