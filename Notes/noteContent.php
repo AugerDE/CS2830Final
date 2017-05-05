@@ -59,9 +59,11 @@
   function addNote($usrnm){
     $num = getNoteNum($usrnm);
     $cont = "New Note ".$num;
+    $y = $num * -200;
+    $top = $y."px";
     $conn = connectToDB();
     $SQL = "INSERT INTO Notes(userName, noteCont, y, x)
-            VALUES(?, ?, '0px', '0px')";
+            VALUES(?, ?, '$top', '0px')";
     $stmt = $conn->stmt_init();
     if(!$stmt->prepare($SQL)){
       $stmt->close();
@@ -72,15 +74,7 @@
     $stmt->execute();
     $stmt->close();
     $conn->close();
-    $note = "'".$cont."'";
-    $notes = "";
-    $notes .= "<div class='notes' style='top:0px; left:0px;'>";
-    $notes .=   '<button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$cont.')">';
-    $notes .=     "<span class='glyphicon glyphicon-remove'></span>
-                 </button>";
-    $notes .=   "<textarea spellcheck='false'>$cont</textarea>
-               </div>";
-    return $notes;
+    return 1;
   }
 
   function deleteNote($cont, $usrnm){
