@@ -43,6 +43,7 @@
     }
     $vids .= "</div></div>";
     $vids .= "<iframe id='vidPlayer' src='' height='500' width='600' class='hidden' allowfullscreen></iframe>";
+    $vids .= '<button class="btn btn-success" onclick="hideVideo()">Change Video</button>';
     $stmt->close();
     $conn->close();
     return $vids;
