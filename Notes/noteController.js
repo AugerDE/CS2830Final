@@ -26,13 +26,29 @@ function loadNotes(){
 }
 
 function addNote(){
-  $.post('Notes/noteHandler.php', {
-    action: 'add'
-  },
-  function(data){
-    saveNotes();
-    loadNotes();
-  });
+  // $.post('Notes/noteHandler.php', {
+  //   action: 'add'
+  // },
+  // function(data){
+  //   saveNotes();
+  //   loadNotes();
+  // });
+  var i = 1;
+  $(".noteContainer").children().each(index){
+    i += index;
+  }
+  note = newNote(num);
+  $(".noteContainer").append(note);
+}
+
+function newNote(num){
+  var note = "<div class='notes'>";
+      note += "<button class='btn btn-sm btn-danger closeNote' onclick='deleteNote('" + num + "')'>";
+      note += "<span class='glyphicon glyphicon-remove'></span>";
+      note += "</button>";
+      note += "<textarea spellcheck='false'>New Note '" + num + "'></textarea>";
+      note += "</div>";
+  return note;
 }
 
 function deleteNote(id){
