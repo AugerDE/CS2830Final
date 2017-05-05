@@ -45,6 +45,6 @@
     $vids .= "<iframe id='vidPlayer' src='' height='500' width='600' class='hidden' allowfullscreen></iframe>";
     $stmt->close();
     $conn->close();
-    return $vid;
+    return $vids;
   }
 ?>
