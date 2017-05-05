@@ -45,7 +45,7 @@ function addNote(){
     id: i
   },
   function(data){
-    $(".noteContainer").append(note);
+    loadNotes();
   });
 }
 
