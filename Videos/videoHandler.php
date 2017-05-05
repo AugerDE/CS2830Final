@@ -25,10 +25,10 @@
     $imgsrc = "'".$thumb."'";
     $vidsrc = "'".$link."'";
 
-    $vid = "";
+    $vid = "<div class='col-sm-2'>";
     $vid .= '<button class="btnImg" onclick="changeVideo('.$imgsrc.', '.$vidsrc.')">';
     $vid .= "<img src='".$thumb."' class='imgBtn' />
-             </button>";
+             </button></div>";
 
     return $vid;
   }
