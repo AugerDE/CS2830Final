@@ -14,7 +14,7 @@
     $action = $_POST['action'];
     switch($action){
       case "load":
-        echo "<iframe width='420' height='315' src='https://www.youtube.com/embed/A6XUVjK9W4o' frameborder='0' allowfullscreen></iframe>";
+        echo "<iframe width='420' height='315' src='https://www.youtube.com/embed/3t1PQJmM8P4' frameborder='0' allowfullscreen></iframe>";
         break;
     }
   }
