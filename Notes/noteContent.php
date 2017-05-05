@@ -59,7 +59,7 @@
   function addNote($usrnm){
     $num = getNoteNum($usrnm);
     $cont = "New Note ".$num;
-    $y = $num * -200;
+    $y = $num * -100;
     $top = $y."px";
     $conn = connectToDB();
     $SQL = "INSERT INTO Notes(userName, noteCont, y, x)
