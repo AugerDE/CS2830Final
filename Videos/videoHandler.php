@@ -26,7 +26,7 @@
     return '<div class="form-inline" id="genreHolder">
               <button class="btn btn-info" onclick="getFunny()">Funny</button>
               <button class="btn btn-info" onclick="getGaming()">Gaming</button>
-              <button class="btn btn-info">Tech</button>
+              <button class="btn btn-info" onclick="getTech()">Tech</button>
             </div>';
   }
 

@@ -26,6 +26,10 @@ function getGaming(){
   loadVideos("gaming");
 }
 
+function getTech(){
+  loadVideos("tech");
+}
+
 function changeVideo(thumb, vid){
   console.log(thumb);
   console.log(vid);
