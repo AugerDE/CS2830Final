@@ -3,7 +3,7 @@ function loadProfile(){
     action: "profile"
   },
   function(data){
-    $("#content").removeClass("noteContainer").html(data);
+    $("#content").html(data);
     var user = $("#profile").val();
     $("#panelType").removeClass("panel-success panel-warning panel-danger").addClass("panel-info");
     $("#contentHeader").html(user + "'s Profile");

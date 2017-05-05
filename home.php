@@ -34,6 +34,7 @@
     <script src="Profile/profileController.js"></script>
     <script src="Tasks/taskController.js"></script>
     <script src="Notes/noteController.js"></script>
+    <script src="Videos/videoController.js"></script>
   </head>
   <body>
     <div class="container">
