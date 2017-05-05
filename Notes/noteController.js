@@ -34,9 +34,9 @@ function addNote(){
   //   loadNotes();
   // });
   var i = 1;
-  $(".noteContainer").children().each(index){
+  $(".noteContainer").children().each(function(index){
     i += index;
-  }
+  });
   note = newNote(i);
   $(".noteContainer").append(note);
 }
