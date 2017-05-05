@@ -37,7 +37,7 @@ function addNote(){
   $(".noteContainer").children().each(function(index){
     i++;
   });
-  note = newNote(i);
+  note = newNote(i, $(".notes").eq(i).offset().top);
   cont = "New Note " + i;
   $.post('Notes/noteHandler.php', {
     action: 'add',
@@ -49,8 +49,9 @@ function addNote(){
   });
 }
 
-function newNote(num){
-  var note = "<div class='notes'>";
+function newNote(num, y){
+  top = -y + "px";
+  var note = "<div class='notes' style='top:"+top+"'>";
       note += "<button class='btn btn-sm btn-danger closeNote' onclick='deleteNote('" + num + "')'>";
       note += "<span class='glyphicon glyphicon-remove'></span>";
       note += "</button>";
