@@ -31,7 +31,7 @@ function addNote(){
   },
   function(data){
     saveNotes();
-    $(".noteContainer").append(data);
+    loadNotes();
   });
 }
 
