@@ -17,6 +17,8 @@
       case "load":
         echo getGenres();
         break;
+      default:
+        echo getVideos($action);
     }
   }
 
@@ -28,9 +30,9 @@
             </div>';
   }
 
-  function getVideos(){
+  function getVideos($genre){
     $conn = connectToDB();
-    $SQL = "SELECT thumb, src FROM Videos WHERE genre='funny'";
+    $SQL = "SELECT thumb, src FROM Videos WHERE genre='$genre'";
     $stmt = $conn->stmt_init();
     if(!$stmt->prepare($SQL)){
       $stmt->close();
@@ -51,7 +53,8 @@
     }
     $vids .= "</div></div>";
     $vids .= "<iframe id='vidPlayer' src='' height='500' width='600' class='hidden' allowfullscreen></iframe>";
-    $vids .= '<button class="btn btn-success" onclick="hideVideo()">Change Video</button>';
+    $type = "'".$genre."'";
+    $vids .= '<button class="btn btn-success" onclick="hideVideo('.$type.')">Change Video</button>';
     $stmt->close();
     $conn->close();
     return $vids;

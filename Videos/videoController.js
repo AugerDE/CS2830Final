@@ -5,17 +5,21 @@ $(function(){
     $("#tasks").addClass("clear");
     $("#videos").removeClass("clear");
     $("#notes").addClass("clear");
-    loadVideos();
+    loadVideos("load");
   });
 });
 
-function loadVideos(){
+function loadVideos(action){
   $.get('Videos/videoHandler.php', {
-    action: 'load'
+    action: action
   },
   function(data){
     $("#content").html(data);
   });
+}
+
+function getFunny(){
+  loadVideos("funny");
 }
 
 function changeVideo(thumb, vid){
@@ -24,4 +28,8 @@ function changeVideo(thumb, vid){
   $("#vidBtnHolder").addClass("hidden");
   $("#vidPlayer").attr('src', vid);
   $("#vidPlayer").removeClass("hidden");
+}
+
+function hideVideo(genre){
+  loadVideos(genre);
 }
