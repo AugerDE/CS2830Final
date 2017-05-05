@@ -30,6 +30,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="jquery-ui-1.11.4.custom/jquery-ui.js"></script>
     <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="homeController.js"></script>
     <script src="Profile/profileController.js"></script>
     <script src="Tasks/taskController.js"></script>
