@@ -38,7 +38,7 @@ function addNote(){
     off = $(".notes").eq(index).offset().top;
     i++;
   });
-  note = newNote(i, off - 200);
+  note = newNote(i, off + 200);
   cont = "New Note " + i;
   $.post('Notes/noteHandler.php', {
     action: 'add',
