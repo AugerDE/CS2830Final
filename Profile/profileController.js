@@ -149,6 +149,6 @@ function confirmPassUpdate(){
       $("#notify").html(data);
       $("#notify").addClass("error");
     }
-    $("#notify").removeClass("hidden");
   });
+  $("#notify").removeClass("hidden");
 }
