@@ -100,7 +100,7 @@ textarea{
   text-align: right;
 }
 .vidImg{
-  height: 100%;
+  height: 150px;
   width: 100%;
   background-color: transparent;
   border: 1px solid gainsboro;
@@ -108,6 +108,6 @@ textarea{
   margin-bottom: 10px;
 }
 .vidBtn{
-  width: 90%;
+  width: 100%;
   height: 80%;
 }
