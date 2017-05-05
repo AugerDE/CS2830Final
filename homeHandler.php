@@ -24,10 +24,12 @@
                   <div class='panel-heading'>Notes</div>
                   <div class='panel-body'>
                     <p>
-                      This is where you will find your sticky
-                      notes! They can be updated, deleted and
-                      moved around. Be warned that any changes
-                      will be discarded if not saved.
+                      Your notes tab is where you can add,
+                      update, and delete sticky notes that
+                      are perfect for jotting down important
+                      info during class! Make sure you save
+                      all of your changes before leaving the
+                      tab!
                     </p>
                   </div>
                 </div>
@@ -37,11 +39,11 @@
                   <div class='panel-heading'>Tasks</div>
                   <div class='panel-body'>
                     <p>
-                      This is your task table! You can add,
-                      update, and delete any task at any time.
-                      Make sure you have all of the forms
-                      filled out before updating or adding a
-                      task.
+                      Your tasks tab is where you can add,
+                      update, and delete tasks that you
+                      accumulate throughout the week. Make
+                      sure to get those dates and times right,
+                      wouldn't want to forget anything!
                     </p>
                   </div>
                 </div>
@@ -51,10 +53,12 @@
                   <div class='panel-heading'>Videos</div>
                   <div class='panel-body'>
                     <p>
-                      These are your videos! You can come
-                      here at any time to decompress from the
-                      stress of school work. You can choose
-                      between funny, gaming, and tech videos!
+                      Your videos tab is where you can go
+                      to try and decompress from the trials
+                      and tribulations from the school week.
+                      You can select from funny, gaming, and
+                      tech vidoes. Try not to spend too much
+                      time here!
                     </p>
                   </div>
                 </div>
