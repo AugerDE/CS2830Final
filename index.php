@@ -22,7 +22,7 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="panel panel-info">
-            <div class="panel-heading"><h2>Final Project</h2></div>
+            <div class="panel-heading"><h2>The One-Stop Student WebApp</h2></div>
             <div class="panel-body" id="content">
             </div>
           </div>
