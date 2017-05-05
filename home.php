@@ -8,8 +8,6 @@
     header('Location: index.php');
   }
 
-  include("functions.php");
-
   $usrnm = (isset($_SESSION['user']) ? $_SESSION['user'] : NULL);
   $tab = (isset($_SESSION['tab']) ? $_SESSION['tab'] : NULL);
 
