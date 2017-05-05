@@ -10,8 +10,8 @@
 
   $usrnm = (isset($_SESSION['user']) ? $_SESSION['user'] : NULL);
 
-  if(isset($_GET['action'])){
-    $action = $_GET['action'];
+  if(isset($_POST['action'])){
+    $action = $_POST['action'];
     switch($action){
       case "load":
         echo "<iframe src='https://www.youtube.com/watch?v=kWVfoMuFnSY'></iframe>";

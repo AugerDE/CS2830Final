@@ -10,7 +10,7 @@ $(function(){
 });
 
 function loadVideos(){
-  $.get('Videos/videoHandler.php', {
+  $.post('Videos/videoHandler.php', {
     action: 'load'
   },
   function(data){
