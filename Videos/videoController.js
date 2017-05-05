@@ -28,8 +28,14 @@ function changeVideo(thumb, vid){
   $("#vidBtnHolder").addClass("hidden");
   $("#vidPlayer").attr('src', vid);
   $("#vidPlayer").removeClass("hidden");
+  $("#changeVid").removeClass("hidden");
+  $("#changeGenre").addClass("hidden");
 }
 
 function hideVideo(genre){
   loadVideos(genre);
+}
+
+function switchGenre(){
+  loadVideos("load");
 }

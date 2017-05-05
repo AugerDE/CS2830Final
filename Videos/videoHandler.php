@@ -54,7 +54,8 @@
     $vids .= "</div></div>";
     $vids .= "<iframe id='vidPlayer' src='' height='500' width='600' class='hidden' allowfullscreen></iframe>";
     $type = "'".$genre."'";
-    $vids .= '<button class="btn btn-success" onclick="hideVideo('.$type.')">Change Video</button>';
+    $vids .= '<button id="changeGenre" class="btn btn-info" onclick="switchGenre()">Change Genre</button>';
+    $vids .= '<button id="changeVid" class="btn btn-success hidden" onclick="hideVideo('.$type.')">Change Video</button>';
     $stmt->close();
     $conn->close();
     return $vids;
