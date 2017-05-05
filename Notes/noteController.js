@@ -35,10 +35,11 @@ function addNote(){
   });
 }
 
-function deleteNote(cont){
+function deleteNote(y, cont){
   $.post('Notes/noteHandler.php', {
     action: 'delete',
-    content: cont
+    content: cont,
+    top: y
   },
   function(data){
     if(data == 1){

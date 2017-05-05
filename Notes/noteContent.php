@@ -24,9 +24,10 @@
     while($row = $result->fetch_array(MYSQLI_NUM)){
       $y = $row[1]."px";
       $x = $row[2]."px";
+      $top = "'".$row[1]."'";
       $cont = "'".$row[0]."'";
       $notes .= "<div class='notes' style='top:$y; left:$x;'>";
-      $notes .=   '<button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$cont.')">';
+      $notes .=   '<button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$row[1].', '.$cont.')">';
       $notes .=     "<span class='glyphicon glyphicon-remove'></span>
                    </button>";
       $notes .=   "<textarea spellcheck='false'>$row[0]</textarea>
@@ -77,17 +78,17 @@
     return 1;
   }
 
-  function deleteNote($cont, $usrnm){
+  function deleteNote($top, $cont, $usrnm){
     $conn = connectToDB();
     $SQL = "DELETE FROM Notes
-            WHERE noteCont=? AND userName=?";
+            WHERE y=? AND userName=?";
     $stmt = $conn->stmt_init();
     if(!$stmt->prepare($SQL)){
       $stmt->close();
       $conn->close();
       return $stmt->error;
     }
-    $stmt->bind_param("ss", $cont, $usrnm);
+    $stmt->bind_param("ds", $top, $usrnm);
     $stmt->execute();
     $stmt->close();
     $conn->close();
