@@ -15,9 +15,17 @@
     $action = $_GET['action'];
     switch($action){
       case "load":
-        echo getVideos();
+        echo getGenres();
         break;
     }
+  }
+
+  function getGenres(){
+    return '<div class="form-inline" id="genreHolder">
+              <button class="btn btn-info" onclick="getFunny()">Funny</button>
+              <button class="btn btn-info">Gaming</button>
+              <button class="btn btn-info">Tech</button>
+            </div>';
   }
 
   function getVideos(){
