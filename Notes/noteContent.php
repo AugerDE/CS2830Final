@@ -59,7 +59,7 @@
   function addNote($id, $cont, $usrnm){
     $conn = connectToDB();
     $SQL = "INSERT INTO Notes(noteID, userName, noteCont, y, x)
-            VALUES(?, ?, ?, '-800px', '0px')";
+            VALUES(?, ?, ?, '0px', '0px')";
     $stmt = $conn->stmt_init();
     if(!$stmt->prepare($SQL)){
       $stmt->close();
