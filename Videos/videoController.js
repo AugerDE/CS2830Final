@@ -17,3 +17,8 @@ function loadVideos(){
     $("#content").html(data);
   });
 }
+
+function changeVideo(thumb, vid){
+  console.log(thumb);
+  console.log(vid);
+}
