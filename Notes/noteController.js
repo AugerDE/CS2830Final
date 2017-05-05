@@ -38,7 +38,15 @@ function addNote(){
     i++;
   });
   note = newNote(i);
-  $(".noteContainer").append(note);
+  cont = "New Note " + i;
+  $.post('Notes/noteHandler.php', {
+    action: 'add',
+    cont: cont,
+    id: i
+  },
+  function(data){
+    $(".noteContainer").append(note);
+  });
 }
 
 function newNote(num){

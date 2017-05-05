@@ -56,9 +56,7 @@
     return $i;
   }
 
-  function addNote($usrnm){
-    $num = getNoteNum($usrnm);
-    $cont = "New Note ".$num;
+  function addNote($id, $cont, $usrnm){
     $conn = connectToDB();
     $SQL = "INSERT INTO Notes(noteID, userName, noteCont, y, x)
             VALUES(?, ?, ?, '0px', '0px')";
@@ -68,7 +66,7 @@
       $conn->close();
       return $stmt->error;
     }
-    $stmt->bind_param("iss", $num, $usrnm, $cont);
+    $stmt->bind_param("iss", $id, $usrnm, $cont);
     $stmt->execute();
     $stmt->close();
     $conn->close();
