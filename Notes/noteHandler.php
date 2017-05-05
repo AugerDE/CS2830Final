@@ -24,9 +24,8 @@
         break;
 
       case "delete":
-        $cont = checkInput($_POST['content']);
-        $top = checkInput($_POST['top']);
-        echo deleteNote($top, $cont, $usrnm);
+        $id = checkInput($_POST['id']);
+        echo deleteNote($id, $usrnm);
         break;
 
       case "save":

@@ -8,7 +8,7 @@
 
   function getNotes($usrnm){
     $conn = connectToDB();
-    $SQL = "SELECT noteCont, y, x
+    $SQL = "SELECT noteID, noteCont, y, x
             FROM Notes
             WHERE userName=?";
     $stmt = $conn->stmt_init();
@@ -22,15 +22,14 @@
     $result = mysqli_stmt_get_result($stmt);
     $notes = "";
     while($row = $result->fetch_array(MYSQLI_NUM)){
-      $y = $row[1]."px";
-      $x = $row[2]."px";
-      $top = "'".$row[1]."'";
-      $cont = "'".$row[0]."'";
+      $y = $row[2]."px";
+      $x = $row[3]."px";
+      $id = "'".$row[0]."'";
       $notes .= "<div class='notes' style='top:$y; left:$x;'>";
-      $notes .=   '<button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$row[1].', '.$cont.')">';
+      $notes .=   '<button class="btn btn-sm btn-danger closeNote" onclick="deleteNote('.$id.')">';
       $notes .=     "<span class='glyphicon glyphicon-remove'></span>
                    </button>";
-      $notes .=   "<textarea spellcheck='false'>$row[0]</textarea>
+      $notes .=   "<textarea spellcheck='false'>$row[1]</textarea>
                  </div>";
     }
     $stmt->close();
@@ -60,35 +59,33 @@
   function addNote($usrnm){
     $num = getNoteNum($usrnm);
     $cont = "New Note ".$num;
-    $y = $num * -100;
-    $top = $y."px";
     $conn = connectToDB();
-    $SQL = "INSERT INTO Notes(userName, noteCont, y, x)
-            VALUES(?, ?, '$top', '0px')";
+    $SQL = "INSERT INTO Notes(noteID, userName, noteCont, y, x)
+            VALUES(?, ?, ?, '0px', '0px')";
     $stmt = $conn->stmt_init();
     if(!$stmt->prepare($SQL)){
       $stmt->close();
       $conn->close();
       return $stmt->error;
     }
-    $stmt->bind_param("ss", $usrnm, $cont);
+    $stmt->bind_param("iss", $num, $usrnm, $cont);
     $stmt->execute();
     $stmt->close();
     $conn->close();
     return 1;
   }
 
-  function deleteNote($top, $cont, $usrnm){
+  function deleteNote($id, $usrnm){
     $conn = connectToDB();
     $SQL = "DELETE FROM Notes
-            WHERE y=? AND userName=?";
+            WHERE noteID=? AND userName=?";
     $stmt = $conn->stmt_init();
     if(!$stmt->prepare($SQL)){
       $stmt->close();
       $conn->close();
       return $stmt->error;
     }
-    $stmt->bind_param("ds", $top, $usrnm);
+    $stmt->bind_param("is", $id, $usrnm);
     $stmt->execute();
     $stmt->close();
     $conn->close();
