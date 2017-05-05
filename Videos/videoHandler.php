@@ -32,7 +32,7 @@
     $stmt->execute();
     $result = mysqli_stmt_get_result($stmt);
 
-    $vids = "<div class='row'><div class='col-sm-12'>";
+    $vids = "<div class='row' id='vidBtnHolder'><div class='col-sm-12'>";
     while($row = $result->fetch_array(MYSQLI_NUM)){
       $imgsrc = "'".$row[0]."'";
       $vidsrc = "'".$row[1]."'";
