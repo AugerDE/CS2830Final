@@ -14,7 +14,7 @@
     $action = $_GET['action'];
     switch($action){
       case "load":
-        echo "<iframe src='https://www.youtube.com/watch?v=l4SpxLAyiTU'></iframe>";
+        echo "<iframe src='https://www.w3schools.com'></iframe>";
         break;
     }
   }
