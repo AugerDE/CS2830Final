@@ -37,7 +37,7 @@ function addNote(){
   $(".noteContainer").children().each(index){
     i += index;
   }
-  note = newNote(num);
+  note = newNote(i);
   $(".noteContainer").append(note);
 }
 
