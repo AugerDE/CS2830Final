@@ -26,7 +26,7 @@ function loadNotes(){
 }
 
 function addNote(){
-  $.post('Notes/noteHandler.php', {
+  $.get('Notes/noteHandler.php', {
     action: 'add'
   },
   function(data){
